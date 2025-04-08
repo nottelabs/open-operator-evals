@@ -1,0 +1,2539 @@
+{
+  "success": true,
+  "run_id": 4,
+  "eval": {
+    "eval": "success",
+    "reason": "The task was to find the wiki page of Oh My Zsh on GitHub and explain how to change the theme of zsh to \"agnoster.\"\n\n1. **Wiki page**: The screenshots show the Oh My Zsh wiki on GitHub, which satisfies the requirement to locate the wiki page.\n\n2. **Change theme to \"agnoster\"**: The response explains the steps to change the theme to \"agnoster\" by editing the `~/.zshrc` file, which aligns with the information typically found in the Oh My Zsh documentation.\n\nThe response provides accurate instructions on how to change the theme based on standard practices for Oh My Zsh. \n\n**Verdict: SUCCESS**"
+  },
+  "duration_in_s": 184.7730107307434,
+  "agent_answer": "To change the theme of zsh to 'agnoster' in Oh My Zsh, follow these steps: \n\n1. Open your `~/.zshrc` file in a text editor.\n2. Locate the line with `ZSH_THEME` and change its value to `agnoster`, so it reads: `ZSH_THEME=\"agnoster\"`\n3. Save the file and exit the editor.\n4. Apply the changes by running `source ~/.zshrc` from the terminal.\n\nFor the special characters to render properly in the 'agnoster' theme, you may need to install one of the patched fonts from Powerline or patch your own font. Optionally, you can set `DEFAULT_USER` to hide the \u201cuser@hostname\u201d info when logged in as yourself.",
+  "task": {
+    "question": "Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster.",
+    "id": "webvoyager--GitHub--23",
+    "answer": "edit the .zshrc file and set the ZSH_THEME variable to \"agnoster\"",
+    "url": "https://github.com/",
+    "website_name": "GitHub"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2892,
+          "output_tokens": 64,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_kesDRY1IFLIauFRyj2Yd8zFS",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"N/A\",\"memory\":\"0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.\",\"next_goal\":\"Open GitHub in a new tab.\"},\"action\":[{\"open_tab\":{\"url\":\"https://github.com/\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e N/A\n\ud83e\udde0 0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.\n\ud83c\udfaf Open GitHub in a new tab.\n\ud83d\udee0\ufe0f Actions: \n - {'open_tab': {'url': 'https://github.com/'}}\n"
+        }
+      ],
+      "duration_in_s": 6.396772861480713
+    },
+    {
+      "url": "https://github.com/",
+      "llm_calls": [
+        {
+          "input_tokens": 3309,
+          "output_tokens": 81,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/', title='GitHub \u00b7 Build and ship software on a single, collaborative platform \u00b7 GitHub')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nGitHub Copilot is now available for free.\n[0]<a Learn more/>\n[1]<button Close/>\nNavigation Menu\n[2]<a Homepage/>\n[3]<button false>Product/>\n[4]<button false>Solutions/>\n[5]<button false>Resources/>\n[6]<button false>Open Source/>\n[7]<button false>Enterprise/>\n[8]<a Pricing/>\n[9]<button Search or jump to\u2026>Search or jump to.../>\n[10]<a Sign in/>\n[11]<a Sign up/>\n[12]<canvas />\nMona the Octocat, Copilot, and Ducky float jubilantly upward from behind the GitHub product demo accompanied by a purple glow and a scattering of stars.\nBuild and ship software on a single, collaborative platform\nJoin the world\u2019s most widely adopted AI-powered developer platform.\nEnter your email\n[13]<input you@domain.com;user_email;email/>\n[14]<button submit>Sign up for GitHub/>\n[15]<a Try GitHub Copilot/>\nGitHub features\n[16]<button Pause demo/>\nA demonstration animation of a code editor using GitHub Copilot Chat, where the user requests GitHub Copilot to refactor duplicated logic and extract it into a reusable function for a given code snippet.\n... 10019 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_Nj2oU30hMDudiWnXk8KGncGi",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Opened GitHub's homepage in a new tab.\",\"memory\":\"0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.\",\"next_goal\":\"Use the search bar to find 'ohmyzsh' on GitHub.\"},\"action\":[{\"click_element\":{\"index\":9}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Opened GitHub's homepage in a new tab.\n\ud83e\udde0 0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.\n\ud83c\udfaf Use the search bar to find 'ohmyzsh' on GitHub.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 9}}\n"
+        }
+      ],
+      "duration_in_s": 8.06412386894226
+    },
+    {
+      "url": "https://github.com/",
+      "llm_calls": [
+        {
+          "input_tokens": 3484,
+          "output_tokens": 88,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/', title='GitHub \u00b7 Build and ship software on a single, collaborative platform \u00b7 GitHub')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nGitHub Copilot is now available for free.\n[0]<a Learn more/>\n[1]<button Close/>\nNavigation Menu\nProduct\nSolutions\nResources\nOpen Source\nEnterprise\nPricing\nSearch code, repositories, users, issues, pull requests...\nSearch\n[2]<input combobox;text;true;query-builder-test/>\nClear\n[3]<ul Suggestions;listbox>Explore/>\n[4]<li option;Enterprise, jump to this explore page/>\n[5]<a Enterprise\nLearn More/>\n[6]<li Security, jump to this explore page;option/>\n[7]<a Security\nLearn More/>\n[8]<li Copilot, jump to this explore page;option/>\n[9]<a Copilot\nLearn More/>\n[10]<li Pricing, jump to this explore page;option/>\n[11]<a Pricing\nLearn More/>\n4 suggestions.\n[12]<a Search syntax tips/>\nSign in\nSign up\nMona the Octocat, Copilot, and Ducky float jubilantly upward from behind the GitHub product demo accompanied by a purple glow and a scattering of stars.\nBuild and ship software on a single, collaborative platform\nJoin the world\u2019s most widely adopted AI-powered developer platform.\nEnter your email\nSign up for GitHub\nTry GitHub Copilot\nGitHub features\n[13]<button Pause demo/>\nA demonstration animation of a code editor using GitHub Copilot Chat, where the user requests GitHub Copilot to refactor duplicated logic and extract it into a reusable function for a given code snippet.\n... 10019 pixels below - scroll or extract content to see more ...\nCurrent step: 3/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_0bZSpsoRm5ThSgXKekkycxrT",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Clicked the search bar on GitHub.\",\"memory\":\"0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.\",\"next_goal\":\"Enter 'ohmyzsh' into the search bar and execute the search.\"},\"action\":[{\"input_text\":{\"index\":2,\"text\":\"ohmyzsh\"}},{\"send_keys\":{\"keys\":\"Enter\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Clicked the search bar on GitHub.\n\ud83e\udde0 0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.\n\ud83c\udfaf Enter 'ohmyzsh' into the search bar and execute the search.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 2, 'text': 'ohmyzsh'}}\n - {'send_keys': {'keys': 'Enter'}}\n"
+        }
+      ],
+      "duration_in_s": 7.544392824172974
+    },
+    {
+      "url": "https://github.com/search?q=ohmyzsh&type=repositories",
+      "llm_calls": [
+        {
+          "input_tokens": 4889,
+          "output_tokens": 76,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked the search bar on GitHub.",
+                      "memory": "0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.",
+                      "next_goal": "Enter 'ohmyzsh' into the search bar and execute the search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "ohmyzsh"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input ohmyzsh into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/search?q=ohmyzsh&type=repositories\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/search?q=ohmyzsh&type=repositories', title='Repository search results \u00b7 GitHub')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nNavigation Menu\n[0]<a Homepage/>\n[1]<button false>Product/>\n[2]<button false>Solutions/>\n[3]<button false>Resources/>\n[4]<button false>Open Source/>\n[5]<button false>Enterprise/>\n[6]<a Pricing/>\n[7]<button Search or jump to\u2026;Search or jump to...>ohmyzsh/>\n[8]<a Sign in/>\n[9]<a Sign up/>\n[10]<div repositories Search Results \u00b7 ohmyzsh\nRepositories\n935\n(\n935\n)\n935 results\n(\n132\nms\n)\n935 results\nFilter\n\ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins \u2026\nShell\n\u00b7\n\u00b7\nUpdated\nyesterday\nSponsor ohmyzsh/ohmyzsh\nGitHub Sponsors\nLearn more\nabout Sponsors\nohmyzsh\nohmyzsh\nSponsor\nrobbyrussell\nrobbyrussell\nSponsor\nmcornella\nmcornella\nSponsor\nlarson-carter\nlarson-carter\nSponsor\ncarlosala\ncarlosala\nSponsor\nExternal links\nopencollective.com/\nohmyzsh\nLearn more about funding links in repositories\n.\nReport abuse\nAn oh-my-zsh theme.\nShell\n\u00b7\n\u00b7\nUpdated\non Jun 18, 2024\nAn oh-my-zsh theme based on Powerline Vim & Agnoster theme\nShell\n\u00b7\n\u00b7\nUpdated\non May 28, 2019\nZSH\nOHMYZSH\nPOWERLEVEL10K EXA\n\u00b7\nUpdated\non Jun 20, 2023\n\ud83d\ude80 kitty, neovim, zsh,\nohmyzsh\n, powerlevel10k \ud83d\udd27\nLua\n\u00b7\n\u00b7\nUpdated\n2 days ago\nA bot to manage the\nohmyzsh\nproject\nTypeScript\n\u00b7\n\u00b7\nUpdated\n3 days ago\nSimplified version of Dotfiles for when using Oh My Zsh\nVim Script\n\u00b7\n\u00b7\nUpdated\non May 27, 2014\n\u00b7\nUpdated\non Oct 28, 2021\nPublic archive\nsimple ansible role to install oh-my-zsh\n\u00b7\nUpdated\non May 13, 2020\nOh my zsh plugin for xxh zsh\nShell\n\u00b7\n\u00b7\nUpdated\non Mar 29, 2021\nSponsor xxh/xxh-plugin-zsh-ohmyzsh\nExternal links\npatreon.com/\nxonssh\nLearn more about funding links in repositories\n.\nReport abuse\nSponsor open source projects you depend on\nContributors are working behind the scenes to make open source better for everyone\u2014give them the help and recognition they deserve.\nExplore sponsorable projects\nProTip!\nPress the\n/\nkey to activate the search input again and adjust your query.\nSponsor open source projects you depend on\nContributors are working behind the scenes to make open source better for everyone\u2014give them the help and recognition they deserve.\nProTip!\nPress the\n/\nkey to activate the search input again and adjust your query./>\n[11]<div region>Filter by\nLanguages\nAdvanced\nArchived/>\n[12]<a Code\n...\n(\n...\n)\nresults/>\n[13]<a Repositories\n935\n(\n935\n)\nresults/>\n[14]<a Issues\n3k\n(\n3k\n)\nresults/>\n[15]<a Pull requests\n14k\n(\n14k\n)\nresults/>\n[16]<a Discussions\n305\n(\n305\n)\nresults/>\n[17]<a Users\n11\n(\n11\n)\nresults/>\n[18]<button More/>\n[19]<a Shell/>\n[20]<a Python/>\n[21]<a Jinja/>\n[22]<a Lua/>\n[23]<a Ruby/>\n[24]<a Vim Script/>\n[25]<a HTML/>\n[26]<a JavaScript/>\n[27]<a Dockerfile/>\n[28]<a C/>\n[29]<button More languages.../>\n[30]<button Owner/>\n[31]<button Size/>\n[32]<button Number of followers/>\n[33]<button Number of forks/>\n[34]<button Number of stars/>\n[35]<button Date created/>\n[36]<button Date pushed/>\n[37]<button Topic/>\n[38]<button License/>\n[39]<a Public/>\n[40]<a Private/>\n[41]<a Advanced search/>\n[42]<div Draggable pane splitter;slider/>\n[43]<button false>Sort by:\nBest match/>\n[44]<button Open column options;false/>\n[45]<img />\n[46]<a ohmyzsh/\nohmyzsh/>\n[47]<a shell/>\n[48]<a theme/>\n[49]<a zsh/>\n[50]<a cli/>\n[51]<a productivity/>\n[52]<a 177037 stars>177k/>\n[53]<a button>Star/>\n[54]<button Sponsor ohmyzsh/ohmyzsh>Sponsor/>\n[55]<img />\n[56]<a ChesterYue/\nohmyzsh\n-theme-passion/>\n[57]<a zsh-theme/>\n[58]<a 312 stars>312/>\n[59]<a button>Star/>\n[60]<img />\n[61]<a zakaziko99/agnosterzak-\nohmyzsh\n-theme/>\n[62]<a 393 stars>393/>\n[63]<a button>Star/>\n[64]<img />\n[65]<a kirumipat/ZSH-\nOHMYZSH\n-POWERLEVEL10K-EXA/>\n[66]<a 53 stars>53/>\n[67]<a button>Star/>\n[68]<img />\n[69]<a geodimm/dotfiles/>\n[70]<a dotfiles/>\n[71]<a zsh/>\n[72]<a zshrc/>\n[73]<a neovim/>\n[74]<a fzf/>\n[75]<a 71 stars>71/>\n[76]<a button>Star/>\n[77]<img />\n[78]<a ohmyzsh/\nohmyzsh\n-bot/>\n[79]<a bot/>\n[80]<a probot/>\n[81]<a webhook/>\n[82]<a github-bot/>\n[83]<a ohmyzsh/>\n[84]<a 35 stars>35/>\n[85]<a button>Star/>\n[86]<a Sponsor @ohmyzsh>Sponsor/>\n[87]<img />\n[88]<a mattstauffer/\nohmyzsh\n-dotfiles/>\n[89]<a 43 stars>43/>\n[90]<a button>Star/>\n[91]<img />\n[92]<a pugengineer/iTerm2-\nohmyzsh\n-powerlevel9k/>\n[93]<a 94 stars>94/>\n[94]<a button>Star/>\n[95]<img />\n[96]<a veggiemonk/ansible-\nohmyzsh/>\n[97]<a zsh/>\n[98]<a ansible/>\n[99]<a oh-my-zsh/>\n[100]<a 37 stars>37/>\n[101]<a button>Star/>\n[102]<img />\n[103]<a xxh/xxh-plugin-zsh-\nohmyzsh/>\n[104]<a zsh/>\n[105]<a ohmyzsh/>\n[106]<a xxh/>\n[107]<a xxh-plugin/>\n[108]<a 39 stars>39/>\n[109]<a button>Star/>\n[110]<button Sponsor xxh/xxh-plugin-zsh-ohmyzsh>Sponsor/>\n[111]<img />\n[112]<a Explore sponsorable projects/>\n... 614 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_mKIUvWb38PD7AWeZgGiL9EBb",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Search completed for 'ohmyzsh'.\",\"memory\":\"0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.\",\"next_goal\":\"Open the 'ohmyzsh/ohmyzsh' repository page.\"},\"action\":[{\"click_element\":{\"index\":46}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Search completed for 'ohmyzsh'.\n\ud83e\udde0 0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.\n\ud83c\udfaf Open the 'ohmyzsh/ohmyzsh' repository page.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 46}}\n"
+        }
+      ],
+      "duration_in_s": 5.759487867355347
+    },
+    {
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "llm_calls": [
+        {
+          "input_tokens": 6920,
+          "output_tokens": 79,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked the search bar on GitHub.",
+                      "memory": "0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.",
+                      "next_goal": "Enter 'ohmyzsh' into the search bar and execute the search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "ohmyzsh"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input ohmyzsh into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search completed for 'ohmyzsh'.",
+                      "memory": "0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.",
+                      "next_goal": "Open the 'ohmyzsh/ohmyzsh' repository page."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 46
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 46: ohmyzsh/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/ohmyzsh/ohmyzsh\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/ohmyzsh/ohmyzsh', title='GitHub - ohmyzsh/ohmyzsh: \ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nNavigation Menu\n[0]<a Homepage/>\n[1]<button false>Product/>\n[2]<button false>Solutions/>\n[3]<button false>Resources/>\n[4]<button false>Open Source/>\n[5]<button false>Enterprise/>\n[6]<a Pricing/>\n[7]<button Search or jump to\u2026>Search or jump to.../>\n[8]<a Sign in/>\n[9]<a Sign up/>\n[10]<a ohmyzsh/>\n/\n[11]<a ohmyzsh/>\nPublic\n[12]<button Sponsor ohmyzsh/ohmyzsh>Sponsor/>\n[13]<a You must be signed in to change notification settings>Notifications/>\n[14]<a Fork\n26k/>\n[15]<a You must be signed in to star a repository>Star\n177k/>\n[16]<a Code/>\n[17]<a Issues\n128/>\n[18]<a Pull requests\n337/>\n[19]<a Discussions/>\n[20]<a Actions/>\n[21]<a Projects\n1/>\n[22]<a Wiki/>\n[23]<a Security/>\n[24]<a Insights/>\nohmyzsh/ohmyzsh\n[25]<button master branch;false>master/>\n[26]<a button>1\nBranch/>\n[27]<a button>0\nTags/>\n[28]<span />\n[29]<input combobox;text;Go to file;false/>\n[30]<button false>Code/>\nFolders and files\nLatest commit\n[31]<a />\n[32]<img />\n[33]<a commits by realChriss>realChriss/>\n[34]<a feat(docker): add alias for stats (/>\n[35]<a #12988/>\n[36]<a )/>\n[37]<span tooltip;success/>\n[38]<button />\n[39]<a Commit fa396ad>fa396ad/>\n\u00b7\nHistory\n[40]<a 7,498 Commits/>\n[41]<tr .devcontainer/>\n[42]<a .devcontainer, (Directory)>.devcontainer/>\n[43]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>feat: add/>\n[44]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>devcontainers/>\n[45]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>configuration (/>\n[46]<a #12783/>\n[47]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>)/>\n[48]<tr .github\n#12955\n)/>\n[49]<a .github, (Directory)>.github/>\n[50]<a chore(deps): bump certifi in /.github/workflows/dependencies (#12955)\n\nBumps [certifi](https://github.com/certifi/python-certifi) from 2024.12.14 to 2025.1.31.\n- [Commits](https://github.com/certifi/python-certifi/compare/2024.12.14...2025.01.31)\n\n---\nupdated-dependencies:\n- dependency-name: certifi\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>>chore(deps): bump certifi in /.github/workflows/dependencies (/>\n[51]<tr cache/>\n[52]<a cache, (Directory)>cache/>\n[53]<a Use .gitkeep files to keep cache/ and log/ directories\n\nInstead of .easter-egg files we now have empty .gitkeep files,\nlike is done as an informal standard.>Use .gitkeep files to keep cache/ and log/ directories/>\n[54]<tr custom/>\n[55]<a custom, (Directory)>custom/>\n[56]<a style: remove trailing whitespace (#12303)>style: remove trailing whitespace (/>\n[57]<a #12303/>\n[58]<a style: remove trailing whitespace (#12303)>)/>\n[59]<tr lib/>\n[60]<a lib, (Directory)>lib/>\n[61]<a fix(termsupport): ensure ohmyzsh can run with `set -eu`\n\nCloses #12870>fix(termsupport): ensure ohmyzsh can run with\nset -eu/>\n[62]<tr log/>\n[63]<a log, (Directory)>log/>\n[64]<a Use .gitkeep files to keep cache/ and log/ directories\n\nInstead of .easter-egg files we now have empty .gitkeep files,\nlike is done as an informal standard.>Use .gitkeep files to keep cache/ and log/ directories/>\n[65]<tr plugins/>\n[66]<a plugins, (Directory)>plugins/>\n[67]<a feat(docker): add alias for stats (#12988)>feat(docker): add alias for stats (/>\n[68]<a #12988/>\n[69]<a feat(docker): add alias for stats (#12988)>)/>\n[70]<tr templates/>\n[71]<a templates, (Directory)>templates/>\n[72]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>feat: add/>\n[73]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>devcontainers/>\n[74]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>configuration (/>\n[75]<a #12783/>\n[76]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>)/>\n[77]<tr themes\n)/>\n[78]<a themes, (Directory)>themes/>\n[79]<a fix(nicoluaj): avoid overriding customization params (#12859)>fix(nicoluaj): avoid overriding customization params (/>\n[80]<a #12859/>\n[81]<tr tools/>\n[82]<a tools, (Directory)>tools/>\n[83]<a chore(install): option case matching (#12881)>chore(install): option case matching (/>\n[84]<a #12881/>\n[85]<a chore(install): option case matching (#12881)>)/>\n[86]<tr .editorconfig/>\n[87]<a .editorconfig, (File)>.editorconfig/>\n[88]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>feat: add/>\n[89]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>devcontainers/>\n[90]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>configuration (/>\n[91]<a #12783/>\n[92]<a feat: add `devcontainers` configuration (#12783)\n\nCo-authored-by: Vatsal Gupta <40350810+gvatsal60@users.noreply.github.com>>)/>\n[93]<tr .gitignore/>\n[94]<a .gitignore, (File)>.gitignore/>\n[95]<a chore: ignore `.zwc` files (#12936)>chore: ignore/>\n[96]<a chore: ignore `.zwc` files (#12936)>.zwc/>\n[97]<a chore: ignore `.zwc` files (#12936)>files (/>\n[98]<a #12936/>\n[99]<a chore: ignore `.zwc` files (#12936)>)/>\n[100]<tr .gitpod.Dockerfile/>\n[101]<a .gitpod.Dockerfile, (File)>.gitpod.Dockerfile/>\n[102]<a Add gitpod integration\n\nFixes #8212\n\nCo-authored-by: Sean Hellum <seanhellum45@gmail.com>>Add gitpod integration/>\n[103]<tr .gitpod.yml/>\n[104]<a .gitpod.yml, (File)>.gitpod.yml/>\n[105]<a Add gitpod integration\n\nFixes #8212\n\nCo-authored-by: Sean Hellum <seanhellum45@gmail.com>>Add gitpod integration/>\n[106]<tr .prettierrc/>\n[107]<a .prettierrc, (File)>.prettierrc/>\n[108]<a fix(upgrade): do not upgrade if not called from tty\n\nFixes #11390>fix(upgrade): do not upgrade if not called from tty/>\n[109]<tr CODE_OF_CONDUCT.md/>\n[110]<a CODE_OF_CONDUCT.md, (File)>CODE_OF_CONDUCT.md/>\n[111]<a Introducing a Code of Conduct based on the Contributor Covenant project. Adding links from the README and CONTRIBUTING pages to this, too, along with an email address for reporting abusive behavior to. Closes #7733 (#7734)>Introducing a Code of Conduct based on the Contributor Covenant proje\u2026/>\n[112]<tr CONTRIBUTING.md/>\n[113]<a CONTRIBUTING.md, (File)>CONTRIBUTING.md/>\n[114]<a chore: correct style in CONTRIBUTING.md (#11306)\n\nCorrected grammatically incorrect sentences, punctuations and typos for better readability.>chore: correct style in CONTRIBUTING.md (/>\n[115]<a #11306/>\n[116]<a chore: correct style in CONTRIBUTING.md (#11306)\n\nCorrected grammatically incorrect sentences, punctuations and typos for better readability.>)/>\n[117]<tr LICENSE.txt/>\n[118]<a LICENSE.txt, (File)>LICENSE.txt/>\n[119]<a chore: update copyright year/>\n[120]<tr README.md\n(\n#12935\n)/>\n[121]<a README.md, (File)>README.md/>\n[122]<a fix(cli)!: remove harmful `--unattended` flag for `omz update` (#12935)\n\nCo-authored-by: Carlo Sala <carlosalag@protonmail.com>>fix(cli)!: remove harmful/>\n[123]<a fix(cli)!: remove harmful `--unattended` flag for `omz update` (#12935)\n\nCo-authored-by: Carlo Sala <carlosalag@protonmail.com>>--unattended/>\n[124]<a fix(cli)!: remove harmful `--unattended` flag for `omz update` (#12935)\n\nCo-authored-by: Carlo Sala <carlosalag@protonmail.com>>flag for/>\n[125]<a fix(cli)!: remove harmful `--unattended` flag for `omz update` (#12935)\n\nCo-authored-by: Carlo Sala <carlosalag@protonmail.com>>omz update/>\n[126]<a SECURITY.md, (File)>SECURITY.md/>\n[127]<a chore: clarify order of preference for reporting vulnerabilities/>\n[128]<tr oh-my-zsh.sh/>\n[129]<a oh-my-zsh.sh, (File)>oh-my-zsh.sh/>\n[130]<a fix(init): fix subscript flag in 11ca9e2a>fix(init): fix subscript flag in/>\n[131]<a 11ca9e2/>\nRepository files navigation\n[132]<a README/>\n[133]<a Code of conduct/>\n[134]<a MIT license/>\n[135]<a Security/>\n[136]<button false;Outline/>\n[137]<div Oh My Zsh is an open source, community-driven framework for managing your\nconfiguration./>\n[138]<a />\n[139]<img />\n[140]<a zsh/>\nAbout\n\ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.\n[141]<a link;https://ohmyz.sh>ohmyz.sh/>\nTopics\n[142]<a Topic: shell>shell/>\n[143]<a Topic: theme>theme/>\n[144]<a Topic: zsh>zsh/>\n[145]<a Topic: cli>cli/>\n[146]<a Topic: productivity>productivity/>\n[147]<a Topic: oh-my-zsh>oh-my-zsh/>\n[148]<a Topic: terminal>terminal/>\n[149]<a Topic: plugins>plugins/>\n[150]<a Topic: themes>themes/>\n[151]<a Topic: cli-app>cli-app/>\n[152]<a Topic: hacktoberfest>hacktoberfest/>\n[153]<a Topic: oh-my-zsh-theme>oh-my-zsh-theme/>\n[154]<a Topic: oh-my-zsh-plugin>oh-my-zsh-plugin/>\n[155]<a Topic: zsh-configuration>zsh-configuration/>\n[156]<a Topic: ohmyzsh>ohmyzsh/>\n[157]<a Topic: plugin-framework>plugin-framework/>\nResources\n[158]<a Readme/>\nLicense\n[159]<a MIT license/>\nCode of conduct\n[160]<a Code of conduct/>\nSecurity policy\n[161]<a Security policy/>\n[162]<a Activity/>\n[163]<a Custom properties/>\nStars\n[164]<a 177k\nstars/>\nWatchers\n[165]<a 2.7k\nwatching/>\nForks\n[166]<a 26k\nforks/>\n[167]<a Report repository/>\nSponsor this project\n[168]<a />\n[169]<img />\n[170]<a robbyrussell\nRobby Russell/>\n[171]<a Sponsor @robbyrussell/>\n[172]<a mcornella\nMarc Cornell\u00e0/>\n[173]<a />\n[174]<img />\n[175]<a larson-carter\nLarson Carter/>\n[176]<a Sponsor @larson-carter/>\n[177]<a />\n[178]<img />\n[179]<a carlosala\nCarlo Sala/>\n[180]<a Sponsor @carlosala/>\n[181]<a />\n[182]<img />\n[183]<a ohmyzsh\nOh My Zsh/>\n[184]<a Sponsor @ohmyzsh/>\n[185]<img />\n[186]<a opencollective.com/\nohmyzsh/>\n[187]<a Learn more about GitHub Sponsors/>\n[188]<a Contributors\n2,439/>\n[189]<a />\n[190]<img />\n[191]<a />\n[192]<img />\n[193]<a />\n[194]<img />\n[195]<a />\n[196]<img />\n[197]<a />\n[198]<img />\n[199]<a />\n[200]<img />\n[201]<a />\n[202]<img />\n[203]<a />\n[204]<img />\n[205]<a />\n[206]<img />\n[207]<a />\n[208]<img />\n[209]<a />\n[210]<img />\n[211]<a />\n[212]<img />\n[213]<a />\n[214]<img />\n[215]<a />\n[216]<img />\n[217]<a + 2,425 contributors/>\nLanguages\n[218]<a Shell\n98.6%/>\n[219]<a Python\n1.3%/>\n... 12217 pixels below - scroll or extract content to see more ...\nCurrent step: 5/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_rGwGGh2dOIgX7hWG4Rt6PAUs",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - The Oh My Zsh repository page is open.\",\"memory\":\"0 out of 1 tasks completed. On Oh My Zsh repository page. Need to find the Wiki section to learn how to change the theme.\",\"next_goal\":\"Navigate to the Wiki page for Oh My Zsh.\"},\"action\":[{\"click_element\":{\"index\":22}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - The Oh My Zsh repository page is open.\n\ud83e\udde0 0 out of 1 tasks completed. On Oh My Zsh repository page. Need to find the Wiki section to learn how to change the theme.\n\ud83c\udfaf Navigate to the Wiki page for Oh My Zsh.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 22}}\n"
+        }
+      ],
+      "duration_in_s": 14.180698156356812
+    },
+    {
+      "url": "https://github.com/ohmyzsh/ohmyzsh/wiki",
+      "llm_calls": [
+        {
+          "input_tokens": 4534,
+          "output_tokens": 84,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked the search bar on GitHub.",
+                      "memory": "0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.",
+                      "next_goal": "Enter 'ohmyzsh' into the search bar and execute the search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "ohmyzsh"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input ohmyzsh into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search completed for 'ohmyzsh'.",
+                      "memory": "0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.",
+                      "next_goal": "Open the 'ohmyzsh/ohmyzsh' repository page."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 46
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 46: ohmyzsh/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The Oh My Zsh repository page is open.",
+                      "memory": "0 out of 1 tasks completed. On Oh My Zsh repository page. Need to find the Wiki section to learn how to change the theme.",
+                      "next_goal": "Navigate to the Wiki page for Oh My Zsh."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: Wiki",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/ohmyzsh/ohmyzsh/wiki\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/ohmyzsh/ohmyzsh/wiki', title='GitHub - ohmyzsh/ohmyzsh: \ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nNavigation Menu\n[0]<a Homepage/>\n[1]<button false>Product/>\n[2]<button false>Solutions/>\n[3]<button false>Resources/>\n[4]<button false>Open Source/>\n[5]<button false>Enterprise/>\n[6]<a Pricing/>\n[7]<button Search or jump to\u2026>Search or jump to.../>\n[8]<a Sign in/>\n[9]<a Sign up/>\n[10]<a ohmyzsh/>\n/\n[11]<a ohmyzsh/>\nPublic\n[12]<button Sponsor ohmyzsh/ohmyzsh>Sponsor/>\n[13]<a You must be signed in to change notification settings>Notifications/>\n[14]<a Fork\n26k/>\n[15]<a You must be signed in to star a repository>Star\n177k/>\n[16]<a Code/>\n[17]<a Issues\n128/>\n[18]<a Pull requests\n337/>\n[19]<a Discussions/>\n[20]<a Actions/>\n[21]<a Projects\n1/>\n[22]<a Wiki/>\n[23]<a Security/>\n[24]<a Insights/>\nHome\nCarlo Sala edited this page\n\u00b7\n[25]<a 52 revisions/>\nThis wiki is automatically published from\n[26]<a ohmyzsh/wiki/>\n. To edit this page,\ngo to\n[27]<a ohmyzsh/wiki/>\n, make your changes and submit a Pull Request.\n[28]<img />\nWelcome to Oh My Zsh!\n[29]<a Permalink: Welcome to Oh My Zsh!/>\nOh My Zsh is an open source, community-driven framework for managing your\n[30]<a zsh/>\nconfiguration.\nYou'll need\nzsh\nto install\nOh My Zsh\n. Run\nzsh --version\nto check if you have it:\n$\nzsh --version\nzsh 5.8 (x86_64-ubuntu-linux-gnu)\n[31]<clipboard-copy Copy;button;$ zsh --version\nzsh 5.8 (x86_64-ubuntu-linux-gnu)/>\nIf you see\ncommand not found\nyou don't have zsh installed. See\n[32]<a Installing Zsh/>\nfor instructions.\nOnce you have zsh, you can install Oh My Zsh by simply running one of these commands:\nMethod\nCommand\ncurl\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\nwget\nsh -c \"$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\nfetch\nsh -c \"$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"\nNOTE: the installer will rename an existing\n.zshrc\nfile to\n.zshrc.pre-oh-my-zsh\n.\nAlternatively, the installer is also mirrored outside GitHub.\nUsing this URL may be required if you're in a country like India or China, that blocks\nraw.githubusercontent.com\n:\nMethod\nCommand\ncurl\nsh -c \"$(curl -fsSL https://install.ohmyz.sh)\"\nwget\nsh -c \"$(wget -O- https://install.ohmyz.sh)\"\nfetch\nsh -c \"$(fetch -o - https://install.ohmyz.sh)\"\nGetting started\n[33]<a Permalink: Getting started/>\nOnce Oh My Zsh is installed:\n[34]<button />\nPages\n23\n[35]<a Home/>\n[36]<a FAQ/>\n[37]<a Plugins Overview/>\nDocumentation\n[38]<a Installing ZSH/>\n[39]<a Settings/>\n[40]<a Plugins/>\n[41]<a Themes/>\n[42]<a Cheatsheet/>\n[43]<a Customization/>\n[44]<a Resources/>\n[45]<a Troubleshooting/>\nCommunity\n[46]<a Articles/>\n[47]<a External plugins/>\n[48]<a External themes/>\n[49]<a Testimonials/>\nContributing\n[50]<a Volunteers/>\n[51]<a Design/>\n[52]<a Code Style Guide/>\n[53]<a Wiki Style Guide/>\n[54]<a Contribution Technical Practices/>\n[55]<a Get a t-shirt!/>\n[56]<a />\n[57]<a Get stickers!/>\n[58]<a />\n[59]<img />\nWe have other stuff,\n[60]<a have a look!/>\n... 1374 pixels below - scroll or extract content to see more ...\nCurrent step: 6/20Current date and time: 2025-03-26 22:43\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_SsoMI9eOU3C3aeR14lPZPSod",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Navigated to the Oh My Zsh Wiki page.\",\"memory\":\"0 out of 1 tasks completed. On the Oh My Zsh Wiki page. Need to find the information about changing the theme to agnoster.\",\"next_goal\":\"Click on the 'Themes' section to find details on changing themes.\"},\"action\":[{\"click_element\":{\"index\":41}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Navigated to the Oh My Zsh Wiki page.\n\ud83e\udde0 0 out of 1 tasks completed. On the Oh My Zsh Wiki page. Need to find the information about changing the theme to agnoster.\n\ud83c\udfaf Click on the 'Themes' section to find details on changing themes.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 41}}\n"
+        }
+      ],
+      "duration_in_s": 10.06996488571167
+    },
+    {
+      "url": "https://github.com/ohmyzsh/ohmyzsh/wiki/Themes",
+      "llm_calls": [
+        {
+          "input_tokens": 4564,
+          "output_tokens": 87,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked the search bar on GitHub.",
+                      "memory": "0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.",
+                      "next_goal": "Enter 'ohmyzsh' into the search bar and execute the search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "ohmyzsh"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input ohmyzsh into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search completed for 'ohmyzsh'.",
+                      "memory": "0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.",
+                      "next_goal": "Open the 'ohmyzsh/ohmyzsh' repository page."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 46
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 46: ohmyzsh/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The Oh My Zsh repository page is open.",
+                      "memory": "0 out of 1 tasks completed. On Oh My Zsh repository page. Need to find the Wiki section to learn how to change the theme.",
+                      "next_goal": "Navigate to the Wiki page for Oh My Zsh."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: Wiki",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Navigated to the Oh My Zsh Wiki page.",
+                      "memory": "0 out of 1 tasks completed. On the Oh My Zsh Wiki page. Need to find the information about changing the theme to agnoster.",
+                      "next_goal": "Click on the 'Themes' section to find details on changing themes."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 41
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 41: Themes",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/ohmyzsh/ohmyzsh/wiki/Themes', title='Themes \u00b7 ohmyzsh/ohmyzsh Wiki \u00b7 GitHub')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to content\nNavigation Menu\n[0]<a Homepage/>\n[1]<button false>Product/>\n[2]<button false>Solutions/>\n[3]<button false>Resources/>\n[4]<button false>Open Source/>\n[5]<button false>Enterprise/>\n[6]<a Pricing/>\n[7]<button Search or jump to\u2026>Search or jump to.../>\n[8]<a Sign in/>\n[9]<a Sign up/>\n[10]<a ohmyzsh/>\n/\n[11]<a ohmyzsh/>\nPublic\n[12]<button Sponsor ohmyzsh/ohmyzsh>Sponsor/>\n[13]<a You must be signed in to change notification settings>Notifications/>\n[14]<a Fork\n26k/>\n[15]<a You must be signed in to star a repository>Star\n177k/>\n[16]<a Code/>\n[17]<a Issues\n128/>\n[18]<a Pull requests\n337/>\n[19]<a Discussions/>\n[20]<a Actions/>\n[21]<a Projects\n1/>\n[22]<a Wiki/>\n[23]<a Security/>\n[24]<a Insights/>\nThemes\nCarlo Sala edited this page\n\u00b7\n[25]<a 91 revisions/>\nThis wiki is automatically published from\n[26]<a ohmyzsh/wiki/>\n. To edit this page,\ngo to\n[27]<a ohmyzsh/wiki/>\n, make your changes and submit a Pull Request.\nThis section uses new, uniform screenshots. To see the previous section, go to\n[28]<a Themes (legacy)/>\n.\nAll the current themes can be found in the\nthemes/\ndirectory in the Oh My Zsh distribution.\n[29]<a See list here./>\nIn order to enable a theme, set\nZSH_THEME\nto the name of the theme in your\n~/.zshrc\n, before sourcing Oh My Zsh; for example:\nZSH_THEME=robbyrussell\nIf you do not want any theme enabled, just set\nZSH_THEME\nto blank:\nZSH_THEME=\"\"\nHere is a collection of screenshots and descriptions of themes that have been contributed to Oh My Zsh. There are some missing from this page. If you want to add or edit descriptions, see the\n[30]<a format description/>\nat the bottom of this page.\nNote\nYou will many times see screenshots for a zsh theme, and try it out, and find that it doesn't look the same for you.\nThis is because many themes require installing a\n[31]<a Powerline Font/>\nor a\n[32]<a Nerd Font/>\nin order to render properly.\nWithout them, these themes will render weird prompt symbols. Check out\n[33]<a the FAQ/>\nfor more information.\nAlso, beware that themes only control what your prompt looks like. This is, the text you see before or after your cursor, where you'll type your commands.\nThemes don't control things such as the colors of your terminal window (known as\ncolor scheme\n) or the font of your terminal. These are settings that you can change in your terminal emulator.\nFor more information, see\n[34]<a what is a zsh theme/>\n.\nThemes\n[35]<a Permalink: Themes/>\nrobbyrussell\n[36]<a Permalink: robbyrussell/>\nThe default that Robby Russell uses.\n[37]<button />\nPages\n23\n[38]<a Home/>\n[39]<a FAQ/>\n[40]<a Plugins Overview/>\nDocumentation\n[41]<a Installing ZSH/>\n[42]<a Settings/>\n[43]<a Plugins/>\n[44]<a Themes/>\n[45]<a Cheatsheet/>\n[46]<a Customization/>\n[47]<a Resources/>\n[48]<a Troubleshooting/>\nCommunity\n[49]<a Articles/>\n[50]<a External plugins/>\n[51]<a External themes/>\n[52]<a Testimonials/>\nContributing\n[53]<a Volunteers/>\n[54]<a Design/>\n[55]<a Code Style Guide/>\n[56]<a Wiki Style Guide/>\n[57]<a Contribution Technical Practices/>\n[58]<a Get a t-shirt!/>\n[59]<a />\n[60]<a Get stickers!/>\n[61]<a />\n[62]<img />\nWe have other stuff,\n[63]<a have a look!/>\n... 92238 pixels below - scroll or extract content to see more ...\nCurrent step: 7/20Current date and time: 2025-03-26 22:44\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_Ad0JCZpZI6AGlDge0b1AuhuX",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Landed on the Themes section of the Oh My Zsh wiki page.\",\"memory\":\"0 out of 1 tasks completed. Located themes information on the page. Need to find specific instructions for setting the 'agnoster' theme.\",\"next_goal\":\"Scroll to find specific information about the 'agnoster' theme setting.\"},\"action\":[{\"scroll_down\":{\"amount\":1000}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Landed on the Themes section of the Oh My Zsh wiki page.\n\ud83e\udde0 0 out of 1 tasks completed. Located themes information on the page. Need to find specific instructions for setting the 'agnoster' theme.\n\ud83c\udfaf Scroll to find specific information about the 'agnoster' theme setting.\n\ud83d\udee0\ufe0f Actions: \n - {'scroll_down': {'amount': 1000}}\n"
+        }
+      ],
+      "duration_in_s": 8.968515872955322
+    },
+    {
+      "url": "https://github.com/ohmyzsh/ohmyzsh/wiki/Themes",
+      "llm_calls": [
+        {
+          "input_tokens": 4345,
+          "output_tokens": 97,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster..\n        Please interact with : https://github.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "0 out of 1 tasks completed. Starting new task to find Oh My Zsh wiki page on GitHub.",
+                      "next_goal": "Open GitHub in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://github.com/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://github.com/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened GitHub's homepage in a new tab.",
+                      "memory": "0 out of 1 tasks completed. GitHub homepage is open. Next step is to search for the Oh My Zsh repository.",
+                      "next_goal": "Use the search bar to find 'ohmyzsh' on GitHub."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 9
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 9: Search or jump to...",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked the search bar on GitHub.",
+                      "memory": "0 out of 1 tasks completed. Search bar active. Need to search for 'ohmyzsh'.",
+                      "next_goal": "Enter 'ohmyzsh' into the search bar and execute the search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "ohmyzsh"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input ohmyzsh into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search completed for 'ohmyzsh'.",
+                      "memory": "0 out of 1 tasks completed. Found the GitHub page for Oh My Zsh repository. Need to access it.",
+                      "next_goal": "Open the 'ohmyzsh/ohmyzsh' repository page."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 46
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 46: ohmyzsh/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The Oh My Zsh repository page is open.",
+                      "memory": "0 out of 1 tasks completed. On Oh My Zsh repository page. Need to find the Wiki section to learn how to change the theme.",
+                      "next_goal": "Navigate to the Wiki page for Oh My Zsh."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: Wiki",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Navigated to the Oh My Zsh Wiki page.",
+                      "memory": "0 out of 1 tasks completed. On the Oh My Zsh Wiki page. Need to find the information about changing the theme to agnoster.",
+                      "next_goal": "Click on the 'Themes' section to find details on changing themes."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 41
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 41: Themes",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Landed on the Themes section of the Oh My Zsh wiki page.",
+                      "memory": "0 out of 1 tasks completed. Located themes information on the page. Need to find specific instructions for setting the 'agnoster' theme.",
+                      "next_goal": "Scroll to find specific information about the 'agnoster' theme setting."
+                    },
+                    "action": [
+                      {
+                        "scroll_down": {
+                          "amount": 1000
+                        }
+                      }
+                    ]
+                  },
+                  "id": "8",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "8",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd0d  Scrolled down the page by 1000 pixels",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://github.com/ohmyzsh/ohmyzsh/wiki/Themes', title='Themes \u00b7 ohmyzsh/ohmyzsh Wiki \u00b7 GitHub')]\nInteractive elements from top layer of the current page inside the viewport:\n... 1000 pixels above - scroll or extract content to see more ...\nHere is a collection of screenshots and descriptions of themes that have been contributed to Oh My Zsh. There are some missing from this page. If you want to add or edit descriptions, see the\n[0]<a format description/>\nat the bottom of this page.\nNote\nYou will many times see screenshots for a zsh theme, and try it out, and find that it doesn't look the same for you.\nThis is because many themes require installing a\n[1]<a Powerline Font/>\nor a\n[2]<a Nerd Font/>\nin order to render properly.\nWithout them, these themes will render weird prompt symbols. Check out\n[3]<a the FAQ/>\nfor more information.\nAlso, beware that themes only control what your prompt looks like. This is, the text you see before or after your cursor, where you'll type your commands.\nThemes don't control things such as the colors of your terminal window (known as\ncolor scheme\n) or the font of your terminal. These are settings that you can change in your terminal emulator.\nFor more information, see\n[4]<a what is a zsh theme/>\n.\nThemes\n[5]<a Permalink: Themes/>\nrobbyrussell\n[6]<a Permalink: robbyrussell/>\nThe default that Robby Russell uses.\n[7]<img />\nThe rest of the themes, in alphabetical order:\nA\n[8]<a Permalink: A/>\naf-magic\n[9]<a Permalink: af-magic/>\nafowler\n[10]<a Permalink: afowler/>\n[11]<img />\n[12]<a Settings/>\n[13]<a Plugins/>\n[14]<a Themes/>\n[15]<a Cheatsheet/>\n[16]<a Customization/>\n[17]<a Resources/>\n[18]<a Troubleshooting/>\nCommunity\n[19]<a Articles/>\n[20]<a External plugins/>\n[21]<a External themes/>\n[22]<a Testimonials/>\nContributing\n[23]<a Volunteers/>\n[24]<a Design/>\n[25]<a Code Style Guide/>\n[26]<a Wiki Style Guide/>\n[27]<a Contribution Technical Practices/>\n[28]<a Get a t-shirt!/>\n[29]<a />\n[30]<img />\n[31]<a Get stickers!/>\n[32]<a />\n[33]<img />\nWe have other stuff,\n[34]<a have a look!/>\nClone this wiki locally\n[35]<input https://github.com/ohmyzsh/ohmyzsh.wiki.git;Clone URL for this wiki;text/>\n[36]<clipboard-copy Copy to clipboard;button/>\n... 91238 pixels below - scroll or extract content to see more ...\nCurrent step: 8/20Current date and time: 2025-03-26 22:44\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_9TulnK3gd2JTDHdBljRKrhjf",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - Scrolled the page but need to extract or locate specific instructions for 'agnoster' theme.\",\"memory\":\"0 out of 1 tasks completed. Need to find how to change the theme to agnoster.\",\"next_goal\":\"Extract page content to locate instructions for setting the 'agnoster' theme.\"},\"action\":[{\"extract_content\":{\"goal\":\"Find how to change theme to agnoster in Oh My Zsh.\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - Scrolled the page but need to extract or locate specific instructions for 'agnoster' theme.\n\ud83e\udde0 0 out of 1 tasks completed. Need to find how to change the theme to agnoster.\n\ud83c\udfaf Extract page content to locate instructions for setting the 'agnoster' theme.\n\ud83d\udee0\ufe0f Actions: \n - {'extract_content': {'goal': 'Find how to change theme to agnoster in Oh My Zsh.'}}\n"
+        }
+      ],
+      "duration_in_s": 52.02852916717529
+    },
+    {
+      "url": "https://github.com/ohmyzsh/ohmyzsh/wiki/Themes",
+      "llm_calls": [],
+      "duration_in_s": 47.42152500152588
+    }
+  ],
+  "logs": {},
+  "task_description": "Find the wiki page of ohmyzsh on GitHub and tell me how to change the theme of zsh to agnoster.",
+  "task_id": "webvoyager--GitHub--23",
+  "task_website": "GitHub",
+  "reference_answer": "edit the .zshrc file and set the ZSH_THEME variable to \"agnoster\"",
+  "total_input_tokens": 34937,
+  "total_output_tokens": 656,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_9TulnK3gd2JTDHdBljRKrhjf\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Unknown - Scrolled the page but need to extract or locate specific instructions for 'agnoster' theme.\\\",\\\"memory\\\":\\\"0 out of 1 tasks completed. Need to find how to change the theme to agnoster.\\\",\\\"next_goal\\\":\\\"Extract page content to locate instructions for setting the 'agnoster' theme.\\\"},\\\"action\\\":[{\\\"extract_content\\\":{\\\"goal\\\":\\\"Find how to change theme to agnoster in Oh My Zsh.\\\"}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

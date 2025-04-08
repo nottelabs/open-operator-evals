@@ -1,0 +1,18 @@
+[RunParameters]
+n_jobs = 4
+tries_per_task = 8
+evaluator = "webvoyager"
+capture_logging = false
+max_task_duration_in_s = 360
+
+[RunParameters.task_set]
+name = "WebVoyager30"
+
+[Notte]
+use_vision = true
+headless = true
+model = "gemini/gemini-2.0-flash"
+max_steps = 20
+history_type = "short_observations_with_short_data"
+pool = "None" # could instead be anchor, browserbase, steel etc..
+user_agent = "Mozilla/5.0 (Windows NT 6.2;) Gecko/20100101 Firefox/54.8"

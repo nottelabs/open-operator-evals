@@ -1,0 +1,1974 @@
+{
+  "success": true,
+  "run_id": 3,
+  "eval": {
+    "eval": "success",
+    "reason": "Based on the screenshots provided:\n\n1. The course \"Modern Art & Ideas\" by The Museum of Modern Art is located on Coursera.\n2. The percentage of 3-star ratings is 2.51%.\n3. The star level with the lowest percentage is 1 star, at 0.59%.\n\nThe Result Response matches the information in the screenshot. Therefore, the task has been successfully accomplished.\n\n**Verdict: SUCCESS**"
+  },
+  "duration_in_s": 58.580689907073975,
+  "agent_answer": "The course 'Modern Art & Ideas' by The Museum of Modern Art on Coursera has a 3-star review percentage of 2.51%. The lowest percentage among the ratings is 1 star with 0.59%.",
+  "task": {
+    "question": "Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage.",
+    "id": "webvoyager--Coursera--30",
+    "answer": "3 stars: 2.5%; 1 star has the lowest percentage",
+    "url": "https://www.coursera.org/",
+    "website_name": "Coursera"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2913,
+          "output_tokens": 67,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 22:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_RtKeapPe2qnREZuD0J65S0fm",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"N/A\",\"memory\":\"Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.\",\"next_goal\":\"Open the Coursera homepage.\"},\"action\":[{\"go_to_url\":{\"url\":\"https://www.coursera.org/\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e N/A\n\ud83e\udde0 Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.\n\ud83c\udfaf Open the Coursera homepage.\n\ud83d\udee0\ufe0f Actions: \n - {'go_to_url': {'url': 'https://www.coursera.org/'}}\n"
+        }
+      ],
+      "duration_in_s": 5.407833814620972
+    },
+    {
+      "url": "https://www.coursera.org/",
+      "llm_calls": [
+        {
+          "input_tokens": 3722,
+          "output_tokens": 89,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/', title='Coursera | Degrees, Certificates, & Free Online Courses')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a For\nIndividuals/>\n[1]<a For\nBusinesses/>\n[2]<a For\nUniversities/>\n[3]<a For\nGovernments/>\n[4]<a Coursera/>\n[5]<img />\n[6]<button false;Explore our catalog>Explore/>\n[7]<input What do you want to learn?;text;textbox/>\n[8]<a Online Degrees/>\n[9]<a Careers/>\n[10]<a button>Log In/>\n[11]<a button>Join for Free/>\n[12]<img />\nChoose your path. Grow your career.\nExpert-led programs. Job-ready certificates. 10,000+ ways to grow. All for $25/month, billed annually.\n[13]<a Save on Coursera Plus/>\n[14]<a Save on Teams/>\n[15]<img />\n[16]<a We collaborate with\n350+ leading universities and companies/>\n[17]<a />\n[18]<img />\n[19]<a />\n[20]<img />\n[21]<a />\n[22]<img />\n[23]<a />\n[24]<img />\n[25]<a />\n[26]<img />\n[27]<a />\n[28]<img />\n[29]<a />\n[30]<img />\n[31]<a />\n[32]<img />\nChoose your role\nGain the knowledge and skills you need to advance.\nBeginner\nPopular\nSoftware Engineering & IT\nBusiness\nSales & Marketing\nData Science & Analytics\nHealthcare\n[33]<div description:\nA Data Analyst collects, cleans, and interprets data, using tools like Excel, SQL, and Tableau to analyze trends and provide insights for decisions.\nIf you like:\nanalyzing data to find insights, creating reports and visualizations, working with spreadsheets and databases\n.\nThis role has a\nCHF\u00a0132,494\nmedian salary \u00b9\n.\nThis role has approximately\n1,440\njobs available \u00b9\n.\nCredentials/>\n[34]<img />\n[35]<a Data Analyst, role>Data Analyst/>\n[36]<a Meta Data Analyst\n,/>\n[37]<img />\n[38]<a Google Cloud Data Analytics\n,/>\n[39]<div description:\nA Data Scientist analyzes large datasets to uncover insights, using statistics, machine learning, and visualization to inform business strategies.\nIf you like:\nanalyzing complex datasets, developing machine learning models, solving statistical problems\n.\nThis role has a\nCHF\u00a0155,330\nmedian salary \u00b9\n.\nThis role has approximately\n2,175\njobs available \u00b9\n.\nCredentials/>\n[40]<img />\n[41]<a Data Scientist, role>Data Scientist/>\n[42]<a IBM Data Science/>\n[43]<img />\n[44]<div description:\nA Cyber Security Analyst monitors IT systems, analyzes threats, finds vulnerabilities, and implements measures to protect data from cyber attacks.\nIf you like:\nprotecting networks and data from cyber threats, analyzing security vulnerabilities, developing security protocols\n.\nThis role has a\nCHF\u00a088,857\nmedian salary \u00b9\n.\nThis role has approximately\n572\njobs available \u00b9\n.\nCredentials/>\n[45]<img />\n[46]<a Cyber Security Analyst, role>Cyber Security Analyst/>\n[47]<a Google Cybersecurity\n,/>\n[48]<img />\n... 9724 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 22:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_ihBvrqelAgF2bspMtf3apWiS",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Opened Coursera homepage.\",\"memory\":\"Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.\",\"next_goal\":\"Search for 'Modern Art & Ideas' in the input box.\"},\"action\":[{\"input_text\":{\"index\":7,\"text\":\"Modern Art & Ideas\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Opened Coursera homepage.\n\ud83e\udde0 Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.\n\ud83c\udfaf Search for 'Modern Art & Ideas' in the input box.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 7, 'text': 'Modern Art & Ideas'}}\n"
+        }
+      ],
+      "duration_in_s": 5.605957269668579
+    },
+    {
+      "url": "https://www.coursera.org/",
+      "llm_calls": [
+        {
+          "input_tokens": 4100,
+          "output_tokens": 76,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Coursera homepage.",
+                      "memory": "Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.",
+                      "next_goal": "Search for 'Modern Art & Ideas' in the input box."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 7,
+                          "text": "Modern Art & Ideas"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Modern Art & Ideas into index 7",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/', title='Coursera | Degrees, Certificates, & Free Online Courses')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a For\nIndividuals/>\n[1]<a For\nBusinesses/>\n[2]<a For\nUniversities/>\n[3]<a For\nGovernments/>\n[4]<a Coursera/>\n[5]<img />\n[6]<button false;Explore our catalog>Explore/>\n[7]<input What do you want to learn?;text;textbox;Modern Art & Ideas/>\n[8]<div listbox;Autocomplete results>Most Popular Specializations\nPopular right now/>\n[9]<ul listbox/>\n[10]<li option/>\n[11]<div Most Popular Specializations: IBM Generative AI Engineering, IBM.;presentation>Most Popular Specializations:\nIBM Generative AI Engineering\nIBM/>\n[12]<img />\n[13]<li option/>\n[14]<div Most Popular Specializations: IBM AI Developer, IBM.;presentation>Most Popular Specializations:\nIBM AI Developer\nIBM/>\n[15]<img />\n[16]<li option/>\n[17]<div Most Popular Specializations: IBM AI Product Manager, IBM.;presentation>Most Popular Specializations:\nIBM AI Product Manager\nIBM/>\n[18]<img />\n[19]<ul listbox/>\n[20]<li option/>\n[21]<div Popular right now: machine learning.;presentation>Popular right now:\nmachine learning/>\n[22]<img />\n[23]<li option/>\n[24]<div Popular right now: project management.;presentation>Popular right now:\nproject management/>\n[25]<img />\n[26]<li option/>\n[27]<div Popular right now: cybersecurity.;presentation>Popular right now:\ncybersecurity/>\n[28]<img />\nLoading\n[29]<a Online Degrees/>\n[30]<a Careers/>\n[31]<a button>Log In/>\n[32]<a button>Join for Free/>\n[33]<img />\nChoose your path. Grow your career.\nExpert-led programs. Job-ready certificates. 10,000+ ways to grow. All for $25/month, billed annually.\n[34]<a Save on Coursera Plus/>\nSave on Teams\n[35]<img />\n[36]<a We collaborate with\n350+ leading universities and companies/>\n[37]<a />\n[38]<img />\n[39]<a />\n[40]<img />\n[41]<a />\n[42]<img />\n[43]<a />\n[44]<img />\n[45]<a />\n[46]<img />\n[47]<a />\n[48]<img />\n[49]<a />\n[50]<img />\n[51]<a />\n[52]<img />\nChoose your role\nGain the knowledge and skills you need to advance.\nBeginner\nPopular\nSoftware Engineering & IT\nBusiness\nSales & Marketing\nData Science & Analytics\nHealthcare\n[53]<div description:\nA Data Analyst collects, cleans, and interprets data, using tools like Excel, SQL, and Tableau to analyze trends and provide insights for decisions.\nIf you like:\nanalyzing data to find insights, creating reports and visualizations, working with spreadsheets and databases\n.\nThis role has a\nCHF\u00a0132,494\nmedian salary \u00b9\n.\nThis role has approximately\n1,440\njobs available \u00b9\n.\nCredentials/>\n[54]<img />\n[55]<a Data Analyst, role>Data Analyst/>\n[56]<a Meta Data Analyst\n,/>\n[57]<img />\n[58]<a Google Cloud Data Analytics\n,/>\n[59]<div description:\nA Data Scientist analyzes large datasets to uncover insights, using statistics, machine learning, and visualization to inform business strategies.\nIf you like:\nanalyzing complex datasets, developing machine learning models, solving statistical problems\n.\nThis role has a\nCHF\u00a0155,330\nmedian salary \u00b9\n.\nThis role has approximately\n2,175\njobs available \u00b9\n.\nCredentials/>\n[60]<img />\n[61]<a Data Scientist, role>Data Scientist/>\n[62]<a IBM Data Science/>\n[63]<img />\n[64]<div description:\nA Cyber Security Analyst monitors IT systems, analyzes threats, finds vulnerabilities, and implements measures to protect data from cyber attacks.\nIf you like:\nprotecting networks and data from cyber threats, analyzing security vulnerabilities, developing security protocols\n.\nThis role has a\nCHF\u00a088,857\nmedian salary \u00b9\n.\nThis role has approximately\n572\njobs available \u00b9\n.\nCredentials/>\n[65]<img />\n[66]<a Cyber Security Analyst, role>Cyber Security Analyst/>\n[67]<a Google Cybersecurity\n,/>\n[68]<img />\n... 9724 pixels below - scroll or extract content to see more ...\nCurrent step: 3/20Current date and time: 2025-03-26 22:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_otcMGD6loAgzgxWmVlgNs8DJ",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Input text into the search box.\",\"memory\":\"Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.\",\"next_goal\":\"Trigger the search for 'Modern Art & Ideas' by pressing Enter.\"},\"action\":[{\"send_keys\":{\"keys\":\"Enter\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Input text into the search box.\n\ud83e\udde0 Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.\n\ud83c\udfaf Trigger the search for 'Modern Art & Ideas' by pressing Enter.\n\ud83d\udee0\ufe0f Actions: \n - {'send_keys': {'keys': 'Enter'}}\n"
+        }
+      ],
+      "duration_in_s": 5.774418830871582
+    },
+    {
+      "url": "https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas",
+      "llm_calls": [
+        {
+          "input_tokens": 5305,
+          "output_tokens": 82,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Coursera homepage.",
+                      "memory": "Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.",
+                      "next_goal": "Search for 'Modern Art & Ideas' in the input box."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 7,
+                          "text": "Modern Art & Ideas"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Modern Art & Ideas into index 7",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input text into the search box.",
+                      "memory": "Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.",
+                      "next_goal": "Trigger the search for 'Modern Art & Ideas' by pressing Enter."
+                    },
+                    "action": [
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas', title='Top Modern Art & Ideas Courses - Learn Modern Art & Ideas Online')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a For\nIndividuals/>\n[1]<a For\nBusinesses/>\n[2]<a For\nUniversities/>\n[3]<a For\nGovernments/>\n[4]<a Coursera/>\n[5]<img />\n[6]<button false;Explore our catalog>Explore/>\n[7]<input query;What do you want to learn?;Search catalog;text/>\n[8]<a Online Degrees/>\n[9]<a Careers/>\n[10]<a Log In/>\n[11]<a Join for Free/>\nFilter by\nSkip to search results\nSubject\nRequired\n[12]<input checkbox/>\nBusiness\n(\n434\n)\n[13]<input checkbox/>\nComputer Science\n(\n378\n)\n[14]<input checkbox/>\nArts and Humanities\n(\n341\n)\n[15]<input checkbox/>\nData Science\n(\n147\n)\n[16]<button Show more Subject options>Show 7 more/>\nLanguage\nRequired\n[17]<button false;Information about this filter group/>\n[18]<input checkbox/>\nEnglish\n(\n1,637\n)\n[19]<input checkbox/>\nSpanish\n(\n932\n)\n[20]<input checkbox/>\nArabic\n(\n820\n)\n[21]<input checkbox/>\nPortuguese (Brazil)\n(\n820\n)\n[22]<button Show more Language options>Show 24 more/>\nLearning Product\nRequired\n[23]<input checkbox/>\nGuided Projects\n(\n109\n)\nBuild job-relevant skills in under 2 hours with hands-on tutorials.\n[24]<input checkbox/>\nCourses\n(\n1,482\n)\nLearn from top instructors with graded assignments, videos, and discussion forums.\n[25]<input checkbox/>\nProjects\n(\n7\n)\nLearn a new tool or skill in an interactive, hands-on environment.\n[26]<input checkbox/>\nSpecializations\n(\n215\n)\nGet in-depth knowledge of a subject by completing a series of courses and projects.\n[27]<input checkbox/>\nProfessional Certificates\n(\n13\n)\nEarn career credentials from industry leaders that demonstrate your expertise.\nLevel\nRequired\n[28]<input checkbox/>\nBeginner\n(\n967\n)\n[29]<input checkbox/>\nIntermediate\n(\n574\n)\n[30]<input checkbox/>\nAdvanced\n(\n57\n)\n[31]<input checkbox/>\nMixed\n(\n228\n)\nDuration\nRequired\n[32]<input checkbox/>\nLess Than 2 Hours\n(\n116\n)\n[33]<input checkbox/>\n1-4 Weeks\n(\n750\n)\n[34]<input checkbox/>\n1-3 Months\n(\n760\n)\n[35]<input checkbox/>\n3-6 Months\n(\n200\n)\nSkills\nRequired\n[36]<input Search by keyword;search;Search Skills (1000)/>\nResults for \"Modern Art & Ideas\"\n[37]<div button;false>Sort by\n:\nBest Match/>\nT\nThe Museum of Modern Art\n[38]<a Modern Art & Ideas Course by The Museum of Modern Art, 4.8 stars, by 6.6K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 1 - 3 Months>Modern Art & Ideas/>\nSkills you'll gain\n:\nLiberal Arts, Social Studies, Aesthetics, Cultural Diversity, Design, Storytelling\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n6.6K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\nStatus: Free\nFree\nW\nWesleyan University\n[39]<a The Modern and the Postmodern (Part 1) free Course by Wesleyan University, 4.8 stars, by 1K reviews, provide skills Aesthetics, Liberal Arts, Social Studies etc... Mixed level, 1 - 3 Months>The Modern and the Postmodern (Part 1)/>\nSkills you'll gain\n:\nAesthetics, Liberal Arts, Social Studies, Culture, Political Sciences, Sociology, Social Sciences, Creativity, Economics\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n1K reviews\nMixed \u00b7 Course \u00b7 1 - 3 Months\nStatus: Free\nFree\nY\nYale University\n[40]<a Financial Markets free Course by Yale University, 4.8 stars, by 30K reviews, provide skills Investment Banking, Risk Management, Financial Market etc... Beginner level, 1 - 3 Months>Financial Markets/>\nSkills you'll gain\n:\nInvestment Banking, Risk Management, Financial Market, Financial Regulation, Financial Services, Finance, Business Risk Management, Securities (Finance), Financial Policy, Capital Markets, Behavioral Economics, Banking, Corporate Finance, Governance, Insurance, Underwriting, Equities, Derivatives, Mortgage Loans, Decision Making\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n30K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\nStatus: Free\nFree\nW\nWesleyan University\n[41]<a The Modern and the Postmodern (Part 2) free Course by Wesleyan University, 4.8 stars, by 361 reviews, provide skills Liberal Arts, Aesthetics, Culture etc... Mixed level, 1 - 3 Months>The Modern and the Postmodern (Part 2)/>\nSkills you'll gain\n:\nLiberal Arts, Aesthetics, Culture, Cultural Diversity, Social Studies, Psychology, Political Sciences, Sociology, Creativity, Social Sciences, Higher Education\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n361 reviews\nMixed \u00b7 Course \u00b7 1 - 3 Months\nStatus: Free\nFree\nD\nDeep Teaching Solutions\n[42]<a Learning How to Learn: Powerful mental tools to help you master tough subjects free Course by Deep Teaching Solutions, 4.8 stars, by 92K reviews, provide skills Learning Strategies, Time Management, Willingness To Learn etc... Beginner level, 1 - 4 Weeks>Learning How to Learn: Powerful mental tools to help you master tough subjects/>\nSkills you'll gain\n:\nLearning Strategies, Time Management, Willingness To Learn, Mental Concentration, Creativity, Persistence, Stress Management, Self-Awareness, Adaptability\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n92K reviews\nBeginner \u00b7 Course \u00b7 1 - 4 Weeks\nStatus: Free\nFree\nT\nThe University of Sydney\n[43]<a Innovation Through Design: Think, Make, Break, Repeat free Course by The University of Sydney, 4.7 stars, by 2.1K reviews, provide skills Design Thinking, Human Centered Design, Innovation etc... Beginner level, 1 - 3 Months>Innovation Through Design: Think, Make, Break, Repeat/>\nSkills you'll gain\n:\nDesign Thinking, Human Centered Design, Innovation, Brainstorming, Prototyping, Ideation, Design Strategies, User Experience Design, Product Development, Design, Usability Testing, User Feedback\n4.7\nRating, 4.7 out of 5 stars\n\u00b7\n2.1K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\n[44]<img />\nStatus: Free\nFree\nU\nUniversity of Virginia\n[45]<a The Modern World, Part One: Global History from 1760 to 1910 free Course by University of Virginia, 4.8 stars, by 3K reviews, provide skills International Relations, Social Sciences, Political Sciences etc... Beginner level, 1 - 3 Months>The Modern World, Part One: Global History from 1760 to 1910/>\nSkills you'll gain\n:\nInternational Relations, Social Sciences, Political Sciences, Economics, Economic Development, Socioeconomics, Industrial Engineering, Culture, Governance\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n3K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\n[46]<img />\nG\nGoogle\n[47]<a The Bits and Bytes of Computer Networking Course by Google, 4.7 stars, by 51K reviews, provide skills Computer Networking, Network Troubleshooting, TCP/IP etc... Beginner level, 1 - 3 Months>The Bits and Bytes of Computer Networking/>\nSkills you'll gain\n:\nComputer Networking, Network Troubleshooting, TCP/IP, Network Architecture, Routing Protocols, Network Protocols, OSI Models, Network Infrastructure, Dynamic Host Configuration Protocol (DHCP), Virtual Private Networks (VPN), Network Security, Wireless Networks\n4.7\nRating, 4.7 out of 5 stars\n\u00b7\n51K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\n[48]<img />\nT\nThe Museum of Modern Art\n[49]<a Modern and Contemporary Art and Design Specialization by The Museum of Modern Art, 4.8 stars, by 15K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 3 - 6 Months>Modern and Contemporary Art and Design/>\nSkills you'll gain\n:\nLiberal Arts, Social Studies, Aesthetics, Electronic Media, Culture, Cultural Diversity, Media and Communications, Design, Journalism, Architectural Design, Multimedia, Environmental Issue, Artificial Intelligence, Storytelling, Research, Sociology, Creative Design, Social Justice, Non-Verbal Communication, 3D Modeling\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n15K reviews\nBeginner \u00b7 Specialization \u00b7 3 - 6 Months\n[50]<img />\nStatus: Free\nFree\n[51]<img />\n[52]<img />\nStatus: Free\nFree\n... 3320 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 22:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_G6gndFxSproV4yqGzpXQmeEt",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Search results loaded for 'Modern Art & Ideas'.\",\"memory\":\"Located 'Modern Art & Ideas' by The Museum of Modern Art in search results. Need to click on it to find review details next.\",\"next_goal\":\"Click on 'Modern Art & Ideas' course link to access its details.\"},\"action\":[{\"click_element\":{\"index\":38}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Search results loaded for 'Modern Art & Ideas'.\n\ud83e\udde0 Located 'Modern Art & Ideas' by The Museum of Modern Art in search results. Need to click on it to find review details next.\n\ud83c\udfaf Click on 'Modern Art & Ideas' course link to access its details.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 38}}\n"
+        }
+      ],
+      "duration_in_s": 6.9681291580200195
+    },
+    {
+      "url": "https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas",
+      "llm_calls": [
+        {
+          "input_tokens": 5321,
+          "output_tokens": 86,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Coursera homepage.",
+                      "memory": "Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.",
+                      "next_goal": "Search for 'Modern Art & Ideas' in the input box."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 7,
+                          "text": "Modern Art & Ideas"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Modern Art & Ideas into index 7",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input text into the search box.",
+                      "memory": "Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.",
+                      "next_goal": "Trigger the search for 'Modern Art & Ideas' by pressing Enter."
+                    },
+                    "action": [
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results loaded for 'Modern Art & Ideas'.",
+                      "memory": "Located 'Modern Art & Ideas' by The Museum of Modern Art in search results. Need to click on it to find review details next.",
+                      "next_goal": "Click on 'Modern Art & Ideas' course link to access its details."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 38
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 38: Modern Art & Ideas",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas', title='Top Modern Art & Ideas Courses - Learn Modern Art & Ideas Online')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a For\nIndividuals/>\n[1]<a For\nBusinesses/>\n[2]<a For\nUniversities/>\n[3]<a For\nGovernments/>\nSkip to main content\n[4]<a Coursera/>\n[5]<img />\n[6]<button false;Explore our catalog>Explore/>\n[7]<input What do you want to learn?;text;textbox;Modern Art & Ideas/>\n[8]<a Online Degrees/>\n[9]<a Careers/>\n[10]<a Log In/>\n[11]<a Join for Free/>\nFilter by\nSkip to search results\nSubject\nRequired\n[12]<input checkbox/>\nBusiness\n(\n434\n)\n[13]<input checkbox/>\nComputer Science\n(\n378\n)\n[14]<input checkbox/>\nArts and Humanities\n(\n341\n)\n[15]<input checkbox/>\nData Science\n(\n147\n)\n[16]<button Show more Subject options>Show 7 more/>\nLanguage\nRequired\n[17]<button false;Information about this filter group/>\n[18]<input checkbox/>\nEnglish\n(\n1,637\n)\n[19]<input checkbox/>\nSpanish\n(\n932\n)\n[20]<input checkbox/>\nArabic\n(\n820\n)\n[21]<input checkbox/>\nPortuguese (Brazil)\n(\n820\n)\n[22]<button Show more Language options>Show 24 more/>\nLearning Product\nRequired\n[23]<input checkbox/>\nGuided Projects\n(\n109\n)\nBuild job-relevant skills in under 2 hours with hands-on tutorials.\n[24]<input checkbox/>\nCourses\n(\n1,482\n)\nLearn from top instructors with graded assignments, videos, and discussion forums.\nProjects\n(\n7\n)\nLearn a new tool or skill in an interactive, hands-on environment.\nSpecializations\n(\n215\n)\nGet in-depth knowledge of a subject by completing a series of courses and projects.\nProfessional Certificates\n(\n13\n)\nEarn career credentials from industry leaders that demonstrate your expertise.\nLevel\nRequired\n[25]<input checkbox/>\nBeginner\n(\n967\n)\n[26]<input checkbox/>\nIntermediate\n(\n574\n)\n[27]<input checkbox/>\nAdvanced\n(\n57\n)\n[28]<input checkbox/>\nMixed\n(\n228\n)\nDuration\nRequired\n[29]<input checkbox/>\nLess Than 2 Hours\n(\n116\n)\n[30]<input checkbox/>\n1-4 Weeks\n(\n750\n)\n[31]<input checkbox/>\n1-3 Months\n(\n760\n)\n[32]<input checkbox/>\n3-6 Months\n(\n200\n)\nSkills\nRequired\n[33]<div \u200b/>\n[34]<div />\n[35]<input Search by keyword;search;Search Skills (1000)/>\nResults for \"Modern Art & Ideas\"\n[36]<div \u200b/>\n[37]<div button;false>Sort by\n:\nBest Match/>\n[38]<div The Museum of Modern Art\nSkills you'll gain\n:\nLiberal Arts, Social Studies, Aesthetics, Cultural Diversity, Design, Storytelling\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n6.6K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months/>\n[39]<img />\n[40]<a Modern Art & Ideas Course by The Museum of Modern Art, 4.8 stars, by 6.6K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 1 - 3 Months>Modern Art & Ideas/>\n[41]<div Status: Free\nFree\nWesleyan University\nSkills you'll gain\n:\nAesthetics, Liberal Arts, Social Studies, Culture, Political Sciences, Sociology, Social Sciences, Creativity, Economics\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n1K reviews\nMixed \u00b7 Course \u00b7 1 - 3 Months/>\n[42]<img />\n[43]<a The Modern and the Postmodern (Part 1) free Course by Wesleyan University, 4.8 stars, by 1K reviews, provide skills Aesthetics, Liberal Arts, Social Studies etc... Mixed level, 1 - 3 Months>The Modern and the Postmodern (Part 1)/>\n[44]<div Status: Free\nFree\nYale University\nSkills you'll gain\n:\nInvestment Banking, Risk Management, Financial Market, Financial Regulation, Financial Services, Finance, Business Risk Management, Securities (Finance), Financial Policy, Capital Markets, Behavioral Economics, Banking, Corporate Finance, Governance, Insurance, Underwriting, Equities, Derivatives, Mortgage Loans, Decision Making\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n30K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months/>\n[45]<img />\n[46]<a Financial Markets free Course by Yale University, 4.8 stars, by 30K reviews, provide skills Investment Banking, Risk Management, Financial Market etc... Beginner level, 1 - 3 Months>Financial Markets/>\nStatus: Free\nFree\n[47]<img />\nWesleyan University\nThe Modern and the Postmodern (Part 2)\nSkills you'll gain\n:\nLiberal Arts, Aesthetics, Culture, Cultural Diversity, Social Studies, Psychology, Political Sciences, Sociology, Creativity, Social Sciences, Higher Education\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n361 reviews\nMixed \u00b7 Course \u00b7 1 - 3 Months\nStatus: Free\nFree\n[48]<img />\nDeep Teaching Solutions\nLearning How to Learn: Powerful mental tools to help you master tough subjects\nSkills you'll gain\n:\nLearning Strategies, Time Management, Willingness To Learn, Mental Concentration, Creativity, Persistence, Stress Management, Self-Awareness, Adaptability\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n92K reviews\nBeginner \u00b7 Course \u00b7 1 - 4 Weeks\nStatus: Free\nFree\n[49]<img />\nThe University of Sydney\nInnovation Through Design: Think, Make, Break, Repeat\nSkills you'll gain\n:\nDesign Thinking, Human Centered Design, Innovation, Brainstorming, Prototyping, Ideation, Design Strategies, User Experience Design, Product Development, Design, Usability Testing, User Feedback\n4.7\nRating, 4.7 out of 5 stars\n\u00b7\n2.1K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months\n[50]<div Status: Free\nFree\nUniversity of Virginia\nSkills you'll gain\n:\nInternational Relations, Social Sciences, Political Sciences, Economics, Economic Development, Socioeconomics, Industrial Engineering, Culture, Governance\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n3K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months/>\n[51]<img />\n[52]<img />\n[53]<a The Modern World, Part One: Global History from 1760 to 1910 free Course by University of Virginia, 4.8 stars, by 3K reviews, provide skills International Relations, Social Sciences, Political Sciences etc... Beginner level, 1 - 3 Months>The Modern World, Part One: Global History from 1760 to 1910/>\n[54]<div Google\nSkills you'll gain\n:\nComputer Networking, Network Troubleshooting, TCP/IP, Network Architecture, Routing Protocols, Network Protocols, OSI Models, Network Infrastructure, Dynamic Host Configuration Protocol (DHCP), Virtual Private Networks (VPN), Network Security, Wireless Networks\n4.7\nRating, 4.7 out of 5 stars\n\u00b7\n51K reviews\nBeginner \u00b7 Course \u00b7 1 - 3 Months/>\n[55]<img />\n[56]<img />\n[57]<a The Bits and Bytes of Computer Networking Course by Google, 4.7 stars, by 51K reviews, provide skills Computer Networking, Network Troubleshooting, TCP/IP etc... Beginner level, 1 - 3 Months>The Bits and Bytes of Computer Networking/>\n[58]<div The Museum of Modern Art\nSkills you'll gain\n:\nLiberal Arts, Social Studies, Aesthetics, Electronic Media, Culture, Cultural Diversity, Media and Communications, Design, Journalism, Architectural Design, Multimedia, Environmental Issue, Artificial Intelligence, Storytelling, Research, Sociology, Creative Design, Social Justice, Non-Verbal Communication, 3D Modeling\n4.8\nRating, 4.8 out of 5 stars\n\u00b7\n15K reviews\nBeginner \u00b7 Specialization \u00b7 3 - 6 Months/>\n[59]<img />\n[60]<img />\n[61]<a Modern and Contemporary Art and Design Specialization by The Museum of Modern Art, 4.8 stars, by 15K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 3 - 6 Months>Modern and Contemporary Art and Design/>\n[62]<div Status: Free\nFree/>\n[63]<img />\n[64]<div />\n[65]<img />\n[66]<div Status: Free\nFree/>\n[67]<img />\n... 3320 pixels below - scroll or extract content to see more ...\nCurrent step: 5/20Current date and time: 2025-03-26 22:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_4Jq3or7sIXQipv10B6Bd1TCR",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - The click did not lead to the course details page.\",\"memory\":\"Click on 'Modern Art & Ideas' course link from the search results failed to navigate to the course details page. 0/1 navigation attempt done.\",\"next_goal\":\"Retry clicking on the 'Modern Art & Ideas' link to access course details.\"},\"action\":[{\"click_element\":{\"index\":40}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - The click did not lead to the course details page.\n\ud83e\udde0 Click on 'Modern Art & Ideas' course link from the search results failed to navigate to the course details page. 0/1 navigation attempt done.\n\ud83c\udfaf Retry clicking on the 'Modern Art & Ideas' link to access course details.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 40}}\n"
+        }
+      ],
+      "duration_in_s": 19.18343186378479
+    },
+    {
+      "url": "https://www.coursera.org/learn/modern-art-ideas",
+      "llm_calls": [
+        {
+          "input_tokens": 4752,
+          "output_tokens": 98,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Coursera homepage.",
+                      "memory": "Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.",
+                      "next_goal": "Search for 'Modern Art & Ideas' in the input box."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 7,
+                          "text": "Modern Art & Ideas"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Modern Art & Ideas into index 7",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input text into the search box.",
+                      "memory": "Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.",
+                      "next_goal": "Trigger the search for 'Modern Art & Ideas' by pressing Enter."
+                    },
+                    "action": [
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results loaded for 'Modern Art & Ideas'.",
+                      "memory": "Located 'Modern Art & Ideas' by The Museum of Modern Art in search results. Need to click on it to find review details next.",
+                      "next_goal": "Click on 'Modern Art & Ideas' course link to access its details."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 38
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 38: Modern Art & Ideas",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The click did not lead to the course details page.",
+                      "memory": "Click on 'Modern Art & Ideas' course link from the search results failed to navigate to the course details page. 0/1 navigation attempt done.",
+                      "next_goal": "Retry clicking on the 'Modern Art & Ideas' link to access course details."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 40
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/learn/modern-art-ideas\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas', title='Top Modern Art & Ideas Courses - Learn Modern Art & Ideas Online'), TabInfo(page_id=1, url='https://www.coursera.org/learn/modern-art-ideas', title='Modern Art & Ideas | Coursera')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a For\nIndividuals/>\n[1]<a For\nBusinesses/>\n[2]<a For\nUniversities/>\n[3]<a For\nGovernments/>\n[4]<a Coursera/>\n[5]<img />\n[6]<button false;Explore our catalog>Explore/>\n[7]<input What do you want to learn?;text;textbox/>\n[8]<a Online Degrees/>\n[9]<a Careers/>\n[10]<a Log In/>\n[11]<a Join for Free/>\n[12]<a Home/>\n[13]<a Browse/>\n[14]<a Arts and Humanities/>\n[15]<a Music and Art/>\nCultivate your career with expert-led programs, job-ready certificates, and\n10,000\nways to grow. All for\n$25\n/month, billed annually.\n[16]<a Save now/>\n[17]<button Close/>\n[18]<img />\nModern Art & Ideas\nThis course is part of\n[19]<a Modern and Contemporary Art and Design Specialization/>\n[20]<img />\nInstructor:\n[21]<a Lisa Mazzola/>\n[22]<button submit>Enroll for Free\nStarts Mar 26/>\n460,290\nalready enrolled\nIncluded with\n[23]<img />\n\u2022\n[24]<a Learn more about Coursera Plus>Learn more/>\n[25]<div presentation/>\n[26]<a 6 modules/>\nGain insight into a topic and learn the fundamentals.\n4.8\n(6,571 reviews)\nBeginner level\nNo prior experience required\nFlexible schedule\nApprox. 13 hours\nLearn at your own pace\n98%\nMost learners liked this course\n[27]<a About/>\n[28]<a Outcomes/>\n[29]<a Modules/>\n[30]<a Recommendations/>\n[31]<a Testimonials/>\n[32]<a Reviews/>\nDetails to know\nShareable certificate\nAdd to your LinkedIn profile\nAssessments\n8 assignments\nTaught in English\n24 languages available\nSee how employees at top companies are mastering in-demand skills\n[33]<a Learn more about Coursera for Business/>\n[34]<img />\n[35]<div presentation>Build your subject-matter expertise\nThis course is part of the\nWhen you enroll in this course, you'll also be enrolled in this Specialization.\nLearn new concepts from industry experts\nGain a foundational understanding of a subject or tool\nDevelop job-relevant skills with hands-on projects\nEarn a shareable career certificate/>\n[36]<a Modern and Contemporary Art and Design Specialization/>\n[37]<img />\n... 6326 pixels below - scroll or extract content to see more ...\nCurrent step: 6/20Current date and time: 2025-03-26 22:25\n\nAction error 1/1: ...Failed to click element: <a data-click-key=\"search.search.click.search_card\" data-click-value=\"{\"filtersApplied\":{},\"hitPosition\":0,\"href\":\"/learn/modern-art-ideas\",\"indexName\":\"consumer_products_cohere_embed_english_v3_alias:rt-search-heavy-ranker-cohere-english-prod\",\"indexPosition\":1,\"listIndex\":1,\"namespace\":{\"action\":\"click\",\"app\":\"search\",\"component\":\"search_card\",\"page\":\"search\"},\"noResults\":false,\"objectID\":\"course~v9CQdBkhEeWjrA6seF25aw\",\"query\":\"Modern Art & Ideas\",\"queryID\":\"Modern Art & Ideas\",\"schema_type\":\"FRONTEND\"}\" data-track=\"true\" data-track-app=\"search\" data-track-page=\"search\" data-track-action=\"click\" data-track-component=\"search_card\" data-track-href=\"/learn/modern-art-ideas\" href=\"/learn/modern-art-ideas\" to=\"/learn/modern-art-ideas\" class=\"cds-119 cds-113 cds-115 cds-CommonCard-titleLink css-vflzcf cds-142\" id=\"cds-react-aria-:Rl1kiv6laikta:-product-card-title\" aria-label=\"Modern Art & Ideas Course by The Museum of Modern Art, 4.8 stars, by 6.6K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 1 - 3 Months\" target=\"_blank\" rel=\"noopener noreferrer\"> [interactive, top, highlight:40, in-viewport]. Error: Element: <a data-click-key=\"search.search.click.search_card\" data-click-value=\"{\"filtersApplied\":{},\"hitPosition\":0,\"href\":\"/learn/modern-art-ideas\",\"indexName\":\"consumer_products_cohere_embed_english_v3_alias:rt-search-heavy-ranker-cohere-english-prod\",\"indexPosition\":1,\"listIndex\":1,\"namespace\":{\"action\":\"click\",\"app\":\"search\",\"component\":\"search_card\",\"page\":\"search\"},\"noResults\":false,\"objectID\":\"course~v9CQdBkhEeWjrA6seF25aw\",\"query\":\"Modern Art & Ideas\",\"queryID\":\"Modern Art & Ideas\",\"schema_type\":\"FRONTEND\"}\" data-track=\"true\" data-track-app=\"search\" data-track-page=\"search\" data-track-action=\"click\" data-track-component=\"search_card\" data-track-href=\"/learn/modern-art-ideas\" href=\"/learn/modern-art-ideas\" to=\"/learn/modern-art-ideas\" class=\"cds-119 cds-113 cds-115 cds-CommonCard-titleLink css-vflzcf cds-142\" id=\"cds-react-aria-:Rl1kiv6laikta:-product-card-title\" aria-label=\"Modern Art & Ideas Course by The Museum of Modern Art, 4.8 stars, by 6.6K reviews, provide skills Liberal Arts, Social Studies, Aesthetics etc... Beginner level, 1 - 3 Months\" target=\"_blank\" rel=\"noopener noreferrer\"> [interactive, top, highlight:40, in-viewport] not found"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_eAiAZimzaM6hnryBOD8d9qEx",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Now on the 'Modern Art & Ideas' course page.\",\"memory\":\"Successfully navigated to the 'Modern Art & Ideas' course page. Next, find and analyze reviews, looking for 3-star rating percentage and lowest percentage star level.\",\"next_goal\":\"Scroll to and click on the 'Reviews' section to find detailed reviews.\"},\"action\":[{\"scroll_to_text\":{\"text\":\"Reviews\"}},{\"click_element\":{\"index\":32}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Now on the 'Modern Art & Ideas' course page.\n\ud83e\udde0 Successfully navigated to the 'Modern Art & Ideas' course page. Next, find and analyze reviews, looking for 3-star rating percentage and lowest percentage star level.\n\ud83c\udfaf Scroll to and click on the 'Reviews' section to find detailed reviews.\n\ud83d\udee0\ufe0f Actions: \n - {'scroll_to_text': {'text': 'Reviews'}}\n - {'click_element': {'index': 32}}\n"
+        }
+      ],
+      "duration_in_s": 9.790077924728394
+    },
+    {
+      "url": "https://www.coursera.org/learn/modern-art-ideas#reviews",
+      "llm_calls": [
+        {
+          "input_tokens": 4600,
+          "output_tokens": 122,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage..\n        Please interact with : https://www.coursera.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "N/A",
+                      "memory": "Starting task to find and analyze the course 'Modern Art & Ideas' on Coursera. Starting from about:blank.",
+                      "next_goal": "Open the Coursera homepage."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://www.coursera.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://www.coursera.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Coursera homepage.",
+                      "memory": "Opened Coursera homepage. Next step is to search for the course 'Modern Art & Ideas' offered by The Museum of Modern Art. 0/1 search attempt done.",
+                      "next_goal": "Search for 'Modern Art & Ideas' in the input box."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 7,
+                          "text": "Modern Art & Ideas"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Modern Art & Ideas into index 7",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input text into the search box.",
+                      "memory": "Entered 'Modern Art & Ideas' into search. Next, I need to trigger the search. 0/1 search attempt done.",
+                      "next_goal": "Trigger the search for 'Modern Art & Ideas' by pressing Enter."
+                    },
+                    "action": [
+                      {
+                        "send_keys": {
+                          "keys": "Enter"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Enter",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results loaded for 'Modern Art & Ideas'.",
+                      "memory": "Located 'Modern Art & Ideas' by The Museum of Modern Art in search results. Need to click on it to find review details next.",
+                      "next_goal": "Click on 'Modern Art & Ideas' course link to access its details."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 38
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 38: Modern Art & Ideas",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The click did not lead to the course details page.",
+                      "memory": "Click on 'Modern Art & Ideas' course link from the search results failed to navigate to the course details page. 0/1 navigation attempt done.",
+                      "next_goal": "Retry clicking on the 'Modern Art & Ideas' link to access course details."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 40
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Now on the 'Modern Art & Ideas' course page.",
+                      "memory": "Successfully navigated to the 'Modern Art & Ideas' course page. Next, find and analyze reviews, looking for 3-star rating percentage and lowest percentage star level.",
+                      "next_goal": "Scroll to and click on the 'Reviews' section to find detailed reviews."
+                    },
+                    "action": [
+                      {
+                        "scroll_to_text": {
+                          "text": "Reviews"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 32
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: Text 'Reviews' not found or not visible on page",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 32: Reviews",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.coursera.org/learn/modern-art-ideas#reviews\nAvailable tabs:\n[TabInfo(page_id=0, url='https://www.coursera.org/search?query=Modern%20Art%20%26%20Ideas', title='Top Modern Art & Ideas Courses - Learn Modern Art & Ideas Online'), TabInfo(page_id=1, url='https://www.coursera.org/learn/modern-art-ideas#reviews', title='Modern Art & Ideas | Coursera')]\nInteractive elements from top layer of the current page inside the viewport:\n... 3670 pixels above - scroll or extract content to see more ...\n[0]<div Modern Art & Ideas\nRecommended if you're interested in Music and Art\nShow 8 more\nLearner reviews\n4.8\n6,571\nreviews\n5 stars\n82.85%\n4 stars\n13.43%\n3 stars\n2.51%\n2 stars\n0.60%\n1 star\n0.59%\nShowing 3 of 6571\nC\nCP\n5\nReviewed on Jun 5, 2020\nI found it very interesting and challenging giving me deeper understanding of art as themes and why modern art was linked with the industrial revolution, media and relationship with its audience.\nH\nHB\n5\nReviewed on Mar 27, 2020\nthis course was the most interesting course that I have ever had. I learned lots of special things about the artist and their artworks and it leads me to find my way in my art career. thank you.\nJ\nJK\n5\nReviewed on May 24, 2020\nThank you very much for the experience and the possibility to learn new information about art. It was great to partecipate and I will definitely recommend to my friends and acquaintances.\nEnroll for Free\nStarts Mar 26/>\n[1]<img />\n[2]<button submit>Enroll for Free\nStarts Mar 26/>\n[3]<a About/>\n[4]<a Outcomes/>\n[5]<a Modules/>\n[6]<a Recommendations/>\n[7]<a Testimonials/>\n[8]<a Reviews/>\n[9]<button tab>Recommended/>\n[10]<button tab>Related courses/>\n[11]<button tab>Degrees/>\n[12]<div The Museum of Modern Art\nCourse/>\n[13]<img />\n[14]<img />\n[15]<a Art & Ideas: Teaching with Themes, offered by The Museum of Modern Art, COURSE>Art & Ideas: Teaching with Themes/>\n[16]<div The Museum of Modern Art\nSpecialization/>\n[17]<img />\n[18]<img />\n[19]<a Modern and Contemporary Art and Design, offered by The Museum of Modern Art, SPECIALIZATION>Modern and Contemporary Art and Design/>\n[20]<div The Museum of Modern Art\nCourse/>\n[21]<img />\n[22]<img />\n[23]<a What Is Contemporary Art?, offered by The Museum of Modern Art, COURSE>What Is Contemporary Art?/>\n[24]<div The Museum of Modern Art\nSpecialization/>\n[25]<img />\n[26]<img />\n[27]<a Teaching with Art: Using Inquiry, Activities, and Themes, offered by The Museum of Modern Art, SPECIALIZATION>Teaching with Art: Using Inquiry, Activities, and Themes/>\n[28]<div presentation>Why people choose Coursera for their career\nFelipe M.\nLearner since 2018\n\"To be able to take courses at my own pace and rhythm has been an amazing experience. I can learn whenever it fits my schedule and mood.\"\nJennifer J.\nLearner since 2020\n\"I directly applied the concepts and skills I learned from my courses to an exciting new project at work.\"\nLarry W.\nLearner since 2021\n\"When I need courses on topics that my university doesn't offer, Coursera is one of the best places to go.\"\nChaitanya A.\n\"Learning isn't just about being better at your job: it's so much more than that. Coursera allows me to learn without limits.\"/>\n[29]<img />\n[30]<img />\n[31]<img />\n[32]<img />\n[33]<a View more reviews/>\n[34]<div presentation>Open new doors with Coursera Plus\nUnlimited access to 10,000+ world-class courses, hands-on projects, and job-ready certificate programs - all included in your subscription\nAdvance your career with an online degree\nEarn a degree from world-class universities - 100% online\nJoin over 3,400 global companies that choose Coursera for Business\nUpskill your employees to excel in the digital economy/>\n[35]<img />\n[36]<img />\n[37]<a Learn more about Coursera Plus>Learn more/>\n[38]<img />\n[39]<a Explore degrees/>\n[40]<img />\n[41]<a Learn more about Coursera for Business>Learn more/>\n... 2096 pixels below - scroll or extract content to see more ...\nCurrent step: 7/20Current date and time: 2025-03-26 22:25\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_nAHXd9TdPLvALcjmKHX3j9Mm",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Accessed review ratings successfully.\",\"memory\":\"Found review ratings for 'Modern Art & Ideas'. 3-star percentage is 2.51%. Lowest percentage is 1 star with 0.59%.\",\"next_goal\":\"Finalize the task with the results.\"},\"action\":[{\"done\":{\"text\":\"The course 'Modern Art & Ideas' by The Museum of Modern Art on Coursera has a 3-star review percentage of 2.51%. The lowest percentage among the ratings is 1 star with 0.59%.\",\"success\":true}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Accessed review ratings successfully.\n\ud83e\udde0 Found review ratings for 'Modern Art & Ideas'. 3-star percentage is 2.51%. Lowest percentage is 1 star with 0.59%.\n\ud83c\udfaf Finalize the task with the results.\n\ud83d\udee0\ufe0f Actions: \n - {'done': {'text': \"The course 'Modern Art & Ideas' by The Museum of Modern Art on Coursera has a 3-star review percentage of 2.51%. The lowest percentage among the ratings is 1 star with 0.59%.\", 'success': True}}\n"
+        }
+      ],
+      "duration_in_s": 5.850514888763428
+    }
+  ],
+  "logs": {},
+  "task_description": "Locate the course 'Modern Art & Ideas' on Coursera offered by The Museum of Modern Art. Find out the percentage (rounded) of 3-star ratings in the reviews and note which star level has the lowest percentage.",
+  "task_id": "webvoyager--Coursera--30",
+  "task_website": "Coursera",
+  "reference_answer": "3 stars: 2.5%; 1 star has the lowest percentage",
+  "total_input_tokens": 30713,
+  "total_output_tokens": 620,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_nAHXd9TdPLvALcjmKHX3j9Mm\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Success - Accessed review ratings successfully.\\\",\\\"memory\\\":\\\"Found review ratings for 'Modern Art & Ideas'. 3-star percentage is 2.51%. Lowest percentage is 1 star with 0.59%.\\\",\\\"next_goal\\\":\\\"Finalize the task with the results.\\\"},\\\"action\\\":[{\\\"done\\\":{\\\"text\\\":\\\"The course 'Modern Art & Ideas' by The Museum of Modern Art on Coursera has a 3-star review percentage of 2.51%. The lowest percentage among the ratings is 1 star with 0.59%.\\\",\\\"success\\\":true}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

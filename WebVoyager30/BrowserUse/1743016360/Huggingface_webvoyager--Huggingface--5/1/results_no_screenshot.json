@@ -1,0 +1,834 @@
+{
+  "success": true,
+  "run_id": 1,
+  "eval": {
+    "eval": "success",
+    "reason": "Based on the screenshots and the response:\n\n1. The model identified is \"flax-community/t5-recipe-generation.\"\n2. The information retrieved shows:\n   - Model size: 223M parameters\n   - Tensor type: F32\n\nThe screenshots confirm the details given in the response, matching the model name, size, and tensor type.\n\nVerdict: SUCCESS"
+  },
+  "duration_in_s": 60.57418131828308,
+  "agent_answer": "Model details retrieved for recipe generation: Name - flax-community/t5-recipe-generation, Model size - 223M params, Tensor type - F32.",
+  "task": {
+    "question": "Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type.",
+    "id": "webvoyager--Huggingface--5",
+    "answer": "flax-community/t5-recipe-generation; 223M params; F32",
+    "url": "https://huggingface.co/",
+    "website_name": "Huggingface"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2896,
+          "output_tokens": 87,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type..\n        Please interact with : https://huggingface.co/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 23:47\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_AUzLKwkqHJkl5tzydAJEMXdS",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - A new task is starting, and the browser is ready for interaction.\",\"memory\":\"Task started: Find a model released on Hugging Face for recipe generation. Current step: 1/20 steps completed.\",\"next_goal\":\"Open Hugging Face website in a new tab to begin the search.\"},\"action\":[{\"open_tab\":{\"url\":\"https://huggingface.co/\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - A new task is starting, and the browser is ready for interaction.\n\ud83e\udde0 Task started: Find a model released on Hugging Face for recipe generation. Current step: 1/20 steps completed.\n\ud83c\udfaf Open Hugging Face website in a new tab to begin the search.\n\ud83d\udee0\ufe0f Actions: \n - {'open_tab': {'url': 'https://huggingface.co/'}}\n"
+        }
+      ],
+      "duration_in_s": 11.76763916015625
+    },
+    {
+      "url": "https://huggingface.co/",
+      "llm_calls": [
+        {
+          "input_tokens": 3721,
+          "output_tokens": 84,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type..\n        Please interact with : https://huggingface.co/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - A new task is starting, and the browser is ready for interaction.",
+                      "memory": "Task started: Find a model released on Hugging Face for recipe generation. Current step: 1/20 steps completed.",
+                      "next_goal": "Open Hugging Face website in a new tab to begin the search."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://huggingface.co/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://huggingface.co/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://huggingface.co/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://huggingface.co/', title='Hugging Face \u2013 The AI community building the future.')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a Hugging Face/>\n[1]<img />\n[2]<input Search models, datasets, users...;text/>\n[3]<a Models/>\n[4]<a Datasets/>\n[5]<a Spaces/>\n[6]<a Posts/>\n[7]<a Docs/>\n[8]<a Enterprise/>\n[9]<a Pricing/>\n[10]<button />\n[11]<a Log In/>\n[12]<a Sign Up/>\n[13]<img />\nThe AI community building the future.\nThe platform where the machine learning community collaborates on models, datasets, and applications.\n[14]<a Explore AI Apps/>\nor\n[15]<a Browse 1M+ models/>\nTrending on\n[16]<img />\nthis week\nModels\n[17]<a deepseek-ai/DeepSeek-V3-0324\nUpdated\n1 day ago\n\u2022\n20.1k\n\u2022\n1.69k/>\n[18]<a manycore-research/SpatialLM-Llama-1B\nUpdated\n6 days ago\n\u2022\n5.31k\n\u2022\n696/>\n[19]<a ds4sd/SmolDocling-256M-preview\nUpdated\n3 days ago\n\u2022\n37.1k\n\u2022\n956/>\n[20]<a sesame/csm-1b\nUpdated\n10 days ago\n\u2022\n44.7k\n\u2022\n1.68k/>\n[21]<a ByteDance/InfiniteYou\nUpdated\n1 day ago\n\u2022\n391/>\n[22]<a Browse 1M+ models/>\nSpaces\n[23]<a Running\non\nZero\n401\n401\nInfiniteYou-FLUX\n\ud83d\udcf8\nFlexible Photo Recrafting While Preserving Your Identity/>\n[24]<a Running\n297\n297\nGemini Co-Drawing\n\u270f\nGemini 2.0 native image generation co-doodling/>\n[25]<a Running\non\nL40S\n301\n301\nStable Virtual Camera\n\u26a1\nGenerate virtual camera views from input images/>\n[26]<a Running\non\nZero\n178\n178\nLHM\n\u26a1\nLarge Animatable Human Model/>\n[27]<a Running\non\nZero\n667\n667\nSesame CSM\n\ud83c\udf31\nConversational speech generation/>\n[28]<a Browse 400k+ applications/>\nDatasets\n[29]<a nvidia/Llama-Nemotron-Post-Training-Dataset-v1\nUpdated\n8 days ago\n\u2022\n6.21k\n\u2022\n235/>\n[30]<a glaiveai/reasoning-v1-20m\nUpdated\n7 days ago\n\u2022\n5.34k\n\u2022\n105/>\n[31]<a nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim\nUpdated\n5 days ago\n\u2022\n25.5k\n\u2022\n84/>\n[32]<a FreedomIntelligence/medical-o1-reasoning-SFT\nUpdated\nFeb 22\n\u2022\n27.6k\n\u2022\n551/>\n[33]<a facebook/collaborative_agent_bench\nUpdated\n7 days ago\n\u2022\n70\n\u2022\n43/>\n[34]<a Browse 250k+ datasets/>\n... 4780 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 23:47\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_7KBdYNiKTW9OTumeUdVcos5y",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Opened Hugging Face site in a new tab.\",\"memory\":\"The Hugging Face site is open. Ready to find a recipe generation model. Current step: 2/20 steps completed.\",\"next_goal\":\"Use the search bar to look for a model related to recipe generation.\"},\"action\":[{\"input_text\":{\"index\":2,\"text\":\"recipe generation\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Opened Hugging Face site in a new tab.\n\ud83e\udde0 The Hugging Face site is open. Ready to find a recipe generation model. Current step: 2/20 steps completed.\n\ud83c\udfaf Use the search bar to look for a model related to recipe generation.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 2, 'text': 'recipe generation'}}\n"
+        }
+      ],
+      "duration_in_s": 4.950297117233276
+    },
+    {
+      "url": "https://huggingface.co/",
+      "llm_calls": [
+        {
+          "input_tokens": 4079,
+          "output_tokens": 116,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type..\n        Please interact with : https://huggingface.co/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - A new task is starting, and the browser is ready for interaction.",
+                      "memory": "Task started: Find a model released on Hugging Face for recipe generation. Current step: 1/20 steps completed.",
+                      "next_goal": "Open Hugging Face website in a new tab to begin the search."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://huggingface.co/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://huggingface.co/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Hugging Face site in a new tab.",
+                      "memory": "The Hugging Face site is open. Ready to find a recipe generation model. Current step: 2/20 steps completed.",
+                      "next_goal": "Use the search bar to look for a model related to recipe generation."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "recipe generation"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input recipe generation into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://huggingface.co/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://huggingface.co/', title='Hugging Face \u2013 The AI community building the future.')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a Hugging Face/>\n[1]<img />\n[2]<input Search models, datasets, users...;text/>\nModels\n[3]<a flax-community/t5-recipe-generation/>\n[4]<a Shresthadev403/food-recipe-generation/>\n[5]<a Shresthadev403/controlled-food-recipe-generation/>\n[6]<a emifjo/recipe-generation/>\n[7]<a Shresthadev403/food_recipe_generation/>\n[8]<a Aalaa-07/gpt2-finetuned_recipe_generation/>\n[9]<a See 18 model results for \"recipe generation\"/>\nDatasets\n[10]<a skadewdl3/llama2-recipe-generation-mini/>\n[11]<a supergoose/flan_combined_task571_recipe_nlg_ner_generation/>\n[12]<a supergoose/flan_combined_task572_recipe_nlg_text_generation/>\n[13]<a See 6 dataset results for \"recipe generation\"/>\nSpaces\n[14]<a anhnv125/recipe_generation/>\n[15]<a VinaySingh86/recipe_generation2/>\n[16]<a psusanadams/flax-community-t5-recipe-generation/>\n[17]<a See 8 Space results for \"recipe generation\"/>\n[18]<a Use Full-text search/>\n[19]<a Models/>\n[20]<a Datasets/>\n[21]<a Spaces/>\n[22]<a Posts/>\n[23]<a Docs/>\n[24]<a Enterprise/>\n[25]<a Pricing/>\n[26]<button />\n[27]<a Log In/>\n[28]<a Sign Up/>\n[29]<img />\nThe AI community building the future.\nThe platform where the machine learning community collaborates on models, datasets, and applications.\n[30]<a Explore AI Apps/>\nor\nBrowse 1M+ models\nTrending on\n[31]<img />\nthis week\nModels\n[32]<a deepseek-ai/DeepSeek-V3-0324\nUpdated\n1 day ago\n\u2022\n20.1k\n\u2022\n1.69k/>\n[33]<a manycore-research/SpatialLM-Llama-1B\nUpdated\n6 days ago\n\u2022\n5.31k\n\u2022\n696/>\n[34]<a ds4sd/SmolDocling-256M-preview\nUpdated\n3 days ago\n\u2022\n37.1k\n\u2022\n956/>\n[35]<a sesame/csm-1b\nUpdated\n10 days ago\n\u2022\n44.7k\n\u2022\n1.68k/>\n[36]<a ByteDance/InfiniteYou\nUpdated\n1 day ago\n\u2022\n391/>\n[37]<a Browse 1M+ models/>\nSpaces\n[38]<a Running\non\nZero\n401\n401\nInfiniteYou-FLUX\n\ud83d\udcf8\nFlexible Photo Recrafting While Preserving Your Identity/>\n[39]<a Running\n297\n297\nGemini Co-Drawing\n\u270f\nGemini 2.0 native image generation co-doodling/>\n[40]<a Running\non\nL40S\n301\n301\nStable Virtual Camera\n\u26a1\nGenerate virtual camera views from input images/>\n[41]<a Running\non\nZero\n178\n178\nLHM\n\u26a1\nLarge Animatable Human Model/>\n[42]<a Running\non\nZero\n667\n667\nSesame CSM\n\ud83c\udf31\nConversational speech generation/>\n[43]<a Browse 400k+ applications/>\nDatasets\n[44]<a nvidia/Llama-Nemotron-Post-Training-Dataset-v1\nUpdated\n8 days ago\n\u2022\n6.21k\n\u2022\n235/>\n[45]<a glaiveai/reasoning-v1-20m\nUpdated\n7 days ago\n\u2022\n5.34k\n\u2022\n105/>\n[46]<a nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim\nUpdated\n5 days ago\n\u2022\n25.5k\n\u2022\n84/>\n[47]<a FreedomIntelligence/medical-o1-reasoning-SFT\nUpdated\nFeb 22\n\u2022\n27.6k\n\u2022\n551/>\n[48]<a facebook/collaborative_agent_bench\nUpdated\n7 days ago\n\u2022\n70\n\u2022\n43/>\n[49]<a Browse 250k+ datasets/>\n... 4780 pixels below - scroll or extract content to see more ...\nCurrent step: 3/20Current date and time: 2025-03-26 23:48\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_uQ1aq0XnHP7g2bs9x05eERcU",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - The search for 'recipe generation' models has been executed, and results are available.\",\"memory\":\"Several models related to recipe generation are visible. Current step: 3/20 steps completed. Ready to extract details like model name, size, and tensor type.\",\"next_goal\":\"Extract information about the 'flax-community/t5-recipe-generation' model.\"},\"action\":[{\"extract_content\":{\"goal\":\"Extract details like model name, size, and tensor type for 'flax-community/t5-recipe-generation'.\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - The search for 'recipe generation' models has been executed, and results are available.\n\ud83e\udde0 Several models related to recipe generation are visible. Current step: 3/20 steps completed. Ready to extract details like model name, size, and tensor type.\n\ud83c\udfaf Extract information about the 'flax-community/t5-recipe-generation' model.\n\ud83d\udee0\ufe0f Actions: \n - {'extract_content': {'goal': \"Extract details like model name, size, and tensor type for 'flax-community/t5-recipe-generation'.\"}}\n"
+        }
+      ],
+      "duration_in_s": 13.410597801208496
+    },
+    {
+      "url": "https://huggingface.co/",
+      "llm_calls": [
+        {
+          "input_tokens": 4308,
+          "output_tokens": 91,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type..\n        Please interact with : https://huggingface.co/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - A new task is starting, and the browser is ready for interaction.",
+                      "memory": "Task started: Find a model released on Hugging Face for recipe generation. Current step: 1/20 steps completed.",
+                      "next_goal": "Open Hugging Face website in a new tab to begin the search."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://huggingface.co/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://huggingface.co/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Hugging Face site in a new tab.",
+                      "memory": "The Hugging Face site is open. Ready to find a recipe generation model. Current step: 2/20 steps completed.",
+                      "next_goal": "Use the search bar to look for a model related to recipe generation."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "recipe generation"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input recipe generation into index 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The search for 'recipe generation' models has been executed, and results are available.",
+                      "memory": "Several models related to recipe generation are visible. Current step: 3/20 steps completed. Ready to extract details like model name, size, and tensor type.",
+                      "next_goal": "Extract information about the 'flax-community/t5-recipe-generation' model."
+                    },
+                    "action": [
+                      {
+                        "extract_content": {
+                          "goal": "Extract details like model name, size, and tensor type for 'flax-community/t5-recipe-generation'."
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"model_details\": {\n    \"model_name\": \"flax-community/t5-recipe-generation\",\n    \"size\": null,\n    \"tensor_type\": null\n  }\n}\n```\n\nExplanation: The given page doesn't provide specific details for the model \"flax-community/t5-recipe-generation\" related to its size or tensor type, so these fields are marked as null.\n",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://huggingface.co/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://huggingface.co/', title='Hugging Face \u2013 The AI community building the future.')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<a Hugging Face/>\n[1]<img />\n[2]<input Search models, datasets, users...;text/>\nModels\n[3]<a flax-community/t5-recipe-generation/>\n[4]<a Shresthadev403/food-recipe-generation/>\n[5]<a Shresthadev403/controlled-food-recipe-generation/>\n[6]<a emifjo/recipe-generation/>\n[7]<a Shresthadev403/food_recipe_generation/>\n[8]<a Aalaa-07/gpt2-finetuned_recipe_generation/>\n[9]<a See 18 model results for \"recipe generation\"/>\nDatasets\n[10]<a skadewdl3/llama2-recipe-generation-mini/>\n[11]<a supergoose/flan_combined_task571_recipe_nlg_ner_generation/>\n[12]<a supergoose/flan_combined_task572_recipe_nlg_text_generation/>\n[13]<a See 6 dataset results for \"recipe generation\"/>\nSpaces\n[14]<a anhnv125/recipe_generation/>\n[15]<a VinaySingh86/recipe_generation2/>\n[16]<a psusanadams/flax-community-t5-recipe-generation/>\n[17]<a See 8 Space results for \"recipe generation\"/>\n[18]<a Use Full-text search/>\n[19]<a Models/>\n[20]<a Datasets/>\n[21]<a Spaces/>\n[22]<a Posts/>\n[23]<a Docs/>\n[24]<a Enterprise/>\n[25]<a Pricing/>\n[26]<button />\n[27]<a Log In/>\n[28]<a Sign Up/>\n[29]<img />\nThe AI community building the future.\nThe platform where the machine learning community collaborates on models, datasets, and applications.\n[30]<a Explore AI Apps/>\nor\nBrowse 1M+ models\nTrending on\n[31]<img />\nthis week\nModels\n[32]<a deepseek-ai/DeepSeek-V3-0324\nUpdated\n1 day ago\n\u2022\n20.1k\n\u2022\n1.69k/>\n[33]<a manycore-research/SpatialLM-Llama-1B\nUpdated\n6 days ago\n\u2022\n5.31k\n\u2022\n696/>\n[34]<a ds4sd/SmolDocling-256M-preview\nUpdated\n3 days ago\n\u2022\n37.1k\n\u2022\n956/>\n[35]<a sesame/csm-1b\nUpdated\n10 days ago\n\u2022\n44.7k\n\u2022\n1.68k/>\n[36]<a ByteDance/InfiniteYou\nUpdated\n1 day ago\n\u2022\n391/>\n[37]<a Browse 1M+ models/>\nSpaces\n[38]<a Running\non\nZero\n401\n401\nInfiniteYou-FLUX\n\ud83d\udcf8\nFlexible Photo Recrafting While Preserving Your Identity/>\n[39]<a Running\n297\n297\nGemini Co-Drawing\n\u270f\nGemini 2.0 native image generation co-doodling/>\n[40]<a Running\non\nL40S\n301\n301\nStable Virtual Camera\n\u26a1\nGenerate virtual camera views from input images/>\n[41]<a Running\non\nZero\n178\n178\nLHM\n\u26a1\nLarge Animatable Human Model/>\n[42]<a Running\non\nZero\n667\n667\nSesame CSM\n\ud83c\udf31\nConversational speech generation/>\n[43]<a Browse 400k+ applications/>\nDatasets\n[44]<a nvidia/Llama-Nemotron-Post-Training-Dataset-v1\nUpdated\n8 days ago\n\u2022\n6.21k\n\u2022\n235/>\n[45]<a glaiveai/reasoning-v1-20m\nUpdated\n7 days ago\n\u2022\n5.34k\n\u2022\n105/>\n[46]<a nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim\nUpdated\n5 days ago\n\u2022\n25.5k\n\u2022\n84/>\n[47]<a FreedomIntelligence/medical-o1-reasoning-SFT\nUpdated\nFeb 22\n\u2022\n27.6k\n\u2022\n551/>\n[48]<a facebook/collaborative_agent_bench\nUpdated\n7 days ago\n\u2022\n70\n\u2022\n43/>\n[49]<a Browse 250k+ datasets/>\n... 4780 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 23:48\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_lN6xDSWNVXSScps7dDfW4305",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - Found the model, but can't extract size or tensor type from the current page there was null\",\"memory\":\"Extracted the model name: flax-community/t5-recipe-generation. Other details are missing. Current step: 5/20 steps completed.\",\"next_goal\":\"Click the model link to check for more details like size or tensor type.\"},\"action\":[{\"click_element\":{\"index\":3}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - Found the model, but can't extract size or tensor type from the current page there was null\n\ud83e\udde0 Extracted the model name: flax-community/t5-recipe-generation. Other details are missing. Current step: 5/20 steps completed.\n\ud83c\udfaf Click the model link to check for more details like size or tensor type.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 3}}\n"
+        }
+      ],
+      "duration_in_s": 11.888582944869995
+    },
+    {
+      "url": "https://huggingface.co/flax-community/t5-recipe-generation",
+      "llm_calls": [],
+      "duration_in_s": 9.765014171600342
+    }
+  ],
+  "logs": {},
+  "task_description": "Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type.",
+  "task_id": "webvoyager--Huggingface--5",
+  "task_website": "Huggingface",
+  "reference_answer": "flax-community/t5-recipe-generation; 223M params; F32",
+  "total_input_tokens": 15004,
+  "total_output_tokens": 378,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_lN6xDSWNVXSScps7dDfW4305\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Unknown - Found the model, but can't extract size or tensor type from the current page there was null\\\",\\\"memory\\\":\\\"Extracted the model name: flax-community/t5-recipe-generation. Other details are missing. Current step: 5/20 steps completed.\\\",\\\"next_goal\\\":\\\"Click the model link to check for more details like size or tensor type.\\\"},\\\"action\\\":[{\\\"click_element\\\":{\\\"index\\\":3}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

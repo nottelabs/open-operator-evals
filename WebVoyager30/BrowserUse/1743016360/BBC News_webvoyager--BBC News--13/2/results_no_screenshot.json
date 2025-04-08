@@ -1,0 +1,818 @@
+{
+  "success": true,
+  "run_id": 2,
+  "eval": {
+    "eval": "unknown",
+    "reason": "To properly evaluate the task, we need to determine if the recent news about Trump was found and summarized effectively. Here\u2019s a step-by-step analysis:\n\n1. **Task Requirement**: The instruction was to search for recent news related to Trump and summarize the main points.\n\n2. **Result Response**: The response summarizes a politically themed article on Trump's impact on international relations, specifically focusing on NATO, European security, alliances, and 'Trumpism.'\n\n3. **Screenshots**: The provided screenshots do not contain any visible information from the news article. They show cookie consent forms from the BBC website and do not contribute any news content or headlines related to Trump.\n\n4. **Analysis**: \n   - The screenshots provided do not contain any information about Trump; they only display cookie consent requests from a news website, which suggests that the browsing encountered interference.\n   - The response contains a coherent summary of a news article, which is not supported by any information visible in the screenshots.\n\n5. **Conclusion**: Since the screenshots do not display relevant news content, we must rely on the result response. However, without verification from the screenshots, it is uncertain whether the summary is accurate or recent.\n\n**Verdict**: UNKNOWN"
+  },
+  "duration_in_s": 83.26875400543213,
+  "agent_answer": "The article discusses how Trump's presidency has significantly challenged the established international order. Key points include:\n\n1. Trump's approach has led to questioning the United States' traditional global role, particularly concerning NATO and European security.\n2. Europe's reliance on US security under Trump faces strain, causing European leaders to reconsider their defense strategies.\n3. Trump's foreign policy includes skepticism toward longstanding alliances and criticisms of countries not paying enough for defense.\n4. The article mentions the enduring impact of 'Trumpism' on US foreign policy, suggesting it might outlast his presidency.\n\nThis reflects a significant shift in international relations and poses questions about future global leadership dynamics.",
+  "task": {
+    "question": "Search for recent news related to Trump and summarize the main points.",
+    "id": "webvoyager--BBC News--13",
+    "answer": "<summary> (about Trump)",
+    "url": "https://www.bbc.com/news/",
+    "website_name": "BBC News"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2881,
+          "output_tokens": 77,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Search for recent news related to Trump and summarize the main points..\n        Please interact with : https://www.bbc.com/news/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 21:22\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_fOluGS8jMIsoQeowDcIIHa2M",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - The page is blank, no progress made yet.\",\"memory\":\"Starting search for recent news related to Trump. 0 out of 1 websites visited.\",\"next_goal\":\"Open BBC News website to begin the search for recent news about Trump.\"},\"action\":[{\"open_tab\":{\"url\":\"https://www.bbc.com/news/\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - The page is blank, no progress made yet.\n\ud83e\udde0 Starting search for recent news related to Trump. 0 out of 1 websites visited.\n\ud83c\udfaf Open BBC News website to begin the search for recent news about Trump.\n\ud83d\udee0\ufe0f Actions: \n - {'open_tab': {'url': 'https://www.bbc.com/news/'}}\n"
+        }
+      ],
+      "duration_in_s": 11.178400993347168
+    },
+    {
+      "url": "https://www.bbc.com/news",
+      "llm_calls": [
+        {
+          "input_tokens": 3885,
+          "output_tokens": 61,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Search for recent news related to Trump and summarize the main points..\n        Please interact with : https://www.bbc.com/news/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is blank, no progress made yet.",
+                      "memory": "Starting search for recent news related to Trump. 0 out of 1 websites visited.",
+                      "next_goal": "Open BBC News website to begin the search for recent news about Trump."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.bbc.com/news/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.bbc.com/news/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.bbc.com/news\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.bbc.com/news', title='Home - BBC News')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nRegister\nSign In\nHome\nNews\nSport\nBusiness\nInnovation\nCulture\nArts\nTravel\nEarth\nAudio\nVideo\nLive\nIsrael-Gaza War\nWar in Ukraine\nUS & Canada\nUK\nAfrica\nAsia\nAustralia\nEurope\nLatin America\nMiddle East\nIn Pictures\nBBC InDepth\nBBC Verify\nLIVE\nRubio says someone made a 'big mistake' inviting journalist to Signal chat\nBut the US secretary of state says no messages, which included information about a military strike, threatened the lives of US service members.\nThree sensitive messages from Yemen strike Signal chat unpacked and explained\nWe unpick excerpts from a group chat by high-ranking US security officials about an air strike on Yemen.\n3 hrs ago\nWorld\nBrazil's Bolsonaro to stand trial on coup charges, court rules\nBrazil's top court has ruled that there is enough evidence to warrant that Jair Bolsonaro be put on trial.\n1 hr ago\nLatin America\nJD Vance will join wife in Greenland but trip scaled back\nGreenland's leaders have criticised planned visits by US officials after Trump's threats to annex the island.\n6 hrs ago\nUS & Canada\nLIVE\nZelensky facing questions from BBC's Jeremy Bowen and international journalists\nVolodymyr Zelensky is being interviewed by the BBC's International editor and a panel of European journalists.\nTurkey opposition says protests will continue until jailed mayor is freed\nOpposition leader Ozgur Ozel tells the BBC's Orla Guerin there will be mass rallies \"in every city\".\n2 hrs ago\nWorld\nArmy in full control of Khartoum, Sudan military leader says\n\"Khartoum is free,\" says army chief Abdel Fattah al-Burhan after almost two years of occupation by the RSF.\nJust now\nAfrica\nPoland to suspend migrants' right to apply for asylum\nThe law will allow Polish authorities to temporarily spend asylum rights at the border with Belarus.\n1 hr ago\nEurope\n[0]<div />\n[1]<a Niger coup leader sworn in as president for five years\n2 hrs ago\nAfrica/>\n[2]<div />\n[3]<a Watch: Multiple wildfires ravage South Korea\n12 hrs ago\nAsia/>\n[4]<div />\n[5]<a Harry quits charity he set up in Diana's honour over internal row\n10 hrs ago\nAfrica/>\n[6]<div />\n[7]<a The row that rocked K-pop: NewJeans tell BBC why they spoke out\n8 hrs ago\nAsia/>\n[8]<div />\n[9]<a Thousands turn out for Turkey protests after more than 1,400 arrests\n16 hrs ago\nWorld/>\nMore to explore\n[10]<div />\n[11]<a Trump has blown up the world order - and left Europe's leaders scrabbling/>\n[12]<img />\n[13]<div />\n[14]<a />\n[15]<img />\n[16]<img />\nLet us know you agree to advertising cookies\nWe and our 42 partners use cookies and similar technologies to collect and process personal data from your device, such as your IP address and the pages you visit.\nWe use this data to help us to better understand our audiences and to improve and personalise your experience.\u00a0We also use this data to manage the advertising shown on our services.\u00a0We make money from these ads, which in turn helps to fund our services and the creation of more BBC content.\nPlease let us know if you agree to:\n[17]<button false>Store and/or access information on a device/>\n[18]<button false>Personalised advertising and content, advertising and content measurement, audience research and services development/>\nClick \u201cManage Options\u201d to set your choice for specific purposes and to view the list of our partners. You can find out more in our\n[19]<a advertising cookie notice/>\n.\nTo change your preferences at any other time (including to withdraw consent or opt out of legitimate interest processing) by clicking on\n\u2018Do not share or sell my info\u2018\nat the bottom of any page.\n[20]<button I do not agree/>\n[21]<button I agree/>\n[22]<button Manage options/>\n... 4462 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 21:23\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_p3gHz4rw9SsfG7ObT2ZWsebp",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - BBC News page opened.\",\"memory\":\"Searching for recent news related to Trump on BBC News. 0 out of 1 websites visited.\",\"next_goal\":\"Click on the link related to Trump.\"},\"action\":[{\"click_element\":{\"index\":11}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - BBC News page opened.\n\ud83e\udde0 Searching for recent news related to Trump on BBC News. 0 out of 1 websites visited.\n\ud83c\udfaf Click on the link related to Trump.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 11}}\n"
+        }
+      ],
+      "duration_in_s": 11.032509088516235
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/c2er9j83x0zo",
+      "llm_calls": [
+        {
+          "input_tokens": 3591,
+          "output_tokens": 87,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Search for recent news related to Trump and summarize the main points..\n        Please interact with : https://www.bbc.com/news/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is blank, no progress made yet.",
+                      "memory": "Starting search for recent news related to Trump. 0 out of 1 websites visited.",
+                      "next_goal": "Open BBC News website to begin the search for recent news about Trump."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.bbc.com/news/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.bbc.com/news/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - BBC News page opened.",
+                      "memory": "Searching for recent news related to Trump on BBC News. 0 out of 1 websites visited.",
+                      "next_goal": "Click on the link related to Trump."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 11
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 11: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.bbc.com/news/articles/c2er9j83x0zo\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.bbc.com/news/articles/c2er9j83x0zo', title='How Trump blew up the world order - and left Europe scrabbling')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nRegister\nSign In\nHome\nNews\nSport\nBusiness\nInnovation\nCulture\nArts\nTravel\nEarth\nAudio\nVideo\nLive\nTrump has blown up the world order - and left Europe's leaders scrabbling\n19 hours ago\nShare\nSave\nAllan Little\nSenior correspondent\n\u2022\n@alittl\nBBC\nThis is the gravest crisis for Western security since the end of World War Two, and a lasting one. As one expert puts it, \"Trumpism will outlast his presidency\". But which nations are equipped to step to the fore as the US stands back?\n[0]<button />\n[1]<img />\nRegister for a free BBC account.\n[2]<button />\n[3]<a Register/>\nAlready have an account?\n[4]<button />\n[5]<a Sign in/>\n[6]<img />\nLet us know you agree to advertising cookies\nWe and our 42 partners use cookies and similar technologies to collect and process personal data from your device, such as your IP address and the pages you visit.\nWe use this data to help us to better understand our audiences and to improve and personalise your experience.\u00a0We also use this data to manage the advertising shown on our services.\u00a0We make money from these ads, which in turn helps to fund our services and the creation of more BBC content.\nPlease let us know if you agree to:\n[7]<button false>Store and/or access information on a device/>\n[8]<button false>Personalised advertising and content, advertising and content measurement, audience research and services development/>\nClick \u201cManage Options\u201d to set your choice for specific purposes and to view the list of our partners. You can find out more in our\n[9]<a advertising cookie notice/>\n.\nTo change your preferences at any other time (including to withdraw consent or opt out of legitimate interest processing) by clicking on\n\u2018Do not share or sell my info\u2018\nat the bottom of any page.\n[10]<button I do not agree/>\n[11]<button I agree/>\n[12]<button Manage options/>\n... 11871 pixels below - scroll or extract content to see more ...\nCurrent step: 3/20Current date and time: 2025-03-26 21:23\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_aJdUAGuQeh9SYwxpaBRtY5nd",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Clicked on the link related to Trump on BBC News.\",\"memory\":\"Focused on extracting key points from the Trump-related article. 0 out of 1 articles summarized.\",\"next_goal\":\"Extract content from the current article to summarize the main points related to Trump.\"},\"action\":[{\"extract_content\":{\"goal\":\"summarize the main points related to Trump from the article.\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Clicked on the link related to Trump on BBC News.\n\ud83e\udde0 Focused on extracting key points from the Trump-related article. 0 out of 1 articles summarized.\n\ud83c\udfaf Extract content from the current article to summarize the main points related to Trump.\n\ud83d\udee0\ufe0f Actions: \n - {'extract_content': {'goal': 'summarize the main points related to Trump from the article.'}}\n"
+        }
+      ],
+      "duration_in_s": 31.252723932266235
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/c2er9j83x0zo",
+      "llm_calls": [
+        {
+          "input_tokens": 10646,
+          "output_tokens": 205,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Search for recent news related to Trump and summarize the main points..\n        Please interact with : https://www.bbc.com/news/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is blank, no progress made yet.",
+                      "memory": "Starting search for recent news related to Trump. 0 out of 1 websites visited.",
+                      "next_goal": "Open BBC News website to begin the search for recent news about Trump."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.bbc.com/news/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.bbc.com/news/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - BBC News page opened.",
+                      "memory": "Searching for recent news related to Trump on BBC News. 0 out of 1 websites visited.",
+                      "next_goal": "Click on the link related to Trump."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 11
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 11: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Clicked on the link related to Trump on BBC News.",
+                      "memory": "Focused on extracting key points from the Trump-related article. 0 out of 1 articles summarized.",
+                      "next_goal": "Extract content from the current article to summarize the main points related to Trump."
+                    },
+                    "action": [
+                      {
+                        "extract_content": {
+                          "goal": "summarize the main points related to Trump from the article."
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.bbc.com/news/articles/c2er9j83x0zo\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.bbc.com/news/articles/c2er9j83x0zo', title='How Trump blew up the world order - and left Europe scrabbling')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nRegister\nSign In\nHome\nNews\nSport\nBusiness\nInnovation\nCulture\nArts\nTravel\nEarth\nAudio\nVideo\nLive\nTrump has blown up the world order - and left Europe's leaders scrabbling\n19 hours ago\nShare\nSave\nAllan Little\nSenior correspondent\n\u2022\n@alittl\nBBC\nThis is the gravest crisis for Western security since the end of World War Two, and a lasting one. As one expert puts it, \"Trumpism will outlast his presidency\". But which nations are equipped to step to the fore as the US stands back?\n[0]<button />\n[1]<img />\nRegister for a free BBC account.\n[2]<button />\n[3]<a Register/>\nAlready have an account?\n[4]<button />\n[5]<a Sign in/>\n[6]<img />\nLet us know you agree to advertising cookies\nWe and our 42 partners use cookies and similar technologies to collect and process personal data from your device, such as your IP address and the pages you visit.\nWe use this data to help us to better understand our audiences and to improve and personalise your experience.\u00a0We also use this data to manage the advertising shown on our services.\u00a0We make money from these ads, which in turn helps to fund our services and the creation of more BBC content.\nPlease let us know if you agree to:\n[7]<button false>Store and/or access information on a device/>\n[8]<button false>Personalised advertising and content, advertising and content measurement, audience research and services development/>\nClick \u201cManage Options\u201d to set your choice for specific purposes and to view the list of our partners. You can find out more in our\n[9]<a advertising cookie notice/>\n.\nTo change your preferences at any other time (including to withdraw consent or opt out of legitimate interest processing) by clicking on\n\u2018Do not share or sell my info\u2018\nat the bottom of any page.\n[10]<button I do not agree/>\n[11]<button I agree/>\n[12]<button Manage options/>\n... 11871 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 21:23\n\nAction result 1/1: \ud83d\udcc4  Extracted from page\n: How Trump blew up the world order - and left Europe scrabbling[Skip to content](#main-content)[British Broadcasting Corporation](/)[Register](https://session.bbc.com/session?action=register&userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc2er9j83x0zo)[Sign In](https://session.bbc.com/session?userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc2er9j83x0zo)\n\n* [Home](/)\n* [News](/news)\n* [Sport](/sport)\n* [Business](/business)\n* [Innovation](/innovation)\n* [Culture](/culture)\n* [Arts](/arts)\n* [Travel](/travel)\n* [Earth](/future-planet)\n* [Audio](/audio)\n* [Video](/video)\n* [Live](/live)\n\n* [Home](/home)\n\n\n* [News](/news)\n\n+ [Israel-Gaza War](/news/topics/c2vdnvdg6xxt)\n\n\n+ [War in Ukraine](/news/war-in-ukraine)\n\n\n+ [US & Canada](/news/us-canada)\n\n\n+ [UK](/news/uk)\n\n- [UK Politics](/news/politics)\n\n\n- [England](/news/england)\n\n\n- [N. Ireland](/news/northern_ireland)\n\n* [N. Ireland Politics](/news/northern_ireland/northern_ireland_politics)\n\n\n- [Scotland](/news/scotland)\n\n* [Scotland Politics](/news/scotland/scotland_politics)\n\n\n- [Wales](/news/wales)\n\n* [Wales Politics](/news/wales/wales_politics)\n\n\n+ [Africa](/news/world/africa)\n\n\n+ [Asia](/news/world/asia)\n\n- [China](/news/world/asia/china)\n\n\n- [India](/news/world/asia/india)\n\n\n+ [Australia](/news/world/australia)\n\n\n+ [Europe](/news/world/europe)\n\n\n+ [Latin America](/news/world/latin_america)\n\n\n+ [Middle East](/news/world/middle_east)\n\n\n+ [In Pictures](/news/in_pictures)\n\n\n+ [BBC InDepth](/news/bbcindepth)\n\n\n+ [BBC Verify](/news/bbcverify)\n\n\n* [Sport](/sport)\n\n\n* [Business](/business)\n\n+ [Executive Lounge](/business/executive-lounge)\n\n\n+ [Technology of Business](/business/technology-of-business)\n\n\n+ [Future of Business](/business/future-of-business)\n\n\n* [Innovation](/innovation)\n\n+ [Technology](/innovation/technology)\n\n\n+ [Science & Health](/innovation/science)\n\n\n+ [Artificial Intelligence](/innovation/artificial-intelligence)\n\n\n+ [AI v the Mind](/innovation/ai-v-the-mind)\n\n\n* [Culture](/culture)\n\n+ [Film & TV](/culture/film-tv)\n\n\n+ [Music](/culture/music)\n\n\n+ [Art & Design](/culture/art)\n\n\n+ [Style](/culture/style)\n\n\n+ [Books](/culture/books)\n\n\n+ [Entertainment News](/culture/entertainment-news)\n\n\n* [Arts](/arts)\n\n+ [Arts in Motion](/arts/arts-in-motion)\n\n\n* [Travel](/travel)\n\n+ [Destinations](/travel/destinations)\n\n- [Africa](/travel/destinations/africa)\n\n\n- [Antarctica](/travel/destinations/antarctica)\n\n\n- [Asia](/travel/destinations/asia)\n\n\n- [Australia and Pacific](/travel/destinations/australia-and-pacific)\n\n\n- [Caribbean & Bermuda](/travel/destinations/caribbean)\n\n\n- [Central America](/travel/destinations/central-america)\n\n\n- [Europe](/travel/destinations/europe)\n\n\n- [Middle East](/travel/destinations/middle-east)\n\n\n- [North America](/travel/destinations/north-america)\n\n\n- [South America](/travel/destinations/south-america)\n\n\n+ [World\u2019s Table](/travel/worlds-table)\n\n\n+ [Culture & Experiences](/travel/cultural-experiences)\n\n\n+ [Adventures](/travel/adventures)\n\n\n+ [The SpeciaList](/travel/specialist)\n\n\n* [Earth](/future-planet)\n\n+ [Natural Wonders](/future-planet/natural-wonders)\n\n\n+ [Weather & Science](/future-planet/weather-science)\n\n\n+ [Climate Solutions](/future-planet/solutions)\n\n\n+ [Sustainable Business](/future-planet/sustainable-business)\n\n\n+ [Green Living](/future-planet/green-living)\n\n\n* [Audio](/audio)\n\n+ [Podcasts](/audio/categories)\n\n\n+ [Radio](/audio/stations)\n\n\n+ [Audio FAQs](/undefined)\n\n\n* [Video](/video)\n\n\n* [Live](/live)\n\n+ [Live News](/live/news)\n\n\n+ [Live Sport](/live/sport)\n\n[Register](https://session.bbc.com/session?action=register&userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc2er9j83x0zo)[Sign In](https://session.bbc.com/session?userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc2er9j83x0zo)[Home](/)News[Sport](/sport)BusinessInnovationCultureArtsTravelEarthAudio[Video](/video)Live[Weather](https://www.bbc.com/weather)[Newsletters](https://www.bbc.com/newsletters)\n\nTrump has blown up the world order - and left Europe's leaders scrabbling\n=========================================================================\n\n19 hours agoShareSave![Allan Little profile image](https://ichef.bbci.co.uk/news/480/cpsprodpb/0656/live/4b5816e0-0960-11f0-97d3-37df2b293ed1.png.webp)Allan LittleSenior correspondent\u2022[@alittl](https://twitter.com/alittl)ShareSave![BBC A treated image of a white pawn chess piece with the shadow of a king piece against the backdrop of a world map.](https://ichef.bbci.co.uk/news/480/cpsprodpb/57e5/live/98f5b8f0-098b-11f0-88b7-5556e7b55c5e.png.webp)BBC\n\n**This is the gravest crisis for Western security since the end of World War Two, and a lasting one. As one expert puts it, \"Trumpism will outlast his presidency\". But which nations are equipped to step to the fore as the US stands back?**\n\nAt 09.00 one morning in February 1947, the UK ambassador in Washington, Lord Inverchapel, walked into the State Department to hand the US Secretary of State, George Marshall, two diplomatic messages printed on blue paper to emphasise their importance: one on Greece, the other on Turkey.\n\nExhausted, broke and heavily in debt to the United States, Britain told the US that it could no longer continue its support for the Greek government forces that were fighting an armed Communist insurgency. Britain had already announced plans to pull out of Palestine and India and to wind down its presence in Egypt.\n\nThe United States saw immediately that there was now a real danger that Greece would fall to the Communists and, by extension, to Soviet control. And if Greece went, the United States feared that Turkey could be next, giving Moscow control of the Eastern Mediterranean including, potentially, the Suez Canal, a vital global trade route.\n\nAlmost overnight, the United States stepped into the vacuum left by the departing British.\n\n![Getty Images President Harry S. Truman speaks during a television address from the Oval Office](https://ichef.bbci.co.uk/news/480/cpsprodpb/aefd/live/67d040c0-098f-11f0-88b7-5556e7b55c5e.png.webp)Getty Images\n\nPresident Truman said the United States must support free nations\n\n\"It must be a policy of the United States,\" President Harry Truman announced, \"to support free peoples who are resisting attempted subjugation by armed minorities or by outside pressure.\"\n\nIt was the start of what became known as the Truman Doctrine. At its heart was the idea that helping to defend democracy abroad was vital to the United States' national interests.\n\nThere followed two major US initiatives: the Marshall Plan, a massive package of assistance to rebuild the shattered economies of Europe, and the creation of Nato in 1949, which was designed to defend democracies from a Soviet Union that had now extended its control over the eastern part of Europe.\n\nIt is easy to see this as the moment that leadership of the western world passed from Britain to the United States. More accurately it is the moment that revealed that it already had.\n\nThe United States, traditionally isolationist and safely sheltered by two vast oceans, had emerged from World War Two as the leader of the free world. As America projected its power around the globe, it spent the post-war decades remaking much of the world in its own image.\n\nThe baby boomer generation grew up in a world that looked, sounded and behaved more like the United States than ever before. And it became the western world's cultural, economic and military hegemon.\n\nYet the fundamental assumptions on which the United States has based its geostrategic ambitions now look set to change.\n\n![Reuters US President Trump Meets with his Cabinet in Washington](https://ichef.bbci.co.uk/news/480/cpsprodpb/4d92/live/b394d580-0998-11f0-94d4-6f954f5dcfa3.png.webp)Reuters\n\nDonald Trump is the first US president since World War Two to challenge America's global role\n\nDonald Trump is the first US President since World War Two to challenge the role that his country set for itself many decades ago. And he is doing this in such a way that, to many, the old world order appears to be over - and the new world order has yet to take shape.\n\nThe question is, which nations will step forward? And, with the security of Europe under greater strain than at any time almost in living memory, can its leaders, who are currently scrabbling around, find an adequate response?\n\nA challenge to the Truman legacy\n--------------------------------\n\nPresident Trump's critique of the post-1945 international order dates back decades. Nearly 40 years ago he took out full-page advertisements in three US newspapers to criticise the United States' commitment to the defence of the world's democracies.\n\n\"For decades, Japan and other nations have been taking advantage of the United States,\" he wrote in 1987. \"Why are these nations not paying the United States for the human lives and billions of dollars we are losing to protect their interests?\n\n\"The world is laughing at America's politicians as we protect ships we don't own, carrying oil we don't need, destined for allies who won't help.\"\n\nIt's a position he has repeated since his second inauguration.\n\nAnd the fury felt by some in his administration for what they perceive as European reliance on the United States was apparently shown in the leaked messages about air strikes on Houthis in Yemen that emerged this week.\n\nIn the messages, an account named Vice-President JD Vance wrote that European countries might benefit from the strikes. It said: \"I just hate bailing Europe out again.\"\n\nAnother account, identified as Defence Secretary Pete Hegseth, responded three minutes later: \"VP: I fully share your loathing of European free-loading. It's PATHETIC.\"\n\n![Reuters U.S. Vice President JD Vance listens as President Donald Trump delivers a speech](https://ichef.bbci.co.uk/news/480/cpsprodpb/5c66/live/d4ccb5b0-0998-11f0-97d3-37df2b293ed1.png.webp)Reuters\n\nIn leaked messages, an account named Vice President JD Vance wrote: \"I just hate bailing Europe out again.\"\n\nTrump's own position appears to go beyond criticising those he says are taking advantage of the United State's generosity. At the start of his second presidency, he seemed to embrace Russian President Vladimir Putin, telling Russia that Ukraine would not be granted Nato membership and that it should not expect to get back the territory it has lost to Russia.\n\nMany saw this as giving away two major bargaining chips before talks had even started. He apparently asked Russia for nothing in return.\n\nOn the flipside, certain Trump supporters see in Putin a strong leader who embodies many of the conservative values they themselves share.\n\nTo some, Putin is an ally in a \"war on woke\".\n\n![Reuters U.S. President Donald Trump and Russia\"s President Vladimir Putin talk during the family photo session at the APEC Summit in Danang, Vietnam November 11, 2017](https://ichef.bbci.co.uk/news/480/cpsprodpb/a5cd/live/70e05a10-098f-11f0-97d3-37df2b293ed1.png.webp)Reuters\n\nTrump told Russia that Ukraine would not be granted Nato membership and should not expect to regain the territory it has lost\n\nThe United States' foreign policy is now driven, in part at least, by the imperatives of its culture wars. The security of Europe has become entangled in the battle between two polarised and mutually antagonistic visions of what the United States stands for.\n\nSome think the division is about more than Trump's particular views and that Europe can not just sit tight waiting for his term in office to end.\n\n\"The US is becoming divorced from European values,\" argues Ed Arnold, senior research fellow at the Royal United Services Institute (RUSI) in London. \"That's difficult [for Europeans] to swallow because it means that it's structural, cultural and potentially long-term. \"\n\n\"I think the current trajectory of the US will outlast Trump, as a person. I think Trumpism will outlast his presidency.\"\n\nNato Article 5 'is on life support'\n-----------------------------------\n\nThe Trump White House has said it will no longer be the primary guarantor of European security, and that European nations should be responsible for their own defence and pay for it.\n\n\"If [Nato countries] don't pay, I'm not going to defend them. No, I'm not going to defend them,\" the president said earlier this month.\n\nFor almost 80 years, the cornerstone of European security has been embedded in Article 5 of the North Atlantic Treaty, which states that an attack on one member state of the alliance is an attack on all.\n\nIn Downing Street last month, just before his visit to the White House, the Prime Minister Sir Keir Starmer told me during an interview that he was satisfied that the United States remained the leading member of Nato and that Trump personally remained committed to Article 5.\n\nOthers are less sure.\n\n![](/bbcx/grey-placeholder.png)![Shutterstock US President Donald Trump and Nato Secretary General Mark Rutte during their meeting in the Oval Office of the White House in Washington](https://ichef.bbci.co.uk/news/480/cpsprodpb/0081/live/8586e970-098f-11f0-94d4-6f954f5dcfa3.png.webp)Shutterstock\n\nPresident Trump said earlier this month that he would not defend Nato countries if they failed to meet their financial commitments. (Pictured with Nato Secretary General Mark Rutte) \n\nBen Wallace, who was defence secretary in the last Conservative government, told me earlier this month: \"I think Article 5 is on life support.\n\n\"If Europe, including the United Kingdom, doesn't step up to the plate, invest a lot on defence and take it seriously, it's potentially the end of the Nato that we know and it'll be the end of Article 5.\n\n\"Right now, I wouldn't bet my house that Article 5 would be able to be triggered in the event of a Russian attack\u2026 I certainly wouldn't take for granted that the United States would ride to the rescue.\"\n\nAccording to polling by the French company Institut Elabe, nearly three quarters of French people now think that the United States is not an ally of France. A majority in Britain and a very large majority in Denmark, both historically pro-American countries, now have unfavourable views of the United States as well.\n\n\"The damage Trump has done to Nato is probably irreparable,\" argues Robert Kagan, a conservative commentator, author and senior fellow at the Brookings Institute in Washington DC who has been a long time critic of Trump.\n\n\"The alliance relied on an American guarantee that is no longer reliable, to say the least\".\n\nAnd yet Trump is by no means the first US president to tell Europe to get its defence spending in order. In 2016 Barack Obama urged Nato allies to increase theirs, saying: \"Europe has sometimes been complacent about its own defence.\"\n\nHas a 'fragmentation of the West' begun?\n----------------------------------------\n\nAll of this is great news for Putin. \"The entire system of Euro-Atlantic security is crumbling before our eyes,\" he said last year. \"Europe is being marginalised in global economic development, plunged into the chaos of challenges such as migration, and losing international agency and cultural identity.\"\n\nIn early March, three days after Volodymyr Zelensky's disastrous meeting with Trump and Vance in the White House, a Kremlin spokesman declared \"the fragmentation of the West has begun\".\n\n![](/bbcx/grey-placeholder.png)![Reuters U.S. President Donald Trump meets with Ukrainian President Volodymyr Zelenskiy at the White House in Washington](https://ichef.bbci.co.uk/news/480/cpsprodpb/9cb1/live/49ccb090-098f-11f0-88b7-5556e7b55c5e.png.webp)Reuters\n\nZelensky's tense meeting with Trump and Vance at the White House earlier this month prompted a Kremlin spokesman to declare that \"the fragmentation of the West has begun\"\n\n\"Look at Russia's objectives in Europe,\" says Armida van Rij, head of the Europe programme at Chatham House. \"Its objectives are to destabilise Europe. It is to weaken Nato, and get the Americans to withdraw their troops from here.\n\n\"And at the moment you could go 'tick, tick and almost tick'. Because it is destabilising Europe. It is weakening Nato. It hasn't gone as far as to get the US to withdraw troops from Europe, but in a few months time, who knows where we'll be?\"\n\n'We forgot the lessons of our history'\n--------------------------------------\n\nOne of the great challenges Europe, in particular, faces from here is the question of how to arm itself adequately. Eighty years of reliance on the might of the United States has left many European democracies exposed.\n\nBritain, for example, has cut military spending by nearly 70% since the height of the Cold War. (At the end of the Cold War, in the early 1990s, Europe allowed itself a peace dividend and began a decades-long process of reducing defence spending.)\n\n\"We had a big budget [during the Cold War] and we took a peace dividend,\" says Wallace. \"Now, you could argue that that was warranted.\n\n\"The problem is we went from a peace dividend to corporate raiding. [Defence] just became the go-to department to take money from. And that is where we just forgot the lessons of our history.\"\n\nThe prime minister told parliament last month that Britain would increase defence spending from 2.3% of GDP to 2.5% by 2027. But is that enough?\n\n\"It isn't enough just to stand still,\" argues Wallace. \"It wouldn't be enough to fix the things we need to make ourselves more deployable, and to plug the gaps if the Americans left.\"\n\n![](/bbcx/grey-placeholder.png)![Getty Images A conference table ready for a press conference for Lord Carrington, the Secretary General of NATO in Brussels (12th December 1984)](https://ichef.bbci.co.uk/news/480/cpsprodpb/1212/live/60e85ea0-098f-11f0-97d3-37df2b293ed1.png.webp)Getty Images\n\nUncertainty remains over whether the US, under Trump, can still be relied upon to defend its Nato allies\n\nThen there is the wider question of military recruitment. \"The West is in freefall in its military recruiting, it's not just Britain,\" argues Wallace.\n\n\"At the moment, young people aren't joining the military. And that's a problem.\"\n\nBut Germany's new Chancellor-in-waiting, Friedrich Merz, has said Europe must make itself independent of the United States. And \"Europeanising\" NATO will require the build up of an indigenous European military-industrial complex capable of delivering capabilities that currently only the United States has.\n\nOthers share the view that Europe must become more self reliant militarily - but some are concerned that not all of Europe is on board with this.\n\n\"Where we are at the moment is that the East Europeans by and large, don't need to get the memo,\" says Ian Bond, deputy director, Centre for European Reform. \"The further west you go, the more problematic it becomes until you get to Spain and Italy.\"\n\nMr Arnold agrees: \"The view in Europe now is this isn't really a debate anymore, it's a debate of how we do it and maybe how quickly we do it, but we need to do this now.\"\n\nPiecing together a new world order\n----------------------------------\n\nThere is a short list of \"very important things\" that only the United States currently provides, according to historian Timothy Garton Ash.\n\n\"These are the so-called strategic enablers,\" he says. \"The satellites, the intelligence, the Patriot air defence batteries, which are the only ones that can take down Russian ballistic missiles. And within three to five years we [countries other than the US] should aim to have our own version of these.\n\n\"And in this process of transition, from the American-led Nato [the idea is] you will have a Nato that is so Europeanised that its forces, together with national forces and EU capacities, are capable of defending Europe - even if an American president says 'leave us out of this'.\"\n\nThe question is how to achieve this.\n\nMs van Rij stresses that, in her view, Europe does need to build a Europe-owned European defence industrial base - but she foresees difficulties.\n\n\"What's really difficult are the divisions within Europe on how to actually do this and whether to actually do this.\"\n\n![](/bbcx/grey-placeholder.png)![Getty Images President Harry S. Truman (1884 - 1972) signing the North Atlantic Treaty which marked the beginning of NATO](https://ichef.bbci.co.uk/news/480/cpsprodpb/69fc/live/5de66940-098f-11f0-88b7-5556e7b55c5e.png.webp)Getty Images\n\nFormer U.S President Harry S. Truman (1884\u20131972) signs the North Atlantic Treaty, formally establishing NATO\n\nThe European Commission and experts have been trying to figure out how this defence may work for several decades. \"It has traditionally been very difficult because of vested national interests... So this is not going to be easy.\"\n\nIn the meantime, Trump appears ready to turn the page on the post-Cold War rules-based international order of sovereign states that are free to choose their own destinies and alliances.\n\nWhat he seems to share with Vladimir Putin is a desire for a world in which the major powers, unconstrained by internationally agreed laws, are free to impose their will on smaller, weaker nations, as Russia has traditionally done in both its Tsarist and Soviet Empires. That would mean a return to the \"spheres of interest\" system that prevailed for 40 years after the Second World War.\n\nWe don't know exactly what Donald Trump would do were a Nato country to be attacked. But the point is that the guarantee of US help can no longer be taken for granted. That means Europe has to react. Its challenge appears to be to stay united, finally make good on funding its own defence, and avoid being drawn into the \"sphere of influence\" of any of the big powers.\n\n[*BBC InDepth*](https://www.bbc.co.uk/news/bbcindepth) *is the home on the website and app for the best analysis, with fresh perspectives that challenge assumptions and deep reporting on the biggest issues of the day. And we showcase thought-provoking content from across BBC Sounds and iPlayer too. You can send us your feedback on the InDepth section by clicking on the button below.*\n\nMore from InDepth[Rachel Reeves is feeling the heat ahead of her Spring Statement\n---------------------------------------------------------------](https://www.bbc.co.uk/news/articles/c0egy79qx93o)[Russia's next move? The countries trying to Putin-proof themselves\n------------------------------------------------------------------](https://www.bbc.co.uk/news/articles/ceqjd11l55wo)[The unexpected knock-on effect of Trump's minerals 'deal of the century'\n------------------------------------------------------------------------](https://www.bbc.co.uk/news/articles/c30mjedjzgpo)![](/bbcx/grey-placeholder.png)![A thin, grey banner promoting the US Politics Unspun newsletter. On the right, there is an image of North America correspondent Anthony Zurcher, wearing a blue suit and shirt and grey tie. Behind him is a visualisation of the Capitol Building on vertical red, grey and blue stripes. The banner reads: \"The newsletter that cuts through the noise.\u201d](https://ichef.bbci.co.uk/news/480/cpsprodpb/68ab/live/4a2d1da0-0a1f-11f0-88b7-5556e7b55c5e.png.webp)\n\nFollow the twists and turns of Trump's second term with North America correspondent Anthony Zurcher's weekly [US Politics Unspun](https://www.bbc.co.uk/news/world-us-canada-68093155) newsletter. Readers in the UK can [sign up here](https://www.bbc.co.uk/newsletters/zgmn46f). Those outside the UK can [sign up here](https://cloud.email.bbc.com/US_Politics_Unspun_Newsletter_Signup).\n\n[Greece](/news/topics/c40rjmqdqrlt)[Volodymyr Zelensky](/news/topics/c4vvr0ergrzt)[Donald Trump](/news/topics/cp7r8vgl2lgt)[Nato](/news/topics/cp7r8vglgeet)[Vladimir Putin](/news/topics/cvenzmgywd4t)[United States](/news/topics/cx1m7zg01xyt)\n\n---\n\nRelated['A return to Scotland's worst of times under Clarke'\n----------------------------------------------------\n\n3 days agoFootball](/sport/football/articles/cz9nzve7dyqo)[Slick Greece stroll to win that relegates Scotland in Nations League\n--------------------------------------------------------------------\n\n3 days agoFootball](/sport/videos/c3e4q0pjgwgo)[Scotland concede 13 seconds after break to go three down against Greece\n-----------------------------------------------------------------------\n\n3 days agoFootball](/sport/videos/c36wl4yzkl0o)\n\n---\n\nMore[2 hrs ago![](/bbcx/grey-placeholder.png)![Parts of a kit than can be easily assembled into a gun displayed on a desk](https://ichef.bbci.co.uk/news/480/cpsprodpb/a56d/live/c3b489e0-0a6c-11f0-ab11-d94b4b5d9c9d.jpg.webp)\n\nUS Supreme Court upholds Biden's 'ghost guns' crackdown\n-------------------------------------------------------\n\nThe Biden-era regulations require gun makers to perform background checks on people who purchase the weapons kits.\n\n2 hrs agoUS & Canada](/news/articles/cy8303xnjl8o)[3 hrs ago![Pete Hegseth and JD Vance are pictured with a screenshot of messages by Waltz and Vance overlaid. The message from Vance says &quot;Excellent&quot; and from Waltz it's three emojis - fist bumb, USA flag and a fire](https://ichef.bbci.co.uk/news/480/cpsprodpb/3c59/live/d4020d70-0a6e-11f0-97d3-37df2b293ed1.png.webp)\n\nThree sensitive messages from Yemen strike Signal chat unpacked and explained\n-----------------------------------------------------------------------------\n\nWe unpick excerpts from a group chat by high-ranking US security officials about an air strike on Yemen.\n\n3 hrs agoWorld](/news/articles/cj0q5r7ggnlo)[5 hrs ago![](/bbcx/grey-placeholder.png)![Brent Bozell in a blue-stripped jacket and printed tie](https://ichef.bbci.co.uk/news/480/cpsprodpb/d34a/live/b5d84480-0a56-11f0-a4e7-c7ed371222d2.jpg.webp)\n\nTrump names conservative media critic as US ambassador to South Africa\n----------------------------------------------------------------------\n\nBrent Bozell's nomination comes at a time when relations between South Africa and the United States are at a low point.\n\n5 hrs agoWorld](/news/articles/c86p8q482x3o)[5 hrs ago![](/bbcx/grey-placeholder.png)![JD Vance, Pete Hegseth and Mike Waltz sit on a yellow sofa wearing suits laughing.](https://ichef.bbci.co.uk/news/480/cpsprodpb/15d0/live/ae28c980-098e-11f0-97d3-37df2b293ed1.jpg.webp)\n\nWatch: How the Signal group chat fallout unfolded\n-------------------------------------------------\n\nSome of the key reactions to reports that a journalist was inadvertently added to a chat with high-level Trump officials discussing air strikes in Yemen.\n\n5 hrs agoUS & Canada](/news/videos/cyver5v6197o)[6 hrs ago![](/bbcx/grey-placeholder.png)![JD Vance, wearing a suit with a red tie, and his wife Usha in a pink outfit arriving at St John's Episcopal Church in Washington DC on Monday, 20 January ](https://ichef.bbci.co.uk/news/480/cpsprodpb/1ae7/live/ae862120-0a51-11f0-88b7-5556e7b55c5e.png.webp)\n\nJD Vance will join wife in Greenland but trip scaled back\n---------------------------------------------------------\n\nGreenland's leaders have criticised planned visits by US officials after Trump's threats to annex the island.\n\n6 hrs agoUS & Canada](/news/articles/cvgwjllld1ro)\n\n---\n\n[British Broadcasting Corporation](/)\n\n* [Home](https://www.bbc.com/)\n* [News](/news)\n* [Sport](/sport)\n* [Business](/business)\n* [Innovation](/innovation)\n* [Culture](/culture)\n* [Arts](/arts)\n* [Travel](/travel)\n* [Earth](/future-planet)\n* [Audio](/audio)\n* [Video](/video)\n* [Live](/live)\n* [Weather](https://www.bbc.com/weather)\n* [BBC Shop](https://shop.bbc.com/)\n* [BritBox](https://www.britbox.com/?utm_source=bbc.com&utm_medium=referral&utm_campaign=footer)\nBBC in other languages\n\nFollow BBC on:\n--------------\n\n* [Terms of Use](https://www.bbc.co.uk/usingthebbc/terms)\n* [About the BBC](https://www.bbc.co.uk/aboutthebbc)\n* [Privacy Policy](https://www.bbc.com/usingthebbc/privacy/)\n* [Cookies](https://www.bbc.com/usingthebbc/cookies/)\n* [Accessibility Help](https://www.bbc.co.uk/accessibility/)\n* [Contact the BBC](https://www.bbc.co.uk/contact)\n* [Advertise with us](https://www.bbc.com/advertisingcontact)\n* [Do not share or sell my info](https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/)\n* [Contact technical support](https://www.bbc.com/contact-bbc-com-help)\n\nCopyright 2025 BBC. All rights reserved.\u00a0The *BBC* is *not responsible for the content of external sites.*\u00a0[**Read about our approach to external linking.**](https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links)\n\nLet us know you agree to cookies\n--------------------------------\n\nWe use [cookies](https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/) to give you the best online experience.\n\nPlease let us know if you agree to all of these cookies.\n\n* Yes, I agree\n* [No, take me to settings](https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/)\n\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_KjNw4DEzftkMYdb9c38Ox5eR",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Main points related to recent news about Trump have been extracted.\",\"memory\":\"Extracted the main points about Trump's impact on international relations. 1 out of 1 articles summarized.\",\"next_goal\":\"Summarize the main points and complete the task.\"},\"action\":[{\"done\":{\"text\":\"The article discusses how Trump's presidency has significantly challenged the established international order. Key points include:\\n\\n1. Trump's approach has led to questioning the United States' traditional global role, particularly concerning NATO and European security.\\n2. Europe's reliance on US security under Trump faces strain, causing European leaders to reconsider their defense strategies.\\n3. Trump's foreign policy includes skepticism toward longstanding alliances and criticisms of countries not paying enough for defense.\\n4. The article mentions the enduring impact of 'Trumpism' on US foreign policy, suggesting it might outlast his presidency.\\n\\nThis reflects a significant shift in international relations and poses questions about future global leadership dynamics.\",\"success\":true}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Main points related to recent news about Trump have been extracted.\n\ud83e\udde0 Extracted the main points about Trump's impact on international relations. 1 out of 1 articles summarized.\n\ud83c\udfaf Summarize the main points and complete the task.\n\ud83d\udee0\ufe0f Actions: \n - {'done': {'text': \"The article discusses how Trump's presidency has significantly challenged the established international order. Key points include:\\n\\n1. Trump's approach has led to questioning the United States' traditional global role, particularly concerning NATO and European security.\\n2. Europe's reliance on US security under Trump faces strain, causing European leaders to reconsider their defense strategies.\\n3. Trump's foreign policy includes skepticism toward longstanding alliances and criticisms of countries not paying enough for defense.\\n4. The article mentions the enduring impact of 'Trumpism' on US foreign policy, suggesting it might outlast his presidency.\\n\\nThis reflects a significant shift in international relations and poses questions about future global leadership dynamics.\", 'success': True}}\n"
+        }
+      ],
+      "duration_in_s": 29.804303884506226
+    }
+  ],
+  "logs": {},
+  "task_description": "Search for recent news related to Trump and summarize the main points.",
+  "task_id": "webvoyager--BBC News--13",
+  "task_website": "BBC News",
+  "reference_answer": "<summary> (about Trump)",
+  "total_input_tokens": 21003,
+  "total_output_tokens": 430,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_KjNw4DEzftkMYdb9c38Ox5eR\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Success - Main points related to recent news about Trump have been extracted.\\\",\\\"memory\\\":\\\"Extracted the main points about Trump's impact on international relations. 1 out of 1 articles summarized.\\\",\\\"next_goal\\\":\\\"Summarize the main points and complete the task.\\\"},\\\"action\\\":[{\\\"done\\\":{\\\"text\\\":\\\"The article discusses how Trump's presidency has significantly challenged the established international order. Key points include:\\\\n\\\\n1. Trump's approach has led to questioning the United States' traditional global role, particularly concerning NATO and European security.\\\\n2. Europe's reliance on US security under Trump faces strain, causing European leaders to reconsider their defense strategies.\\\\n3. Trump's foreign policy includes skepticism toward longstanding alliances and criticisms of countries not paying enough for defense.\\\\n4. The article mentions the enduring impact of 'Trumpism' on US foreign policy, suggesting it might outlast his presidency.\\\\n\\\\nThis reflects a significant shift in international relations and poses questions about future global leadership dynamics.\\\",\\\"success\\\":true}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

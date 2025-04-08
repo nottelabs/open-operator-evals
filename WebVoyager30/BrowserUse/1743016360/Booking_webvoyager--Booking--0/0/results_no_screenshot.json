@@ -1,0 +1,612 @@
+{
+  "success": false,
+  "run_id": 0,
+  "eval": {
+    "eval": "failure",
+    "reason": "The task was to find a Mexico hotel with deals for July 25-26. \n\nBased on the screenshots:\n- The calendar is displaying months in 2025, specifically showing views for March, April, May, August, and September, but not July 2025.\n- The Result Response confirms that the calendar navigation did not reach July 2025 and acknowledges continued navigation attempts were needed.\n\nSince the month of July 2025 was not reached and hence no hotel deals for July 25-26 in Mexico were found or displayed, the task was not completed successfully.\n\n**Verdict: NOT SUCCESS**"
+  },
+  "duration_in_s": 218.85521292686462,
+  "agent_answer": "current_state=AgentBrain(evaluation_previous_goal='Failed - Still needing to select the correct month to July 2025.', memory='In the attempt to reach and select July dates. Currently at May 2025 on the calendar. Action count 13/20.', next_goal='Continue navigating through the calendar to reach July 2025.') action=[ActionModel(done=None, search_google=None, go_to_url=None, go_back=None, wait=None, click_element=ClickElementAction(index=28, xpath=None), input_text=None, switch_tab=None, open_tab=None, extract_content=None, scroll_down=None, scroll_up=None, send_keys=None, scroll_to_text=None, get_dropdown_options=None, select_dropdown_option=None), ActionModel(done=None, search_google=None, go_to_url=None, go_back=None, wait=None, click_element=ClickElementAction(index=28, xpath=None), input_text=None, switch_tab=None, open_tab=None, extract_content=None, scroll_down=None, scroll_up=None, send_keys=None, scroll_to_text=None, get_dropdown_options=None, select_dropdown_option=None), ActionModel(done=None, search_google=None, go_to_url=None, go_back=None, wait=None, click_element=ClickElementAction(index=28, xpath=None), input_text=None, switch_tab=None, open_tab=None, extract_content=None, scroll_down=None, scroll_up=None, send_keys=None, scroll_to_text=None, get_dropdown_options=None, select_dropdown_option=None), ActionModel(done=None, search_google=None, go_to_url=None, go_back=None, wait=None, click_element=None, input_text=None, switch_tab=None, open_tab=None, extract_content=None, scroll_down=None, scroll_up=None, send_keys=None, scroll_to_text=scroll_to_text_parameters(text='29/30'), get_dropdown_options=None, select_dropdown_option=None)]",
+  "task": {
+    "question": "Find a Mexico hotel with deals for July 25-26.",
+    "id": "webvoyager--Booking--0",
+    "answer": "Be Local",
+    "url": "https://www.booking.com/",
+    "website_name": "Booking"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2879,
+          "output_tokens": 82,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a Mexico hotel with deals for July 25-26..\n        Please interact with : https://www.booking.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 21:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_qFMnueUIPpJhLTX6WROYnrU8",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - The page is currently blank, so I need to start the task.\",\"memory\":\"Starting the task to find a Mexico hotel with deals for July 25-26. Open 0 out of 10 steps.\",\"next_goal\":\"Open the Booking.com website to search for hotels.\"},\"action\":[{\"open_tab\":{\"url\":\"https://www.booking.com\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - The page is currently blank, so I need to start the task.\n\ud83e\udde0 Starting the task to find a Mexico hotel with deals for July 25-26. Open 0 out of 10 steps.\n\ud83c\udfaf Open the Booking.com website to search for hotels.\n\ud83d\udee0\ufe0f Actions: \n - {'open_tab': {'url': 'https://www.booking.com'}}\n"
+        }
+      ],
+      "duration_in_s": 6.998450040817261
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [
+        {
+          "input_tokens": 3810,
+          "output_tokens": 93,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a Mexico hotel with deals for July 25-26..\n        Please interact with : https://www.booking.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently blank, so I need to start the task.",
+                      "memory": "Starting the task to find a Mexico hotel with deals for July 25-26. Open 0 out of 10 steps.",
+                      "next_goal": "Open the Booking.com website to search for hotels."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.booking.com"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.booking.com",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.booking.com/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.booking.com/', title='Booking.com | Official site | The best hotels, flights, car rentals & accommodations')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div More/>\n[1]<a Booking.com/>\n[2]<button Prices in U.S. Dollar>USD/>\n[3]<button Language: English (US)/>\n[4]<img presentation/>\n[5]<a Customer support/>\n[6]<a List your property/>\n[7]<a Register an account>Register/>\n[8]<a Sign in/>\n[9]<a Stays/>\n[10]<a Flights/>\n[11]<a Flight + Hotel/>\n[12]<a Car rentals/>\n[13]<a Cruises/>\n[14]<a Attractions/>\n[15]<a Airport taxis/>\n[16]<div Find deals for any season\nFrom cozy bed & breakfasts to luxury hotels/>\n[17]<div I\u2019m looking for flights/>\n[18]<input ss;false;combobox;Where are you going?/>\n[19]<div none>\u2014/>\n[20]<button Check-in date/>\n[21]<button Check-out date/>\n[22]<button false>2 adults \u00b7 0 children \u00b7 1 room/>\n[23]<button submit>Search/>\n[24]<div Offers\nPromotions, deals, and special offers for you\nSave on stays worldwide\nStart your year with an adventure, saving 15% or more with Early 2025 Deals.\nQuick escape, quality time\nSave up to 20% with a Getaway Deal/>\n[25]<a Search for Early 2025 Deals>Save 15% or more/>\n[26]<img />\n[27]<a Find Getaway Deals>Save on stays/>\n[28]<img />\n[29]<div progressbar/>\n[30]<div Travel more, spend less\nSign in, save money\nSave 10% or more at participating properties \u2013 just look for the blue Genius label/>\n[31]<a Sign in/>\n[32]<a Register/>\n[33]<img presentation/>\nDeals for the weekend\nSave on stays for March 28 - March 30\nEsteem Tour Eiffel\nParis, France\n9\n9\nWonderful\nWonderful\n\u00b7\n793 reviews\nEarly 2025 Deal\n2 nights\n$499\n$349\namaMI\nMilan, Italy\n9.3\n9.3\nWonderful\nWonderful\n\u00b7\n112 reviews\n2 nights\n$255\n$211\nF\u00e9lix dOrt\nLyon, France\n8.5\n8.5\nVery Good\nVery Good\n\u00b7\n776 reviews\n2 nights\n$190\n$171\nBest Western Premier The Blake Paris Gare Saint Lazare\nParis, France\n8.9\n8.9\nExcellent\nExcellent\n\u00b7\n454 reviews\n2 nights\n$474\n$379\nAmedia Milan, Trademark Collection by Wyndham\nMilan, Italy\n8.4\n8.4\nVery Good\nVery Good\n\u00b7\n6,793 reviews\nEarly 2025 Deal\n2 nights\n$238\n$202\n[34]<a Hotel Victoria Lyon Perrache Confluence\nLyon, France\n7.7\n7.7\nGood\nGood\n\u00b7\n3,322 reviews\n2 nights\n$171\n$154/>\n[35]<img presentation/>\n[36]<a Hotel Le Rocroy\nParis, France\n8.4/>\n[37]<img presentation/>\n[38]<button Next/>\n[39]<div Quick and easy trip planner\nPick a vibe and explore the top destinations in the United States\nMore/>\n[40]<button tab>City/>\n[41]<button tab>Beach/>\n[42]<button tab>Ski/>\n[43]<button tab>Outdoors/>\n[44]<button tab>Relax/>\n[45]<button tab>Romance/>\n[46]<button tab>Food/>\n... 4667 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 21:24\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_icV1hF5yxX3WbABp9yKA924w",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Opened Booking.com successfully.\",\"memory\":\"Opened Booking.com to find a Mexico hotel with deals for July 25-26. Action count 1 done.\",\"next_goal\":\"Fill in search details for a hotel in Mexico for July 25-26.\"},\"action\":[{\"input_text\":{\"index\":18,\"text\":\"Mexico\"}},{\"click_element\":{\"index\":20}},{\"click_element\":{\"index\":21}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Opened Booking.com successfully.\n\ud83e\udde0 Opened Booking.com to find a Mexico hotel with deals for July 25-26. Action count 1 done.\n\ud83c\udfaf Fill in search details for a hotel in Mexico for July 25-26.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 18, 'text': 'Mexico'}}\n - {'click_element': {'index': 20}}\n - {'click_element': {'index': 21}}\n"
+        }
+      ],
+      "duration_in_s": 6.78213095664978
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [],
+      "duration_in_s": 9.171538829803467
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [
+        {
+          "input_tokens": 4130,
+          "output_tokens": 149,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find a Mexico hotel with deals for July 25-26..\n        Please interact with : https://www.booking.com/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently blank, so I need to start the task.",
+                      "memory": "Starting the task to find a Mexico hotel with deals for July 25-26. Open 0 out of 10 steps.",
+                      "next_goal": "Open the Booking.com website to search for hotels."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.booking.com"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.booking.com",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Booking.com successfully.",
+                      "memory": "Opened Booking.com to find a Mexico hotel with deals for July 25-26. Action count 1 done.",
+                      "next_goal": "Fill in search details for a hotel in Mexico for July 25-26."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 18,
+                          "text": "Mexico"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 20
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 21
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Mexico into index 18",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 3",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Mexico into index 18",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 3",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.booking.com/\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.booking.com/', title='Booking.com | Official site | The best hotels, flights, car rentals & accommodations')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div More/>\n[1]<a Booking.com/>\n[2]<button Prices in U.S. Dollar>USD/>\n[3]<button Language: English (US)/>\n[4]<img presentation/>\n[5]<a Customer support/>\n[6]<a List your property/>\n[7]<a Register an account>Register/>\n[8]<a Sign in/>\n[9]<a Stays/>\n[10]<a Flights/>\n[11]<a Flight + Hotel/>\n[12]<a Car rentals/>\n[13]<a Cruises/>\n[14]<a Attractions/>\n[15]<a Airport taxis/>\n[16]<div Find deals for any season\nFrom cozy bed & breakfasts to luxury hotels/>\n[17]<div 5 results found\nI\u2019m looking for flights/>\n[18]<input Mexico;ss;true;combobox;Where are you going?/>\n[19]<button />\n[20]<div listbox/>\n[21]<div listbox/>\n[22]<li option/>\n[23]<div button>Mexico City\nMexico DF, Mexico/>\n[24]<li option/>\n[25]<div button>Canc\u00fan\nQuintana Roo (Yucatan Peninsula Mexico), Mexico/>\n[26]<li option/>\n[27]<div button>Mexico/>\n[28]<li option/>\n[29]<div button>Hotel Xcaret Mexico All Parks All Fun Inclusive\nPlaya del Carmen, Quintana Roo, Mexico/>\n[30]<li option/>\n[31]<div button>Mexico Beach\nFlorida, United States/>\n[32]<div none>\u2014/>\n[33]<button Check-in date/>\n[34]<button Check-out date/>\n[35]<button false>2 adults \u00b7 0 children \u00b7 1 room/>\n[36]<button submit>Search/>\n[37]<div Offers\nPromotions, deals, and special offers for you\nSave on stays worldwide\nStart your year with an adventure, saving 15% or more with Early 2025 Deals.\nQuick escape, quality time\nSave up to 20% with a Getaway Deal/>\n[38]<a Search for Early 2025 Deals>Save 15% or more/>\n[39]<img />\n[40]<a Find Getaway Deals>Save on stays/>\n[41]<img />\n[42]<div progressbar/>\n[43]<div Travel more, spend less\nSign in, save money\nSave 10% or more at participating properties \u2013 just look for the blue Genius label/>\n[44]<a Sign in/>\n[45]<a Register/>\n[46]<img presentation/>\nDeals for the weekend\nSave on stays for March 28 - March 30\nEsteem Tour Eiffel\nParis, France\n9\n9\nWonderful\nWonderful\n\u00b7\n793 reviews\nEarly 2025 Deal\n2 nights\n$499\n$349\namaMI\nMilan, Italy\n9.3\n9.3\nWonderful\nWonderful\n\u00b7\n112 reviews\n2 nights\n$255\n$211\nF\u00e9lix dOrt\nLyon, France\n8.5\n8.5\nVery Good\nVery Good\n\u00b7\n776 reviews\n2 nights\n$190\n$171\nBest Western Premier The Blake Paris Gare Saint Lazare\nParis, France\n8.9\n8.9\nExcellent\nExcellent\n\u00b7\n454 reviews\n2 nights\n$474\n$379\nAmedia Milan, Trademark Collection by Wyndham\nMilan, Italy\n8.4\n8.4\nVery Good\nVery Good\n\u00b7\n6,793 reviews\nEarly 2025 Deal\n2 nights\n$238\n$202\n[47]<a Hotel Victoria Lyon Perrache Confluence\nLyon, France\n7.7\n7.7\nGood\nGood\n\u00b7\n3,322 reviews\n2 nights\n$171\n$154/>\n[48]<img presentation/>\n[49]<a Hotel Le Rocroy\nParis, France\n8.4/>\n[50]<img presentation/>\n[51]<button Next/>\n[52]<div Quick and easy trip planner\nPick a vibe and explore the top destinations in the United States\nMore/>\n[53]<button tab>City/>\n[54]<button tab>Beach/>\n[55]<button tab>Ski/>\n[56]<button tab>Outdoors/>\n[57]<button tab>Relax/>\n[58]<button tab>Romance/>\n[59]<button tab>Food/>\n... 4667 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 21:25\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_aRNUAYnZVhV50Ka2qCmp0Oma",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Input 'Mexico' into the search field but need to specify exact location.\",\"memory\":\"Started search for a hotel in Mexico for July 25-26. Current step involves choosing the specific location and setting dates for search. Action count 2 done.\",\"next_goal\":\"Select the location 'Mexico' and input check-in and check-out dates for July 25-26.\"},\"action\":[{\"click_element\":{\"index\":27}},{\"click_element\":{\"index\":33}},{\"send_keys\":{\"keys\":\"July 25, 2025\"}},{\"click_element\":{\"index\":34}},{\"send_keys\":{\"keys\":\"July 26, 2025\"}},{\"click_element\":{\"index\":36}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Input 'Mexico' into the search field but need to specify exact location.\n\ud83e\udde0 Started search for a hotel in Mexico for July 25-26. Current step involves choosing the specific location and setting dates for search. Action count 2 done.\n\ud83c\udfaf Select the location 'Mexico' and input check-in and check-out dates for July 25-26.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 27}}\n - {'click_element': {'index': 33}}\n - {'send_keys': {'keys': 'July 25, 2025'}}\n - {'click_element': {'index': 34}}\n - {'send_keys': {'keys': 'July 26, 2025'}}\n - {'click_element': {'index': 36}}\n"
+        }
+      ],
+      "duration_in_s": 10.405033111572266
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [],
+      "duration_in_s": 9.667755126953125
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [],
+      "duration_in_s": 8.432834148406982
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [],
+      "duration_in_s": 8.316033124923706
+    },
+    {
+      "url": "https://www.booking.com/",
+      "llm_calls": [],
+      "duration_in_s": 7.536895990371704
+    }
+  ],
+  "logs": {},
+  "task_description": "Find a Mexico hotel with deals for July 25-26.",
+  "task_id": "webvoyager--Booking--0",
+  "task_website": "Booking",
+  "reference_answer": "Be Local",
+  "total_input_tokens": 10819,
+  "total_output_tokens": 324,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_aRNUAYnZVhV50Ka2qCmp0Oma\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Success - Input 'Mexico' into the search field but need to specify exact location.\\\",\\\"memory\\\":\\\"Started search for a hotel in Mexico for July 25-26. Current step involves choosing the specific location and setting dates for search. Action count 2 done.\\\",\\\"next_goal\\\":\\\"Select the location 'Mexico' and input check-in and check-out dates for July 25-26.\\\"},\\\"action\\\":[{\\\"click_element\\\":{\\\"index\\\":27}},{\\\"click_element\\\":{\\\"index\\\":33}},{\\\"send_keys\\\":{\\\"keys\\\":\\\"July 25, 2025\\\"}},{\\\"click_element\\\":{\\\"index\\\":34}},{\\\"send_keys\\\":{\\\"keys\\\":\\\"July 26, 2025\\\"}},{\\\"click_element\\\":{\\\"index\\\":36}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

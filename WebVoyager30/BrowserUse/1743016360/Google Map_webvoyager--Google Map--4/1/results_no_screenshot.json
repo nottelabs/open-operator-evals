@@ -1,0 +1,3369 @@
+{
+  "success": true,
+  "run_id": 1,
+  "eval": {
+    "eval": "success",
+    "reason": "Based on the provided screenshots, the task was to plan a trip from Boston Logan Airport to North Station in Boston, MA. \n\n- **Screenshot 4** clearly shows the planned route from Logan International Airport to North Station, Boston, MA. The screenshot indicates the fastest route via MA-1A S, taking 14 minutes and covering 4.6 miles, which aligns with the information in the result response. \n- The transportation modes and alternative times are also displayed, providing additional options for the journey.\n\nThe screenshots give a visual representation of the route, and the response accurately describes the details of the trip.\n\n**Verdict: SUCCESS**"
+  },
+  "duration_in_s": 223.81982684135437,
+  "agent_answer": "Planned a successful route from Boston Logan Airport to North Station in Boston, MA. The fastest route is via MA-1A S, taking 14 minutes over 4.6 miles with usual traffic conditions. There are other options available with different transportation modes and times.",
+  "task": {
+    "question": "Plan a trip from Boston Logan Airport to North Station.",
+    "id": "webvoyager--Google Map--4",
+    "answer": "Drive via MA-1A S and take about 10 mins (based on real-time traffic conditions)",
+    "url": "https://www.google.com/maps/",
+    "website_name": "Google Map"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2878,
+          "output_tokens": 70,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 23:18\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_Dpm8ZhTC2DDEW9i2g5iOjOWS",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - Starting task from a blank page.\",\"memory\":\"Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.\",\"next_goal\":\"Open Google Maps in a new tab.\"},\"action\":[{\"open_tab\":{\"url\":\"https://www.google.com/maps\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - Starting task from a blank page.\n\ud83e\udde0 Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.\n\ud83c\udfaf Open Google Maps in a new tab.\n\ud83d\udee0\ufe0f Actions: \n - {'open_tab': {'url': 'https://www.google.com/maps'}}\n"
+        }
+      ],
+      "duration_in_s": 10.743616104125977
+    },
+    {
+      "url": "https://consent.google.com/m?continue=https://www.google.com/maps&gl=CH&m=0&pc=m&uxe=eomtm&cm=2&hl=de&src=1",
+      "llm_calls": [
+        {
+          "input_tokens": 3500,
+          "output_tokens": 65,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://consent.google.com/m?continue=https://www.google.com/maps&gl=CH&m=0&pc=m&uxe=eomtm&cm=2&hl=de&src=1\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://consent.google.com/m?continue=https://www.google.com/maps&gl=CH&m=0&pc=m&uxe=eomtm&cm=2&hl=de&src=1', title='Bevor Sie zu Google Maps weitergehen')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<button false;Sprache: Deutsch>DE/>\nAnmelden\n[1]<a Anmelden/>\n[2]<img />\nBevor Sie zu Google weitergehen\nWir verwenden\n[3]<a Cookies/>\nund Daten, um\nGoogle-Dienste zu erbringen und zu betreiben\nAusf\u00e4lle zu pr\u00fcfen und Ma\u00dfnahmen gegen Spam, Betrug und Missbrauch zu ergreifen\nZielgruppeninteraktionen zu messen und Websitestatistiken zu erhalten, damit wir verstehen, wie unsere Dienste verwendet werden, und die Qualit\u00e4t dieser Dienste verbessern k\u00f6nnen\nWenn Sie \u201eAlle akzeptieren\u201c ausw\u00e4hlen, verwenden wir Cookies und Daten auch, um\nneue Dienste zu entwickeln und zu verbessern\nWerbung auszuliefern und ihre Wirkung zu messen\nje nach Ihren Einstellungen personalisierte Inhalte anzuzeigen\npersonalisierte Werbung anzuzeigen, abh\u00e4ngig von Ihren Einstellungen\nWenn Sie \u201eAlle ablehnen\u201c ausw\u00e4hlen, verwenden wir Cookies nicht f\u00fcr diese zus\u00e4tzlichen Zwecke.\nNicht personalisierte Inhalte werden u.\u00a0a. von Inhalten, die Sie sich gerade ansehen, Aktivit\u00e4ten in Ihrer aktiven Suchsitzung und Ihrem Standort beeinflusst. Nicht personalisierte Werbung wird von den Inhalten, die Sie sich gerade ansehen, und Ihrem ungef\u00e4hren Standort beeinflusst. Personalisierte Inhalte und Werbung k\u00f6nnen auch relevantere Ergebnisse, Empfehlungen und individuelle Werbung enthalten, die auf fr\u00fcheren Aktivit\u00e4ten in diesem Browser, etwa Suchanfragen bei Google, beruhen. Sofern relevant, verwenden wir Cookies und Daten au\u00dferdem, um Inhalte und Werbung altersgerecht zu gestalten.\nW\u00e4hlen Sie \u201eWeitere Optionen\u201c aus, um sich zus\u00e4tzliche Informationen anzusehen, einschlie\u00dflich Details zum Verwalten Ihrer Datenschutzeinstellungen. Sie k\u00f6nnen auch jederzeit g.co/privacytools besuchen.\n[4]<button Alle ablehnen/>\n[5]<button Alle akzeptieren/>\nWeitere Optionen\nDatenschutzerkl\u00e4rung\n[6]<a Datenschutzerkl\u00e4rung/>\nNutzungsbedingungen\n[7]<a Nutzungsbedingungen/>\n... 182 pixels below - scroll or extract content to see more ...\nCurrent step: 2/20Current date and time: 2025-03-26 23:18\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_6waFehIjErqwuLabKMr3QyUb",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Opened Google Maps but landed on cookie consent page.\",\"memory\":\"Opened Google Maps URL, need to proceed past consent page to access the map.\",\"next_goal\":\"Accept all cookies to proceed and access Google Maps.\"},\"action\":[{\"click_element\":{\"index\":5}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Opened Google Maps but landed on cookie consent page.\n\ud83e\udde0 Opened Google Maps URL, need to proceed past consent page to access the map.\n\ud83c\udfaf Accept all cookies to proceed and access Google Maps.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 5}}\n"
+        }
+      ],
+      "duration_in_s": 27.250437259674072
+    },
+    {
+      "url": "https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 3313,
+          "output_tokens": 88,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nIn Google Maps suchen\n[0]<input false;combobox;q/>\n[1]<button Suchen>\ue8b6/>\n[2]<button Routenplaner>\ue52e/>\n[3]<button Speisekarte>\ue5d2/>\n[4]<button \ue866\nGespeichert/>\n[5]<button \ue889\nLetzte/>\n[6]<button \ue32c\nApp herunterladen/>\n[End of page]\nCurrent step: 3/20Current date and time: 2025-03-26 23:19\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_eDT54UyaT1qw3ismoGzAvYin",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Google Maps is now accessible.\",\"memory\":\"Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.\",\"next_goal\":\"Enter 'Boston Logan Airport to North Station' in the search bar and click search.\"},\"action\":[{\"input_text\":{\"index\":0,\"text\":\"Boston Logan Airport to North Station\"}},{\"click_element\":{\"index\":1}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Google Maps is now accessible.\n\ud83e\udde0 Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.\n\ud83c\udfaf Enter 'Boston Logan Airport to North Station' in the search bar and click search.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 0, 'text': 'Boston Logan Airport to North Station'}}\n - {'click_element': {'index': 1}}\n"
+        }
+      ],
+      "duration_in_s": 20.3658926486969
+    },
+    {
+      "url": "https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 3934,
+          "output_tokens": 69,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\n[2]<input combobox;q;true/>\n[3]<button Suchen>\ue8b6/>\n[4]<button Routenplaner>\ue52e/>\n[5]<div grid;Vorschl\u00e4ge>\ue52e\nBoston Logan International Airport (BOS)\n, East Boston, Massachusetts, USA\n\ue52e\nNorth Station\n(MBTA), Canal Street, Boston, Massachusetts, USA\n\ue52e\nBoston Logan International Airport (BOS)\n, East Boston, Massachusetts, USA\n\ue52e\nNorth Station\n, Causeway Street, Boston, Massachusetts, USA\n\ue52e\nBoston Logan International Airport (BOS)\n, East Boston, Massachusetts, USA\n\ue52e\nNorth Station\nRoad, Colchester, Vereinigtes K\u00f6nigreich\n\ue0c8\nBoston Logan International Airport (BOS)\nEast Boston, Massachusetts, USA\n\ue52e\nBoston Logan International Airport (BOS)\n, East Boston, Massachusetts, USA\n\ue52e\nNorth Station\n, Causeway Street, Boston, Massachusetts, USA/>\nDieses Gebiet\n9\u00b0\n[6]<img />\n[7]<button Geringes Verkehrsaufkommen\nNormal f\u00fcr diese Zeit\n\ue315/>\n[8]<img />\n[9]<button \ue56c\nRestaurants/>\n[10]<button \ue53a\nHotels/>\n[11]<button \ue412\nM\u00f6gliche Aktivit\u00e4ten/>\n[12]<button \uea36\nMuseen/>\n\ue535\n\u00d6PV/\u00d6PNV\n\ue550\nApotheken\n\ue573\nGeld\u00adautomaten\n[13]<button N\u00e4chste Seite>\ue5cc/>\n[14]<button Speisekarte>\ue5d2/>\n[15]<button \ue866\nGespeichert/>\n[16]<button \ue889\nLetzte/>\n[17]<button \ue32c\nApp herunterladen/>\n[18]<a false;button;Google-Apps/>\n[19]<a Anmelden/>\n[20]<button Deinen Standort anzeigen>\ue55c/>\n[21]<button Vergr\u00f6\u00dfern/>\n[22]<button Verkleinern/>\n[23]<button Street View-Abdeckung anzeigen/>\n[24]<button Bilder anzeigen>\uead0\n\ueacf/>\n\ue53b\nEbenen\n[25]<button false/>\nKartendaten \u00a9 2025 Google\n[26]<button Schweiz/>\n[27]<button Bedingungen/>\n[28]<button Datenschutz/>\n[29]<button Feedback zu Produkt(en) geben/>\n[30]<button 10 km/>\n[End of page]\nCurrent step: 4/20Current date and time: 2025-03-26 23:19\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_jJAOKCIbgVd3sTpAf4j35ALc",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Input recognized and new options appeared.\",\"memory\":\"Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.\",\"next_goal\":\"Select the first suggestion with Boston Logan International Airport and North Station.\"},\"action\":[{\"click_element\":{\"index\":5}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Input recognized and new options appeared.\n\ud83e\udde0 Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.\n\ud83c\udfaf Select the first suggestion with Boston Logan International Airport and North Station.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 5}}\n"
+        }
+      ],
+      "duration_in_s": 21.606048107147217
+    },
+    {
+      "url": "https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 3905,
+          "output_tokens": 103,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input recognized and new options appeared.",
+                      "memory": "Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.",
+                      "next_goal": "Select the first suggestion with Boston Logan International Airport and North Station."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/dir/Boston+Logan+International+Airport+(BOS),+East+Boston,+Massachusetts,+USA/North+Station+Road,+Colchester,+Vereinigtes+K%C3%B6nigreich/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/dir/Boston+Logan+International+Airport+(BOS),+East+Boston,+Massachusetts,+USA/North+Station+Road,+Colchester,+Vereinigtes+K%C3%B6nigreich/@46.5287271,6.652336,10z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\nIn Google Maps suchen\n[2]<input false;combobox;q/>\n[3]<button Suchen>\ue8b6/>\n[4]<button Schlie\u00dfen>\ue5cd/>\n[5]<button \ue56c\nRestaurants/>\n[6]<button \ue53a\nHotels/>\n[7]<button \ue412\nM\u00f6gliche Aktivit\u00e4ten/>\n[8]<button \uea36\nMuseen/>\n\ue535\n\u00d6PV/\u00d6PNV\n\ue550\nApotheken\n\ue573\nGeld\u00adautomaten\n[9]<button N\u00e4chste Seite>\ue5cc/>\n[10]<button Speisekarte>\ue5d2/>\n[11]<button \ue866\nGespeichert/>\n[12]<button \ue889\nLetzte/>\n[13]<button \ue32c\nApp herunterladen/>\n[14]<a false;button;Google-Apps/>\n[15]<a Anmelden/>\n[16]<button Deinen Standort anzeigen>\ue55c/>\n[17]<button Vergr\u00f6\u00dfern/>\n[18]<button Verkleinern/>\n[19]<button Street View-Abdeckung anzeigen/>\n\ue53b\nEbenen\n[20]<button false/>\nKartendaten \u00a9 2025 Google\n[21]<button Schweiz/>\n[22]<button Bedingungen/>\n[23]<button Datenschutz/>\n[24]<button Feedback zu Produkt(en) geben/>\n[25]<button 10 km/>\n[End of page]\nCurrent step: 5/20Current date and time: 2025-03-26 23:20\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_ryMc4DRfcPpmFfdlsDgCtH3u",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - The route displayed is incorrect as it is pointing outside the intended location.\",\"memory\":\"Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.\",\"next_goal\":\"Clear the current route and search again for the correct path to North Station, Boston, MA.\"},\"action\":[{\"input_text\":{\"index\":2,\"text\":\"Boston Logan Airport to North Station Boston MA\"}},{\"click_element\":{\"index\":3}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - The route displayed is incorrect as it is pointing outside the intended location.\n\ud83e\udde0 Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.\n\ud83c\udfaf Clear the current route and search again for the correct path to North Station, Boston, MA.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 2, 'text': 'Boston Logan Airport to North Station Boston MA'}}\n - {'click_element': {'index': 3}}\n"
+        }
+      ],
+      "duration_in_s": 58.21158242225647
+    },
+    {
+      "url": "https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 4553,
+          "output_tokens": 123,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input recognized and new options appeared.",
+                      "memory": "Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.",
+                      "next_goal": "Select the first suggestion with Boston Logan International Airport and North Station."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The route displayed is incorrect as it is pointing outside the intended location.",
+                      "memory": "Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.",
+                      "next_goal": "Clear the current route and search again for the correct path to North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "Boston Logan Airport to North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Logan International Airport nach North Station Road - Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\n[2]<button radio>\ue52e\nBeste/>\n[3]<button radio>\ue531/>\n[4]<button radio>\ue570/>\n[5]<button radio>\ue536/>\n[6]<button radio>\ue52f/>\n[7]<button radio>\ue539\n10\u00a0h/>\n[8]<button Routenplaner schlie\u00dfen>\ue5cd/>\n\uef4a\n\ue5d4\n[9]<div combobox/>\n[10]<input Start Logan International Airport/>\n\ue8b6\n\ue0c8\n[11]<div combobox/>\n[12]<input Ziel N Station Rd, Colchester, Vereinigtes K\u00f6nigreich/>\n\ue8b6\n[13]<button Ausgangsort und Reiseziel vertauschen>\ue8d5/>\n[14]<button Speisekarte>\ue5d2/>\n[15]<button \ue866\nGespeichert/>\n[16]<button \ue889\nLetzte/>\n[17]<button \ue52e\nN Station Rd/>\n[18]<button Logan International Airport/>\n[19]<button N Station Rd/>\n[20]<button \ue32c\nApp herunterladen/>\n[21]<div \ue539\nBoston, Vereinigte Staaten\u2014London, Vereinigtes K\u00f6nigreich\nMultistop-Fl\u00fcge\n1\noder mehr Stopps\nMindestens\n10\u00a0h 20 min\nPreis f\u00fcr Hin- und R\u00fcckflug\n11.\u201315. Apr.\nab\n473\u00a0CHF\nPLAY\n\u2026/>\n[22]<a \ue89e\nErgebnisse in der Google Flugsuche ansehen/>\nN Station Rd erkunden\n[23]<button Restaurants>\ue56c\nRestaurants/>\n[24]<button Hotels>\ue53a\nHotels/>\n[25]<button Bars>\ue540\nBars/>\n[26]<button Kaffee>\uefef\nKaffee/>\n[27]<button Mehr>\ue5d3\nMehr/>\n[28]<button Seitliches Steuerfeld ausblenden/>\n[29]<img />\n[30]<a false;button;Google-Apps/>\n[31]<a Anmelden/>\n[32]<button Deinen Standort anzeigen>\ue55c/>\n[33]<button Vergr\u00f6\u00dfern/>\n[34]<button Verkleinern/>\n[35]<button Street View-Abdeckung anzeigen/>\n\ue53b\nEbenen\n[36]<button false/>\nKartendaten \u00a9 2025 Google,INEGI\n[37]<button Schweiz/>\n[38]<button Bedingungen/>\n[39]<button Datenschutz/>\n[40]<button Feedback zu Produkt(en) geben/>\n[41]<button 500 km/>\n[End of page]\nCurrent step: 6/20Current date and time: 2025-03-26 23:21\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_LeFOYDUYbhJJ8W3Ady9fFPdQ",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - The directions are incorrect, showing travel to the UK instead.\",\"memory\":\"Incorrect route from Boston Logan Airport to North Station in the UK. Need to correct destination to North Station in Boston, MA.\",\"next_goal\":\"Clear current destination and re-enter the correct destination as North Station, Boston, MA.\"},\"action\":[{\"click_element\":{\"index\":12}},{\"send_keys\":{\"keys\":\"Control+A\"}},{\"send_keys\":{\"keys\":\"Backspace\"}},{\"input_text\":{\"index\":12,\"text\":\"North Station Boston MA\"}},{\"click_element\":{\"index\":3}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - The directions are incorrect, showing travel to the UK instead.\n\ud83e\udde0 Incorrect route from Boston Logan Airport to North Station in the UK. Need to correct destination to North Station in Boston, MA.\n\ud83c\udfaf Clear current destination and re-enter the correct destination as North Station, Boston, MA.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 12}}\n - {'send_keys': {'keys': 'Control+A'}}\n - {'send_keys': {'keys': 'Backspace'}}\n - {'input_text': {'index': 12, 'text': 'North Station Boston MA'}}\n - {'click_element': {'index': 3}}\n"
+        }
+      ],
+      "duration_in_s": 25.2844500541687
+    },
+    {
+      "url": "https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 4774,
+          "output_tokens": 123,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input recognized and new options appeared.",
+                      "memory": "Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.",
+                      "next_goal": "Select the first suggestion with Boston Logan International Airport and North Station."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The route displayed is incorrect as it is pointing outside the intended location.",
+                      "memory": "Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.",
+                      "next_goal": "Clear the current route and search again for the correct path to North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "Boston Logan Airport to North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The directions are incorrect, showing travel to the UK instead.",
+                      "memory": "Incorrect route from Boston Logan Airport to North Station in the UK. Need to correct destination to North Station in Boston, MA.",
+                      "next_goal": "Clear current destination and re-enter the correct destination as North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 12
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Control+A"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Backspace"
+                        }
+                      },
+                      {
+                        "input_text": {
+                          "index": 12,
+                          "text": "North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 12: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Control+A",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Backspace",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 3 / 5",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Logan International Airport nach North Station Road - Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\n[2]<button radio>\ue52e\nBeste/>\n[3]<button radio>\ue531/>\n[4]<button radio>\ue570/>\n[5]<button radio>\ue536/>\n[6]<button radio>\ue52f/>\n[7]<button radio>\ue539\n10\u00a0h/>\n[8]<button Routenplaner schlie\u00dfen>\ue5cd/>\n\uef4a\n\ue5d4\n[9]<div combobox/>\n[10]<input Start Logan International Airport/>\n\ue8b6\n\ue945\n\ue0c8\n[11]<div combobox/>\n[12]<input Ziel N Station Rd, Colchester, Vereinigtes K\u00f6nigreich/>\n[13]<button Suche>\ue8b6/>\n[14]<button Ausgangsort und Reiseziel vertauschen>\ue8d5/>\n[15]<button Speisekarte>\ue5d2/>\n[16]<button \ue866\nGespeichert/>\n[17]<button \ue889\nLetzte/>\n[18]<button \ue52e\nN Station Rd/>\n[19]<button Logan International Airport/>\n[20]<button N Station Rd/>\n[21]<button \ue32c\nApp herunterladen/>\n[22]<div \ue539\nBoston, Vereinigte Staaten\u2014London, Vereinigtes K\u00f6nigreich\nMultistop-Fl\u00fcge\n1\noder mehr Stopps\nMindestens\n10\u00a0h 20 min\nPreis f\u00fcr Hin- und R\u00fcckflug\n11.\u201315. Apr.\nab\n473\u00a0CHF\nPLAY\n\u2026/>\n[23]<a \ue89e\nErgebnisse in der Google Flugsuche ansehen/>\nN Station Rd erkunden\n[24]<button Restaurants>\ue56c\nRestaurants/>\n[25]<button Hotels>\ue53a\nHotels/>\n[26]<button Bars>\ue540\nBars/>\n[27]<button Kaffee>\uefef\nKaffee/>\n[28]<button Mehr>\ue5d3\nMehr/>\n[29]<button Seitliches Steuerfeld ausblenden/>\n[30]<img />\n[31]<a false;button;Google-Apps/>\n[32]<a Anmelden/>\n[33]<button Deinen Standort anzeigen>\ue55c/>\n[34]<button Vergr\u00f6\u00dfern/>\n[35]<button Verkleinern/>\n[36]<button Street View-Abdeckung anzeigen/>\n\ue53b\nEbenen\n[37]<button false/>\nKartendaten \u00a9 2025 Google,INEGI\n[38]<button Schweiz/>\n[39]<button Bedingungen/>\n[40]<button Datenschutz/>\n[41]<button Feedback zu Produkt(en) geben/>\n[42]<button 500 km/>\n[End of page]\nCurrent step: 7/20Current date and time: 2025-03-26 23:21\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_b2qNAn0c7bFkRiQUrv5F9i6y",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - The destination is still incorrect, pointing to the UK instead of Boston, MA.\",\"memory\":\"Need to correct the destination to North Station, Boston, MA. Currently set to a location in the UK.\",\"next_goal\":\"Correct the destination by entering 'North Station Boston MA' in the destination input.\"},\"action\":[{\"click_element\":{\"index\":12}},{\"send_keys\":{\"keys\":\"Control+A\"}},{\"send_keys\":{\"keys\":\"Backspace\"}},{\"input_text\":{\"index\":12,\"text\":\"North Station Boston MA\"}},{\"click_element\":{\"index\":13}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - The destination is still incorrect, pointing to the UK instead of Boston, MA.\n\ud83e\udde0 Need to correct the destination to North Station, Boston, MA. Currently set to a location in the UK.\n\ud83c\udfaf Correct the destination by entering 'North Station Boston MA' in the destination input.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 12}}\n - {'send_keys': {'keys': 'Control+A'}}\n - {'send_keys': {'keys': 'Backspace'}}\n - {'input_text': {'index': 12, 'text': 'North Station Boston MA'}}\n - {'click_element': {'index': 13}}\n"
+        }
+      ],
+      "duration_in_s": 11.668033838272095
+    },
+    {
+      "url": "https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/North+Station,+Boston,+Massachusetts,+USA/@47.1308156,-35.0569679,4z/data=!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e37091ba66f5ab:0x7043cdc303ba52dc!2m2!1d-71.0641785!2d42.3665658?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 5132,
+          "output_tokens": 76,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input recognized and new options appeared.",
+                      "memory": "Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.",
+                      "next_goal": "Select the first suggestion with Boston Logan International Airport and North Station."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The route displayed is incorrect as it is pointing outside the intended location.",
+                      "memory": "Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.",
+                      "next_goal": "Clear the current route and search again for the correct path to North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "Boston Logan Airport to North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The directions are incorrect, showing travel to the UK instead.",
+                      "memory": "Incorrect route from Boston Logan Airport to North Station in the UK. Need to correct destination to North Station in Boston, MA.",
+                      "next_goal": "Clear current destination and re-enter the correct destination as North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 12
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Control+A"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Backspace"
+                        }
+                      },
+                      {
+                        "input_text": {
+                          "index": 12,
+                          "text": "North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 12: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Control+A",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Backspace",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 3 / 5",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The destination is still incorrect, pointing to the UK instead of Boston, MA.",
+                      "memory": "Need to correct the destination to North Station, Boston, MA. Currently set to a location in the UK.",
+                      "next_goal": "Correct the destination by entering 'North Station Boston MA' in the destination input."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 12
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Control+A"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Backspace"
+                        }
+                      },
+                      {
+                        "input_text": {
+                          "index": 12,
+                          "text": "North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 13
+                        }
+                      }
+                    ]
+                  },
+                  "id": "8",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "8",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 12: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Control+A",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Backspace",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input North Station Boston MA into index 12",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 4 / 5",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/N+Station+Rd,+Colchester,+Vereinigtes+K%C3%B6nigreich/@47.1308156,-35.0569679,4z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x47d90459673ea6a7:0x8b04c780969b8f4f!2m2!1d0.8956778!2d51.8960291?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Logan International Airport nach North Station Road - Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\n[2]<button radio>\ue52e\nBeste/>\n[3]<button radio>\ue531/>\n[4]<button radio>\ue570/>\n[5]<button radio>\ue536/>\n[6]<button radio>\ue52f/>\n[7]<button radio>\ue539\n10\u00a0h/>\n[8]<button Routenplaner schlie\u00dfen>\ue5cd/>\n\uef4a\n\ue5d4\n[9]<div combobox/>\n[10]<input Start Logan International Airport/>\n\ue8b6\n\ue945\n\ue0c8\n[11]<div combobox;true/>\n[12]<input Ziel North Station Boston MA/>\n[13]<button Suche>\ue8b6/>\n[14]<button Ausgangsort und Reiseziel vertauschen>\ue8d5/>\n[15]<div grid/>\n[16]<div \ue0c8\nNorth Station\nCauseway Street,\nBoston\n,\nMa\nssachusetts, USA/>\n[17]<div \ue535\nNorth Station\nCauseway Street,\nBoston\n,\nMa\nssachusetts, USA/>\n[18]<div \ue0c8\nCourtyard Boston Downtown/\nNorth Station\nBeverly Street,\nBoston\n,\nMa\nssachusetts, USA/>\n[19]<div \ue535\nNorth Station\nBoston\n,\nMa\nssachusetts, USA/>\n[20]<div \ue0c8\ncitizenM Boston\nNorth Station\nhotel\nCauseway Street,\nBoston\n,\nMa\nssachusetts, USA/>\n[21]<button Speisekarte>\ue5d2/>\n[22]<button \ue866\nGespeichert/>\n[23]<button \ue889\nLetzte/>\n[24]<button \ue52e\nN Station Rd/>\n[25]<button Logan International Airport/>\n[26]<button N Station Rd/>\n[27]<button \ue32c\nApp herunterladen/>\n\ue539\nBoston, Vereinigte Staaten\u2014London, Vereinigtes K\u00f6nigreich\nMultistop-Fl\u00fcge\n1\noder mehr Stopps\nMindestens\n10\u00a0h 20 min\nPreis f\u00fcr Hin- und R\u00fcckflug\n11.\u201315. Apr.\nab\n473\u00a0CHF\nPLAY\n\u2026\n\ue89e\nErgebnisse in der Google Flugsuche ansehen\nN Station Rd erkunden\n[28]<button Restaurants>\ue56c\nRestaurants/>\n[29]<button Hotels>\ue53a\nHotels/>\n[30]<button Bars>\ue540\nBars/>\n[31]<button Kaffee>\uefef\nKaffee/>\n[32]<button Mehr>\ue5d3\nMehr/>\n[33]<button Seitliches Steuerfeld ausblenden/>\n[34]<img />\n[35]<a false;button;Google-Apps/>\n[36]<a Anmelden/>\n[37]<button Deinen Standort anzeigen>\ue55c/>\n[38]<button Vergr\u00f6\u00dfern/>\n[39]<button Verkleinern/>\n[40]<button Street View-Abdeckung anzeigen/>\n\ue53b\nEbenen\n[41]<button false/>\nKartendaten \u00a9 2025 Google,INEGI\n[42]<button Schweiz/>\n[43]<button Bedingungen/>\n[44]<button Datenschutz/>\n[45]<button Feedback zu Produkt(en) geben/>\n[46]<button 500 km/>\n[End of page]\nCurrent step: 8/20Current date and time: 2025-03-26 23:21\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_8h9PtXI1bMK0ObUf4UgSFsHs",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - Still incorrect, routing to a location in the UK.\",\"memory\":\"Route is to North Station in the UK, not Boston, MA. Must fix the input to indicate the Boston location more clearly.\",\"next_goal\":\"Select the correct destination suggestion for North Station in Boston.\"},\"action\":[{\"click_element\":{\"index\":19}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - Still incorrect, routing to a location in the UK.\n\ud83e\udde0 Route is to North Station in the UK, not Boston, MA. Must fix the input to indicate the Boston location more clearly.\n\ud83c\udfaf Select the correct destination suggestion for North Station in Boston.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 19}}\n"
+        }
+      ],
+      "duration_in_s": 10.5711669921875
+    },
+    {
+      "url": "https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/North+Station,+Boston,+Massachusetts,+USA/@42.3678526,-71.0797217,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e37091ba66f5ab:0x7043cdc303ba52dc!2m2!1d-71.0641785!2d42.3665658?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+      "llm_calls": [
+        {
+          "input_tokens": 4913,
+          "output_tokens": 126,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Plan a trip from Boston Logan Airport to North Station..\n        Please interact with : https://www.google.com/maps/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - Starting task from a blank page.",
+                      "memory": "Need to navigate to https://www.google.com/maps to plan the trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Open Google Maps in a new tab."
+                    },
+                    "action": [
+                      {
+                        "open_tab": {
+                          "url": "https://www.google.com/maps"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Opened new tab with https://www.google.com/maps",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Opened Google Maps but landed on cookie consent page.",
+                      "memory": "Opened Google Maps URL, need to proceed past consent page to access the map.",
+                      "next_goal": "Accept all cookies to proceed and access Google Maps."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: Alle akzeptieren",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Google Maps is now accessible.",
+                      "memory": "Google Maps is open and accessible. Need to plan a trip from Boston Logan Airport to North Station.",
+                      "next_goal": "Enter 'Boston Logan Airport to North Station' in the search bar and click search."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 0,
+                          "text": "Boston Logan Airport to North Station"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 1
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input Boston Logan Airport to North Station into index 0",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 1 / 2",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Input recognized and new options appeared.",
+                      "memory": "Entered 'Boston Logan Airport to North Station' and options appeared. Need to select the correct search suggestion.",
+                      "next_goal": "Select the first suggestion with Boston Logan International Airport and North Station."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 5
+                        }
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The route displayed is incorrect as it is pointing outside the intended location.",
+                      "memory": "Attempted to plan route from Boston Logan Airport to North Station but received incorrect directions to a location in the UK.",
+                      "next_goal": "Clear the current route and search again for the correct path to North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 2,
+                          "text": "Boston Logan Airport to North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 5: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The directions are incorrect, showing travel to the UK instead.",
+                      "memory": "Incorrect route from Boston Logan Airport to North Station in the UK. Need to correct destination to North Station in Boston, MA.",
+                      "next_goal": "Clear current destination and re-enter the correct destination as North Station, Boston, MA."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 12
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Control+A"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Backspace"
+                        }
+                      },
+                      {
+                        "input_text": {
+                          "index": 12,
+                          "text": "North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 3
+                        }
+                      }
+                    ]
+                  },
+                  "id": "7",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "7",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 12: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Control+A",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Backspace",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 3 / 5",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The destination is still incorrect, pointing to the UK instead of Boston, MA.",
+                      "memory": "Need to correct the destination to North Station, Boston, MA. Currently set to a location in the UK.",
+                      "next_goal": "Correct the destination by entering 'North Station Boston MA' in the destination input."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 12
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Control+A"
+                        }
+                      },
+                      {
+                        "send_keys": {
+                          "keys": "Backspace"
+                        }
+                      },
+                      {
+                        "input_text": {
+                          "index": 12,
+                          "text": "North Station Boston MA"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 13
+                        }
+                      }
+                    ]
+                  },
+                  "id": "8",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "8",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 12: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Control+A",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Sent keys: Backspace",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input North Station Boston MA into index 12",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: Something new appeared after action 4 / 5",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - Still incorrect, routing to a location in the UK.",
+                      "memory": "Route is to North Station in the UK, not Boston, MA. Must fix the input to indicate the Boston location more clearly.",
+                      "next_goal": "Select the correct destination suggestion for North Station in Boston."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 19
+                        }
+                      }
+                    ]
+                  },
+                  "id": "9",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "9",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 19: ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/North+Station,+Boston,+Massachusetts,+USA/@47.1308156,-35.0569679,4z/data=!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e37091ba66f5ab:0x7043cdc303ba52dc!2m2!1d-71.0641785!2d42.3665658?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title=''), TabInfo(page_id=1, url='https://www.google.com/maps/dir/Logan+International+Airport,+East+Boston,+MA+02128,+Vereinigte+Staaten/North+Station,+Boston,+Massachusetts,+USA/@47.1308156,-35.0569679,4z/data=!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e37091ba66f5ab:0x7043cdc303ba52dc!2m2!1d-71.0641785!2d42.3665658?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D', title='Google Maps')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\n[0]<div application;Karte\u00b7Mit den Pfeiltasten kannst du die Karte schwenken.\u00b7Details zu einem Ort kannst du durch Dr\u00fccken der entsprechenden Zifferntaste aufrufen./>\n[1]<canvas />\n[2]<button radio>\ue52e\nBeste/>\n[3]<button radio>\ue531/>\n[4]<button radio>\ue570/>\n[5]<button radio>\ue536/>\n[6]<button radio>\ue52f/>\n[7]<button radio>\ue539\n10\u00a0h/>\n[8]<button Routenplaner schlie\u00dfen>\ue5cd/>\n\uef4a\n\ue5d4\n[9]<div combobox/>\n[10]<input Start Logan International Airport/>\n\ue8b6\n\ue0c8\n[11]<div false;combobox/>\n[12]<input Ziel North Station, Boston, Massachusetts, USA/>\n\ue8b6\n[13]<button Ausgangsort und Reiseziel vertauschen>\ue8d5/>\n[14]<button \ue147\nZiel hinzuf\u00fcgen/>\n[15]<button Speisekarte>\ue5d2/>\n[16]<button \ue866\nGespeichert/>\n[17]<button \ue889\nLetzte/>\n[18]<button \ue52e\nN Station Rd/>\n[19]<button Logan International Airport/>\n[20]<button N Station Rd/>\n[21]<button \ue32c\nApp herunterladen/>\n[22]<button Seitliches Steuerfeld ausblenden/>\n[23]<img />\n[24]<a false;button;Google-Apps/>\n[25]<a Anmelden/>\n[26]<button Deinen Standort anzeigen>\ue55c/>\n[27]<button Vergr\u00f6\u00dfern/>\n[28]<button Verkleinern/>\n[29]<button Street View-Abdeckung anzeigen/>\n\ue53b\nEbenen\n[30]<button false/>\nKartendaten \u00a9 2025 Google,INEGI\n[31]<button Schweiz/>\n[32]<button Bedingungen/>\n[33]<button Datenschutz/>\n[34]<button Feedback zu Produkt(en) geben/>\n[35]<button 500 km/>\n[End of page]\nCurrent step: 9/20Current date and time: 2025-03-26 23:21\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_xSPAO2xneNPA9rLs5Ld1zJcY",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - Route is incorrectly leading to London, UK instead of North Station, Boston, MA.\",\"memory\":\"Currently have directions to UK mistakenly. Need to correct destination to North Station Boston.\",\"next_goal\":\"Re-enter the correct destination directly in the textbox: 'North Station, Boston, MA' and press enter.\"},\"action\":[{\"click_element\":{\"index\":12}},{\"send_keys\":{\"keys\":\"Control+A\"}},{\"send_keys\":{\"keys\":\"Backspace\"}},{\"input_text\":{\"index\":12,\"text\":\"North Station, Boston, MA\"}},{\"send_keys\":{\"keys\":\"Enter\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - Route is incorrectly leading to London, UK instead of North Station, Boston, MA.\n\ud83e\udde0 Currently have directions to UK mistakenly. Need to correct destination to North Station Boston.\n\ud83c\udfaf Re-enter the correct destination directly in the textbox: 'North Station, Boston, MA' and press enter.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 12}}\n - {'send_keys': {'keys': 'Control+A'}}\n - {'send_keys': {'keys': 'Backspace'}}\n - {'input_text': {'index': 12, 'text': 'North Station, Boston, MA'}}\n - {'send_keys': {'keys': 'Enter'}}\n"
+        }
+      ],
+      "duration_in_s": 16.099125862121582
+    }
+  ],
+  "logs": {},
+  "task_description": "Plan a trip from Boston Logan Airport to North Station.",
+  "task_id": "webvoyager--Google Map--4",
+  "task_website": "Google Map",
+  "reference_answer": "Drive via MA-1A S and take about 10 mins (based on real-time traffic conditions)",
+  "total_input_tokens": 36902,
+  "total_output_tokens": 843,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_xSPAO2xneNPA9rLs5Ld1zJcY\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Failed - Route is incorrectly leading to London, UK instead of North Station, Boston, MA.\\\",\\\"memory\\\":\\\"Currently have directions to UK mistakenly. Need to correct destination to North Station Boston.\\\",\\\"next_goal\\\":\\\"Re-enter the correct destination directly in the textbox: 'North Station, Boston, MA' and press enter.\\\"},\\\"action\\\":[{\\\"click_element\\\":{\\\"index\\\":12}},{\\\"send_keys\\\":{\\\"keys\\\":\\\"Control+A\\\"}},{\\\"send_keys\\\":{\\\"keys\\\":\\\"Backspace\\\"}},{\\\"input_text\\\":{\\\"index\\\":12,\\\"text\\\":\\\"North Station, Boston, MA\\\"}},{\\\"send_keys\\\":{\\\"keys\\\":\\\"Enter\\\"}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}

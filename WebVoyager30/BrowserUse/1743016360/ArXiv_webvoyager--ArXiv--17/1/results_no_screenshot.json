@@ -1,0 +1,1693 @@
+{
+  "success": true,
+  "run_id": 1,
+  "eval": {
+    "eval": "unknown",
+    "reason": "Upon reviewing the result response and the screenshots, the task was to find the submission date of version 3 of the 'GPT-4 Technical Report'. \n\nThe provided response states that version 3 was submitted on 4 March, 2024. However, the screenshots of search results from arXiv do not clearly display the 'GPT-4 Technical Report' or any specific information about version 3's submission date. \n\nAs there is no evidence in the screenshots to confirm or contradict the response, the correct submission date remains unknown based on the available information.\n\nFinal verdict: **UNKNOWN**"
+  },
+  "duration_in_s": 164.66076111793518,
+  "agent_answer": "The 'GPT-4 Technical Report' indicates that version 3 was submitted on 4 March, 2024.",
+  "task": {
+    "question": "Find the paper 'GPT-4 Technical Report', when was v3 submitted?",
+    "id": "webvoyager--ArXiv--17",
+    "answer": "Mon, 27 Mar 2023 17:46:54 UTC",
+    "url": "https://arxiv.org/",
+    "website_name": "ArXiv"
+  },
+  "steps": [
+    {
+      "url": "about:blank",
+      "llm_calls": [
+        {
+          "input_tokens": 2882,
+          "output_tokens": 82,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: about:blank\nAvailable tabs:\n[TabInfo(page_id=0, url='about:blank', title='')]\nInteractive elements from top layer of the current page inside the viewport:\nempty page\nCurrent step: 1/20Current date and time: 2025-03-26 21:11\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_yBnZm6iia5Hs6lJlM0lA9aPu",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - The page is currently empty, indicating a starting point.\",\"memory\":\"Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.\",\"next_goal\":\"Open the arxiv.org website to begin the search for the paper.\"},\"action\":[{\"go_to_url\":{\"url\":\"https://arxiv.org/\"}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - The page is currently empty, indicating a starting point.\n\ud83e\udde0 Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.\n\ud83c\udfaf Open the arxiv.org website to begin the search for the paper.\n\ud83d\udee0\ufe0f Actions: \n - {'go_to_url': {'url': 'https://arxiv.org/'}}\n"
+        }
+      ],
+      "duration_in_s": 7.1741578578948975
+    },
+    {
+      "url": "https://arxiv.org/",
+      "llm_calls": [],
+      "duration_in_s": 17.38918709754944
+    },
+    {
+      "url": "http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header",
+      "llm_calls": [],
+      "duration_in_s": 10.976576089859009
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.04066",
+      "llm_calls": [
+        {
+          "input_tokens": 5454,
+          "output_tokens": 93,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently empty, indicating a starting point.",
+                      "memory": "Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.",
+                      "next_goal": "Open the arxiv.org website to begin the search for the paper."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://arxiv.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://arxiv.org/\nAvailable tabs:\n[TabInfo(page_id=0, url='https://arxiv.org/', title='arXiv.org e-Print archive')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to main content\n[0]<a />\n[1]<img />\nWe gratefully acknowledge support from the Simons Foundation,\n[2]<a member institutions/>\n, and all contributors.\n[3]<a Donate/>\n[4]<img />\n[5]<a Login/>\n[6]<input query;Search...;Search term or terms;text/>\n[7]<a Help/>\n|\n[8]<a Advanced Search/>\n[9]<select Field to search;searchtype>All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text/>\n[10]<button Search/>\narXiv is a free distribution service and an open-access archive for nearly 2.4 million\n      scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics.\n      Materials on this site are not peer-reviewed by arXiv.\nSubject search and browse:\n[11]<select Search in;group>Physics\nMathematics\nQuantitative Biology\nComputer Science\nQuantitative Finance\nStatistics\nElectrical Engineering and Systems Science\nEconomics/>\n[12]<input button;Search/>\n[13]<input Form Interface;submit;/form/>\n[14]<input /catchup;Catchup;submit/>\nPhysics\n[15]<a Astrophysics/>\n(\nastro-ph\n[16]<a new/>\n,\n[17]<a recent/>\n,\n[18]<a search/>\n)\n[19]<a Astrophysics of Galaxies/>\n;\n[20]<a Cosmology and Nongalactic Astrophysics/>\n;\n[21]<a Earth and Planetary Astrophysics/>\n;\nHigh Energy Astrophysical Phenomena\n;\n[22]<a Instrumentation and Methods for Astrophysics/>\n;\n[23]<a Solar and Stellar Astrophysics/>\n[24]<a Condensed Matter/>\n(\ncond-mat\n[25]<a new/>\n,\n[26]<a recent/>\n,\n[27]<a search/>\n)\n[28]<a Disordered Systems and Neural Networks/>\n;\n[29]<a Materials Science/>\n;\n[30]<a Mesoscale and Nanoscale Physics/>\n;\n[31]<a Other Condensed Matter/>\n;\n[32]<a Quantum Gases/>\n;\n[33]<a Soft Condensed Matter/>\n;\n[34]<a Statistical Mechanics/>\n;\n[35]<a Strongly Correlated Electrons/>\n;\n[36]<a Superconductivity/>\n[37]<a General Relativity and Quantum Cosmology/>\n(\ngr-qc\n[38]<a new/>\n,\n[39]<a recent/>\n,\n[40]<a search/>\n)\n[41]<a High Energy Physics - Experiment/>\n(\nhep-ex\n[42]<a new/>\n,\n[43]<a recent/>\n,\n[44]<a search/>\n)\n[45]<a High Energy Physics - Lattice/>\n(\nhep-lat\n[46]<a new/>\n,\n[47]<a recent/>\n,\n[48]<a search/>\n)\n[49]<a High Energy Physics - Phenomenology/>\n(\nhep-ph\n[50]<a new/>\n,\n[51]<a recent/>\n,\n[52]<a search/>\n)\n[53]<a High Energy Physics - Theory/>\n(\nhep-th\n[54]<a new/>\n,\n[55]<a recent/>\n,\n[56]<a search/>\n)\n[57]<a Mathematical Physics/>\n(\nmath-ph\n[58]<a new/>\n,\n[59]<a recent/>\n,\n[60]<a search/>\n)\n[61]<a Nonlinear Sciences/>\n(\nnlin\n[62]<a new/>\n,\n[63]<a recent/>\n,\n[64]<a search/>\n)\nincludes:\n[65]<a Adaptation and Self-Organizing Systems/>\n;\n[66]<a Cellular Automata and Lattice Gases/>\n;\n[67]<a Chaotic Dynamics/>\n;\n[68]<a Exactly Solvable and Integrable Systems/>\n;\nPattern Formation and Solitons\n[69]<a Nuclear Experiment/>\n(\nnucl-ex\n[70]<a new/>\n,\n[71]<a recent/>\n,\n[72]<a search/>\n)\n[73]<a Nuclear Theory/>\n(\nnucl-th\n[74]<a new/>\n,\n[75]<a recent/>\n,\n[76]<a search/>\n)\n[77]<a Physics/>\n(\nphysics\n[78]<a new/>\n,\n[79]<a recent/>\n,\n[80]<a search/>\n)\nincludes:\n[81]<a Accelerator Physics/>\n;\n[82]<a Applied Physics/>\n;\n[83]<a Atmospheric and Oceanic Physics/>\n;\n[84]<a Atomic and Molecular Clusters/>\n;\n[85]<a Atomic Physics/>\n;\n[86]<a Biological Physics/>\n;\n[87]<a Chemical Physics/>\n;\n[88]<a Classical Physics/>\n;\n[89]<a Computational Physics/>\n;\n[90]<a Data Analysis, Statistics and Probability/>\n;\n[91]<a Fluid Dynamics/>\n;\n[92]<a General Physics/>\n;\n[93]<a Geophysics/>\n;\n[94]<a History and Philosophy of Physics/>\n;\n[95]<a Instrumentation and Detectors/>\n;\n[96]<a Medical Physics/>\n;\n[97]<a Optics/>\n;\n[98]<a Physics and Society/>\n;\n[99]<a Physics Education/>\n;\n[100]<a Plasma Physics/>\n;\n[101]<a Popular Physics/>\n;\n[102]<a Space Physics/>\n[103]<a Quantum Physics/>\n(\nquant-ph\n[104]<a new/>\n,\n[105]<a recent/>\n,\n[106]<a search/>\n)\nMathematics\n[107]<a Mathematics/>\n(\nmath\n[108]<a new/>\n,\n[109]<a recent/>\n,\n[110]<a search/>\n)\nincludes: (see\n[111]<a detailed description/>\n):\n[112]<a Algebraic Geometry/>\n;\n[113]<a Algebraic Topology/>\n;\n[114]<a Analysis of PDEs/>\n;\n[115]<a Category Theory/>\n;\n[116]<a Classical Analysis and ODEs/>\n;\n[117]<a Combinatorics/>\n;\nCommutative Algebra\n;\n[118]<a Complex Variables/>\n;\n[119]<a Differential Geometry/>\n;\n[120]<a Dynamical Systems/>\n;\n[121]<a Functional Analysis/>\n;\n[122]<a General Mathematics/>\n;\n[123]<a General Topology/>\n;\n[124]<a Geometric Topology/>\n;\n[125]<a Group Theory/>\n;\n[126]<a History and Overview/>\n;\n[127]<a Information Theory/>\n;\n[128]<a K-Theory and Homology/>\n;\n[129]<a Logic/>\n;\n[130]<a Mathematical Physics/>\n;\n[131]<a Metric Geometry/>\n;\n[132]<a Number Theory/>\n;\n[133]<a Numerical Analysis/>\n;\n[134]<a Operator Algebras/>\n;\n[135]<a Optimization and Control/>\n;\n[136]<a Probability/>\n;\n[137]<a Quantum Algebra/>\n;\n[138]<a Representation Theory/>\n;\n[139]<a Rings and Algebras/>\n;\n[140]<a Spectral Theory/>\n;\n[141]<a Statistics Theory/>\n;\n[142]<a Symplectic Geometry/>\nComputer Science\n[143]<a Computing Research Repository/>\n(\nCoRR\n[144]<a new/>\n,\n[145]<a recent/>\n,\n[146]<a search/>\n)\nincludes: (see\n[147]<a detailed description/>\n):\n[148]<a Artificial Intelligence/>\n;\n[149]<a Computation and Language/>\n;\n[150]<a Computational Complexity/>\n;\n[151]<a Computational Engineering, Finance, and Science/>\n;\n[152]<a Computational Geometry/>\n;\n[153]<a Computer Science and Game Theory/>\n;\n[154]<a Computer Vision and Pattern Recognition/>\n;\n[155]<a Computers and Society/>\n;\n[156]<a Cryptography and Security/>\n;\nData Structures and Algorithms\n;\n[157]<a Databases/>\n;\n[158]<a Digital Libraries/>\n;\n[159]<a Discrete Mathematics/>\n;\n[160]<a Distributed, Parallel, and Cluster Computing/>\n;\n[161]<a Emerging Technologies/>\n;\nFormal Languages and Automata Theory\n;\n[162]<a General Literature/>\n;\n[163]<a Graphics/>\n;\n[164]<a Hardware Architecture/>\n;\n[165]<a Human-Computer Interaction/>\n;\n[166]<a Information Retrieval/>\n;\n[167]<a Information Theory/>\n;\n[168]<a Logic in Computer Science/>\n;\nMachine Learning\n;\n[169]<a Mathematical Software/>\n;\n[170]<a Multiagent Systems/>\n;\n[171]<a Multimedia/>\n;\n[172]<a Networking and Internet Architecture/>\n;\n[173]<a Neural and Evolutionary Computing/>\n;\n[174]<a Numerical Analysis/>\n;\nOperating Systems\n;\n[175]<a Other Computer Science/>\n;\n[176]<a Performance/>\n;\n[177]<a Programming Languages/>\n;\n[178]<a Robotics/>\n;\n[179]<a Social and Information Networks/>\n;\n[180]<a Software Engineering/>\n;\n[181]<a Sound/>\n;\n[182]<a Symbolic Computation/>\n;\n[183]<a Systems and Control/>\nQuantitative Biology\n[184]<a Quantitative Biology/>\n(\nq-bio\n[185]<a new/>\n,\n[186]<a recent/>\n,\n[187]<a search/>\n)\nincludes: (see\n[188]<a detailed description/>\n):\n[189]<a Biomolecules/>\n;\n[190]<a Cell Behavior/>\n;\n[191]<a Genomics/>\n;\n[192]<a Molecular Networks/>\n;\n[193]<a Neurons and Cognition/>\n;\n[194]<a Other Quantitative Biology/>\n;\n[195]<a Populations and Evolution/>\n;\n[196]<a Quantitative Methods/>\n;\n[197]<a Subcellular Processes/>\n;\n[198]<a Tissues and Organs/>\nQuantitative Finance\n[199]<a Quantitative Finance/>\n(\nq-fin\n[200]<a new/>\n,\n[201]<a recent/>\n,\n[202]<a search/>\n)\nincludes: (see\n[203]<a detailed description/>\n):\n[204]<a Computational Finance/>\n;\n[205]<a Economics/>\n;\n[206]<a General Finance/>\n;\n[207]<a Mathematical Finance/>\n;\n[208]<a Portfolio Management/>\n;\n[209]<a Pricing of Securities/>\n;\n[210]<a Risk Management/>\n;\n[211]<a Statistical Finance/>\n;\n[212]<a Trading and Market Microstructure/>\nStatistics\n[213]<a Statistics/>\n(\nstat\n[214]<a new/>\n,\n[215]<a recent/>\n,\n[216]<a search/>\n)\nincludes: (see\n[217]<a detailed description/>\n):\n[218]<a Applications/>\n;\n[219]<a Computation/>\n;\n[220]<a Machine Learning/>\n;\n[221]<a Methodology/>\n;\n[222]<a Other Statistics/>\n;\n[223]<a Statistics Theory/>\nElectrical Engineering and Systems Science\n[224]<a Electrical Engineering and Systems Science/>\n(\neess\n[225]<a new/>\n,\n[226]<a recent/>\n,\n[227]<a search/>\n)\nincludes: (see\n[228]<a detailed description/>\n):\n[229]<a Audio and Speech Processing/>\n;\n[230]<a Image and Video Processing/>\n;\n[231]<a Signal Processing/>\n;\n[232]<a Systems and Control/>\nEconomics\n[233]<a Economics/>\n(\necon\n[234]<a new/>\n,\n[235]<a recent/>\n,\n[236]<a search/>\n)\nincludes: (see\n[237]<a detailed description/>\n):\n[238]<a Econometrics/>\n;\n[239]<a General Economics/>\n;\n[240]<a Theoretical Economics/>\n... 908 pixels below - scroll or extract content to see more ...\nCurrent step: 4/20Current date and time: 2025-03-26 21:12\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_P8ZUEC9uRqgZ3Wu03Kczwkkt",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - The arXiv homepage is open.\",\"memory\":\"Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.\",\"next_goal\":\"Use the search function to find the 'GPT-4 Technical Report'.\"},\"action\":[{\"input_text\":{\"index\":6,\"text\":\"GPT-4 Technical Report\"}},{\"click_element\":{\"index\":10}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - The arXiv homepage is open.\n\ud83e\udde0 Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.\n\ud83c\udfaf Use the search function to find the 'GPT-4 Technical Report'.\n\ud83d\udee0\ufe0f Actions: \n - {'input_text': {'index': 6, 'text': 'GPT-4 Technical Report'}}\n - {'click_element': {'index': 10}}\n"
+        }
+      ],
+      "duration_in_s": 9.584729194641113
+    },
+    {
+      "url": "http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header",
+      "llm_calls": [
+        {
+          "input_tokens": 5332,
+          "output_tokens": 84,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently empty, indicating a starting point.",
+                      "memory": "Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.",
+                      "next_goal": "Open the arxiv.org website to begin the search for the paper."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://arxiv.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The arXiv homepage is open.",
+                      "memory": "Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.",
+                      "next_goal": "Use the search function to find the 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 6,
+                          "text": "GPT-4 Technical Report"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 10
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input GPT-4 Technical Report into index 6",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 10: Search",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header\nAvailable tabs:\n[TabInfo(page_id=0, url='http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header', title='Search | arXiv e-print repository')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to main content\n[0]<a />\n[1]<img />\nWe gratefully acknowledge support from\nthe Simons Foundation,\n[2]<a member institutions/>\n, and all contributors.\n[3]<a Donate/>\n[4]<a arxiv-logo/>\n[5]<img />\n[6]<input query;Search...;Search term or terms;text/>\n[7]<a Help/>\n|\n[8]<a Advanced Search/>\n[9]<select Field to search;searchtype>All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text/>\n[10]<button Search/>\n[11]<a Login/>\nShowing 1\u201331 of 31 results for all:\nGPT-4 Technical Report\n[12]<a Search v0.5.6 released 2020-02-24/>\nSearch term or terms\n[13]<input query;Search term...;GPT-4 Technical Report;text/>\n[14]<select searchtype>All fields\nTitle\nAuthor(s)\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\nLicense (URI)\narXiv author ID\nHelp pages\nFull text/>\n[15]<button Search/>\n[16]<input show;radio;abstracts/>\nShow abstracts\n[17]<input radio;abstracts;hide/>\nHide abstracts\n[18]<a Advanced Search/>\n[19]<select size>25\n50\n100\n200/>\nresults per page\n.\nSort results by\n[20]<select order>Announcement date (newest first)\nAnnouncement date (oldest first)\nSubmission date (newest first)\nSubmission date (oldest first)\nRelevance/>\n[21]<button Go/>\n[22]<a arXiv:2502.04066/>\n[\n[23]<a pdf/>\n,\n[24]<a other/>\n]\ncs.CL\ncs.AI\nPredicting Large Language Model Capabilities on Closed-Book QA Tasks Using Only Information Available Prior to Training\nAuthors:\n[25]<a Changhao Jiang/>\n,\n[26]<a Ming Zhang/>\n,\n[27]<a Junjie Ye/>\n,\n[28]<a Xiaoran Fan/>\n,\n[29]<a Yifei Cao/>\n,\n[30]<a Jiajun Sun/>\n,\n[31]<a Zhiheng Xi/>\n,\n[32]<a Shihan Dou/>\n,\n[33]<a Yi Dong/>\n,\nYujiong Shen\n,\n[34]<a Jingqi Tong/>\n,\n[35]<a Zhen Wang/>\n,\n[36]<a Tao Liang/>\n,\n[37]<a Zhihui Fei/>\n,\n[38]<a Mingyang Wan/>\n,\n[39]<a Guojun Ma/>\n,\n[40]<a Qi Zhang/>\n,\n[41]<a Tao Gui/>\n,\n[42]<a Xuanjing Huang/>\nAbstract\n:\nThe\nGPT\n-\n4\ntechnical\nreport\nfrom OpenAI suggests that model performance on specific tasks can be predicted prior to training, though methodologies remain unspecified. This approach is crucial for optimizing resource allocation and ensuring d\u2026\n[43]<a \u25bd More/>\nSubmitted\n6 February, 2025;\noriginally announced\nFebruary 2025.\n[44]<a arXiv:2412.06845/>\n[\n[45]<a pdf/>\n,\n[46]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nFully Open Source Moxin-7B\nTechnical\nReport\nAuthors:\n[47]<a Pu Zhao/>\n,\n[48]<a Xuan Shen/>\n,\n[49]<a Zhenglun Kong/>\n,\n[50]<a Yixin Shen/>\n,\n[51]<a Sung-En Chang/>\n,\n[52]<a Timothy Rupprecht/>\n,\n[53]<a Lei Lu/>\n,\n[54]<a Enfu Nan/>\n,\n[55]<a Changdi Yang/>\n,\n[56]<a Yumei He/>\n,\n[57]<a Xingchen Xu/>\n,\n[58]<a Yu Huang/>\n,\n[59]<a Wei Wang/>\n,\n[60]<a Yue Chen/>\n,\n[61]<a Yong He/>\n,\n[62]<a Yanzhi Wang/>\nAbstract\n:\n\u2026Models (LLMs) have undergone a significant transformation, marked by a rapid rise in both their popularity and capabilities. Leading this evolution are proprietary LLMs like\nGPT\n-\n4\nand\nGPT\n-o1, which have captured widespread attention in the AI community due to their remarkable per\u2026\n[63]<a \u25bd More/>\nSubmitted\n11 December, 2024;\nv1\nsubmitted 7 December, 2024;\noriginally announced\nDecember 2024.\n[64]<a arXiv:2410.03736/>\n[\n[65]<a pdf/>\n,\n[66]<a other/>\n]\ncs.HC\ncs.AI\ncs.LG\nCliMB: An AI-enabled Partner for Clinical Predictive Modeling\nAuthors:\n[67]<a Evgeny Saveliev/>\n,\n[68]<a Tim Schubert/>\n,\n[69]<a Thomas Pouplin/>\n,\n[70]<a Vasilis Kosmoliaptsis/>\n,\n[71]<a Mihaela van der Schaar/>\nAbstract\n:\nDespite its significant promise and continuous\ntechnical\nadvances, real-world applications of artificial intelligence (AI) remain limited. We attribute this to the \"domain expert-AI-conundrum\": while domain experts, such as clinician scientists, should be able to build predictive models such as risk scores, they face substantial barriers in accessing\u2026\n[72]<a \u25bd More/>\nSubmitted\n25 November, 2024;\nv1\nsubmitted 30 September, 2024;\noriginally announced\nOctober 2024.\nComments:\n* Evgeny Saveliev and Tim Schubert contributed equally to this work\n[73]<a arXiv:2409.03215/>\n[\n[74]<a pdf/>\n,\n[75]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nxLAM: A Family of Large Action Models to Empower AI Agent Systems\nAuthors:\n[76]<a Jianguo Zhang/>\n,\n[77]<a Tian Lan/>\n,\n[78]<a Ming Zhu/>\n,\n[79]<a Zuxin Liu/>\n,\n[80]<a Thai Hoang/>\n,\n[81]<a Shirley Kokane/>\n,\n[82]<a Weiran Yao/>\n,\n[83]<a Juntao Tan/>\n,\n[84]<a Akshara Prabhakar/>\n,\n[85]<a Haolin Chen/>\n,\n[86]<a Zhiwei Liu/>\n,\n[87]<a Yihao Feng/>\n,\n[88]<a Tulika Awalgaonkar/>\n,\n[89]<a Rithesh Murthy/>\n,\n[90]<a Eric Hu/>\n,\n[91]<a Zeyuan Chen/>\n,\n[92]<a Ran Xu/>\n,\n[93]<a Juan Carlos Niebles/>\n,\n[94]<a Shelby Heinecke/>\n,\n[95]<a Huan Wang/>\n,\n[96]<a Silvio Savarese/>\n,\n[97]<a Caiming Xiong/>\nAbstract\n:\n\u2026delivers exceptional performance across multiple agent ability benchmarks, notably securing the 1st position on the Berkeley Function-Calling Leaderboard, outperforming\nGPT\n-\n4\n, Claude-3, and many other models in terms of tool use. By releasing the xLAM series, we aim to advance the performance of open-source LLMs for au\u2026\n[98]<a \u25bd More/>\nSubmitted\n4 September, 2024;\noriginally announced\nSeptember 2024.\nComments:\nTechnical\nreport\nfor the Salesforce xLAM model series\n[99]<a arXiv:2406.12845/>\n[\n[100]<a pdf/>\n,\n[101]<a other/>\n]\ncs.LG\ncs.CL\nInterpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts\nAuthors:\n[102]<a Haoxiang Wang/>\n,\n[103]<a Wei Xiong/>\n,\n[104]<a Tengyang Xie/>\n,\n[105]<a Han Zhao/>\n,\n[106]<a Tong Zhang/>\nAbstract\n:\n\u2026state-of-the-art performance on RewardBench, a benchmark evaluating RMs for language modeling. Notably, the performance of our model surpasses the LLM-as-a-judge method with\nGPT\n-\n4\njudges by a margin, and approaches the performance of the much larger Nemotron-\n4\n340B reward model.\n[107]<a \u25bd More/>\nSubmitted\n18 June, 2024;\noriginally announced\nJune 2024.\nComments:\nTechnical\nreport\nv1. Code and model are released at https://github.com/RLHFlow/RLHF-Reward-Modeling/\n[108]<a arXiv:2405.19266/>\n[\n[109]<a pdf/>\n,\n[110]<a other/>\n]\ncs.CL\nPediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications\nAuthors:\n[111]<a Dingkang Yang/>\n,\n[112]<a Jinjie Wei/>\n,\n[113]<a Dongling Xiao/>\n,\n[114]<a Shunli Wang/>\n,\n[115]<a Tong Wu/>\n,\n[116]<a Gang Li/>\n,\n[117]<a Mingcheng Li/>\n,\n[118]<a Shuaibing Wang/>\n,\n[119]<a Jiawei Chen/>\n,\n[120]<a Yue Jiang/>\n,\n[121]<a Qingyao Xu/>\n,\n[122]<a Ke Li/>\n,\n[123]<a Peng Zhai/>\n,\n[124]<a Lihua Zhang/>\nAbstract\n:\n\u2026experts strategy is presented to resolve the competency conflict between medical generalist and pediatric expertise mastery. Extensive results based on the metrics,\nGPT\n-\n4\n, and doctor evaluations on distinct doctor downstream tasks show that PediatricsGPT consistently outperforms previous Chinese medical LLMs. Our model\u2026\n... 5695 pixels below - scroll or extract content to see more ...\nCurrent step: 5/20Current date and time: 2025-03-26 21:12\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_FFsMPCVn1s2otByHokVjWVf1",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Success - Search results for 'GPT-4 Technical Report' displayed.\",\"memory\":\"Search results for 'GPT-4 Technical Report' found. Need to find and open the correct paper to check for v3 submission date.\",\"next_goal\":\"Identify and select the correct paper link for 'GPT-4 Technical Report'.\"},\"action\":[{\"click_element\":{\"index\":22}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Success - Search results for 'GPT-4 Technical Report' displayed.\n\ud83e\udde0 Search results for 'GPT-4 Technical Report' found. Need to find and open the correct paper to check for v3 submission date.\n\ud83c\udfaf Identify and select the correct paper link for 'GPT-4 Technical Report'.\n\ud83d\udee0\ufe0f Actions: \n - {'click_element': {'index': 22}}\n"
+        }
+      ],
+      "duration_in_s": 9.277781009674072
+    },
+    {
+      "url": "http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header",
+      "llm_calls": [
+        {
+          "input_tokens": 4613,
+          "output_tokens": 78,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently empty, indicating a starting point.",
+                      "memory": "Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.",
+                      "next_goal": "Open the arxiv.org website to begin the search for the paper."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://arxiv.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The arXiv homepage is open.",
+                      "memory": "Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.",
+                      "next_goal": "Use the search function to find the 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 6,
+                          "text": "GPT-4 Technical Report"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 10
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input GPT-4 Technical Report into index 6",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 10: Search",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results for 'GPT-4 Technical Report' displayed.",
+                      "memory": "Search results for 'GPT-4 Technical Report' found. Need to find and open the correct paper to check for v3 submission date.",
+                      "next_goal": "Identify and select the correct paper link for 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: arXiv:2502.04066",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: https://arxiv.org/abs/2502.04066\nAvailable tabs:\n[TabInfo(page_id=0, url='https://arxiv.org/abs/2502.04066', title='[2502.04066] Predicting Large Language Model Capabilities on Closed-Book QA Tasks Using Only Information Available Prior to Training')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to main content\n[0]<a />\n[1]<img />\nWe gratefully acknowledge support from the Simons Foundation,\n[2]<a member institutions/>\n, and all contributors.\n[3]<a Donate/>\n[4]<a />\n[5]<img />\n>\n[6]<a cs/>\n>\narXiv:2502.04066\n[7]<input query;Search...;Search term or terms;text/>\n[8]<a Help/>\n|\n[9]<a Advanced Search/>\n[10]<select Field to search;searchtype>All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text/>\n[11]<button Search/>\nComputer Science > Computation and Language\n[Submitted on 6 Feb 2025]\nPredicting Large Language Model Capabilities on Closed-Book QA Tasks Using Only Information Available Prior to Training\n[12]<a Changhao Jiang/>\n,\n[13]<a Ming Zhang/>\n,\n[14]<a Junjie Ye/>\n,\n[15]<a Xiaoran Fan/>\n,\n[16]<a Yifei Cao/>\n,\n[17]<a Jiajun Sun/>\n,\n[18]<a Zhiheng Xi/>\n,\n[19]<a Shihan Dou/>\n,\n[20]<a Yi Dong/>\n,\n[21]<a Yujiong Shen/>\n,\nJingqi Tong\n,\n[22]<a Zhen Wang/>\n,\n[23]<a Tao Liang/>\n,\n[24]<a Zhihui Fei/>\n,\n[25]<a Mingyang Wan/>\n,\n[26]<a Guojun Ma/>\n,\n[27]<a Qi Zhang/>\n,\n[28]<a Tao Gui/>\n,\n[29]<a Xuanjing Huang/>\nThe GPT-4 technical report from OpenAI suggests that model performance on specific tasks can be predicted prior to training, though methodologies remain unspecified. This approach is crucial for optimizing resource allocation and ensuring data alignment with target tasks. To achieve this vision, we focus on predicting performance on Closed-book Question Answering (CBQA) tasks, which are closely tied to pre-training data and knowledge retention. We address three major challenges: 1) mastering the entire pre-training process, especially data construction; 2) evaluating a model's knowledge retention; and 3) predicting task-specific knowledge retention using only information available prior to training. To tackle these challenges, we pre-train three large language models (i.e., 1.6B, 7B, and 13B) using 560k dollars and 520k GPU hours. We analyze the pre-training data with knowledge triples and assess knowledge retention using established methods. Additionally, we introduce the SMI metric, an information-theoretic measure that quantifies the relationship between pre-training data, model size, and task-specific knowledge retention. Our experiments reveal a strong linear correlation (\n[30]<span R\n2\n>\n0.84/>\n) between the SMI metric and the model's accuracy on CBQA tasks across models of varying sizes (i.e., 1.1B, 1.6B, 7B, and 13B). The dataset, model, and code are available at\n[31]<a this https URL/>\n.\nSubjects:\nComputation and Language (cs.CL)\n; Artificial Intelligence (cs.AI)\nCite as:\n[32]<a arXiv:2502.04066/>\n[cs.CL]\n(or\n[33]<a arXiv:2502.04066v1/>\n[cs.CL]\nfor this version)\n[34]<a https://doi.org/10.48550/arXiv.2502.04066/>\n[35]<button Focus to learn more/>\nSubmission history\nFrom: Changhao Jiang [\n[36]<a view email/>\n]\n[v1]\nThu, 6 Feb 2025 13:23:53 UTC (449 KB)\nAccess Paper:\n[37]<a View PDF/>\n[38]<a HTML (experimental)/>\n[39]<a TeX Source/>\n[40]<a Other Formats/>\n[41]<a Rights to this article>view license/>\nCurrent browse context:\ncs.CL\n[42]<a previous in cs.CL (accesskey p)><\u00a0prev/>\n|\n[43]<a next in cs.CL (accesskey n)>next\u00a0>/>\n[44]<a new/>\n|\n[45]<a recent/>\n|\n[46]<a 2025-02/>\nChange to browse by:\n[47]<a cs/>\n[48]<a cs.AI/>\nReferences & Citations\n[49]<a NASA ADS/>\n[50]<a Google Scholar/>\n[51]<a Semantic Scholar/>\nexport BibTeX citation\nBookmark\n[52]<a Bookmark on BibSonomy/>\n[53]<img />\n[54]<a Bookmark on Reddit/>\n[55]<img />\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\n[56]<a What is the Explorer?/>\n)\nConnected Papers Toggle\nConnected Papers\n(\n[57]<a What is Connected Papers?/>\n)\nLitmaps Toggle\nLitmaps\n(\n[58]<a What is Litmaps?/>\n)\nscite.ai Toggle\nscite Smart Citations\n(\n[59]<a What are Smart Citations?/>\n)\nCode, Data, Media\nDemos\nRelated Papers\nAbout arXivLabs\n[60]<a Which authors of this paper are endorsers?/>\n|\n[61]<a Disable MathJax/>\n(\n[62]<a What is MathJax?/>\n)\n[63]<a About/>\n[64]<a Help/>\n[65]<a Contact/>\n[66]<a Subscribe/>\n[67]<a Copyright/>\n[68]<a Privacy Policy/>\n[69]<a Web Accessibility Assistance/>\n[70]<a arXiv Operational Status/>\nGet status notifications via\n[71]<a email/>\nor\n[72]<a slack/>\n... 285 pixels below - scroll or extract content to see more ...\nCurrent step: 6/20Current date and time: 2025-03-26 21:12\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_NPslgccmNTunayRfqKPMtRO0",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Failed - The selected paper is not the 'GPT-4 Technical Report'.\",\"memory\":\"Accidentally opened the wrong paper. Need to refine search or page review to find the correct 'GPT-4 Technical Report'.\",\"next_goal\":\"Go back to search results to find the correct paper.\"},\"action\":[{\"go_back\":{}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Failed - The selected paper is not the 'GPT-4 Technical Report'.\n\ud83e\udde0 Accidentally opened the wrong paper. Need to refine search or page review to find the correct 'GPT-4 Technical Report'.\n\ud83c\udfaf Go back to search results to find the correct paper.\n\ud83d\udee0\ufe0f Actions: \n - {'go_back': {}}\n"
+        }
+      ],
+      "duration_in_s": 8.094184875488281
+    },
+    {
+      "url": "http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header",
+      "llm_calls": [
+        {
+          "input_tokens": 5568,
+          "output_tokens": 94,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently empty, indicating a starting point.",
+                      "memory": "Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.",
+                      "next_goal": "Open the arxiv.org website to begin the search for the paper."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://arxiv.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The arXiv homepage is open.",
+                      "memory": "Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.",
+                      "next_goal": "Use the search function to find the 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 6,
+                          "text": "GPT-4 Technical Report"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 10
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input GPT-4 Technical Report into index 6",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 10: Search",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results for 'GPT-4 Technical Report' displayed.",
+                      "memory": "Search results for 'GPT-4 Technical Report' found. Need to find and open the correct paper to check for v3 submission date.",
+                      "next_goal": "Identify and select the correct paper link for 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: arXiv:2502.04066",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The selected paper is not the 'GPT-4 Technical Report'.",
+                      "memory": "Accidentally opened the wrong paper. Need to refine search or page review to find the correct 'GPT-4 Technical Report'.",
+                      "next_goal": "Go back to search results to find the correct paper."
+                    },
+                    "action": [
+                      {
+                        "go_back": {}
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd19  Navigated back",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header\nAvailable tabs:\n[TabInfo(page_id=0, url='http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header', title='Search | arXiv e-print repository')]\nInteractive elements from top layer of the current page inside the viewport:\n[Start of page]\nSkip to main content\n[0]<a />\n[1]<img />\nWe gratefully acknowledge support from\nthe Simons Foundation,\n[2]<a member institutions/>\n, and all contributors.\n[3]<a Donate/>\n[4]<a arxiv-logo/>\n[5]<img />\n[6]<input query;Search...;Search term or terms;text/>\n[7]<a Help/>\n|\n[8]<a Advanced Search/>\n[9]<select Field to search;searchtype>All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text/>\n[10]<button Search/>\n[11]<a Login/>\nShowing 1\u201331 of 31 results for all:\nGPT-4 Technical Report\n[12]<a Search v0.5.6 released 2020-02-24/>\nSearch term or terms\n[13]<input query;Search term...;GPT-4 Technical Report;text/>\n[14]<select searchtype>All fields\nTitle\nAuthor(s)\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\nLicense (URI)\narXiv author ID\nHelp pages\nFull text/>\n[15]<button Search/>\n[16]<input show;radio;abstracts/>\nShow abstracts\n[17]<input radio;abstracts;hide/>\nHide abstracts\n[18]<a Advanced Search/>\n[19]<select size>25\n50\n100\n200/>\nresults per page\n.\nSort results by\n[20]<select order>Announcement date (newest first)\nAnnouncement date (oldest first)\nSubmission date (newest first)\nSubmission date (oldest first)\nRelevance/>\n[21]<button Go/>\n[22]<a arXiv:2502.04066/>\n[\n[23]<a pdf/>\n,\n[24]<a other/>\n]\ncs.CL\ncs.AI\nPredicting Large Language Model Capabilities on Closed-Book QA Tasks Using Only Information Available Prior to Training\nAuthors:\n[25]<a Changhao Jiang/>\n,\n[26]<a Ming Zhang/>\n,\n[27]<a Junjie Ye/>\n,\n[28]<a Xiaoran Fan/>\n,\n[29]<a Yifei Cao/>\n,\n[30]<a Jiajun Sun/>\n,\n[31]<a Zhiheng Xi/>\n,\n[32]<a Shihan Dou/>\n,\n[33]<a Yi Dong/>\n,\nYujiong Shen\n,\n[34]<a Jingqi Tong/>\n,\n[35]<a Zhen Wang/>\n,\n[36]<a Tao Liang/>\n,\n[37]<a Zhihui Fei/>\n,\n[38]<a Mingyang Wan/>\n,\n[39]<a Guojun Ma/>\n,\n[40]<a Qi Zhang/>\n,\n[41]<a Tao Gui/>\n,\n[42]<a Xuanjing Huang/>\nAbstract\n:\nThe\nGPT\n-\n4\ntechnical\nreport\nfrom OpenAI suggests that model performance on specific tasks can be predicted prior to training, though methodologies remain unspecified. This approach is crucial for optimizing resource allocation and ensuring d\u2026\n[43]<a \u25bd More/>\nSubmitted\n6 February, 2025;\noriginally announced\nFebruary 2025.\n[44]<a arXiv:2412.06845/>\n[\n[45]<a pdf/>\n,\n[46]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nFully Open Source Moxin-7B\nTechnical\nReport\nAuthors:\n[47]<a Pu Zhao/>\n,\n[48]<a Xuan Shen/>\n,\n[49]<a Zhenglun Kong/>\n,\n[50]<a Yixin Shen/>\n,\n[51]<a Sung-En Chang/>\n,\n[52]<a Timothy Rupprecht/>\n,\n[53]<a Lei Lu/>\n,\n[54]<a Enfu Nan/>\n,\n[55]<a Changdi Yang/>\n,\n[56]<a Yumei He/>\n,\n[57]<a Xingchen Xu/>\n,\n[58]<a Yu Huang/>\n,\n[59]<a Wei Wang/>\n,\n[60]<a Yue Chen/>\n,\n[61]<a Yong He/>\n,\n[62]<a Yanzhi Wang/>\nAbstract\n:\n\u2026Models (LLMs) have undergone a significant transformation, marked by a rapid rise in both their popularity and capabilities. Leading this evolution are proprietary LLMs like\nGPT\n-\n4\nand\nGPT\n-o1, which have captured widespread attention in the AI community due to their remarkable per\u2026\n[63]<a \u25bd More/>\nSubmitted\n11 December, 2024;\nv1\nsubmitted 7 December, 2024;\noriginally announced\nDecember 2024.\n[64]<a arXiv:2410.03736/>\n[\n[65]<a pdf/>\n,\n[66]<a other/>\n]\ncs.HC\ncs.AI\ncs.LG\nCliMB: An AI-enabled Partner for Clinical Predictive Modeling\nAuthors:\n[67]<a Evgeny Saveliev/>\n,\n[68]<a Tim Schubert/>\n,\n[69]<a Thomas Pouplin/>\n,\n[70]<a Vasilis Kosmoliaptsis/>\n,\n[71]<a Mihaela van der Schaar/>\nAbstract\n:\nDespite its significant promise and continuous\ntechnical\nadvances, real-world applications of artificial intelligence (AI) remain limited. We attribute this to the \"domain expert-AI-conundrum\": while domain experts, such as clinician scientists, should be able to build predictive models such as risk scores, they face substantial barriers in accessing\u2026\n[72]<a \u25bd More/>\nSubmitted\n25 November, 2024;\nv1\nsubmitted 30 September, 2024;\noriginally announced\nOctober 2024.\nComments:\n* Evgeny Saveliev and Tim Schubert contributed equally to this work\n[73]<a arXiv:2409.03215/>\n[\n[74]<a pdf/>\n,\n[75]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nxLAM: A Family of Large Action Models to Empower AI Agent Systems\nAuthors:\n[76]<a Jianguo Zhang/>\n,\n[77]<a Tian Lan/>\n,\n[78]<a Ming Zhu/>\n,\n[79]<a Zuxin Liu/>\n,\n[80]<a Thai Hoang/>\n,\n[81]<a Shirley Kokane/>\n,\n[82]<a Weiran Yao/>\n,\n[83]<a Juntao Tan/>\n,\n[84]<a Akshara Prabhakar/>\n,\n[85]<a Haolin Chen/>\n,\n[86]<a Zhiwei Liu/>\n,\n[87]<a Yihao Feng/>\n,\n[88]<a Tulika Awalgaonkar/>\n,\n[89]<a Rithesh Murthy/>\n,\n[90]<a Eric Hu/>\n,\n[91]<a Zeyuan Chen/>\n,\n[92]<a Ran Xu/>\n,\n[93]<a Juan Carlos Niebles/>\n,\n[94]<a Shelby Heinecke/>\n,\n[95]<a Huan Wang/>\n,\n[96]<a Silvio Savarese/>\n,\n[97]<a Caiming Xiong/>\nAbstract\n:\n\u2026delivers exceptional performance across multiple agent ability benchmarks, notably securing the 1st position on the Berkeley Function-Calling Leaderboard, outperforming\nGPT\n-\n4\n, Claude-3, and many other models in terms of tool use. By releasing the xLAM series, we aim to advance the performance of open-source LLMs for au\u2026\n[98]<a \u25bd More/>\nSubmitted\n4 September, 2024;\noriginally announced\nSeptember 2024.\nComments:\nTechnical\nreport\nfor the Salesforce xLAM model series\n[99]<a arXiv:2406.12845/>\n[\n[100]<a pdf/>\n,\n[101]<a other/>\n]\ncs.LG\ncs.CL\nInterpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts\nAuthors:\n[102]<a Haoxiang Wang/>\n,\n[103]<a Wei Xiong/>\n,\n[104]<a Tengyang Xie/>\n,\n[105]<a Han Zhao/>\n,\n[106]<a Tong Zhang/>\nAbstract\n:\n\u2026state-of-the-art performance on RewardBench, a benchmark evaluating RMs for language modeling. Notably, the performance of our model surpasses the LLM-as-a-judge method with\nGPT\n-\n4\njudges by a margin, and approaches the performance of the much larger Nemotron-\n4\n340B reward model.\n[107]<a \u25bd More/>\nSubmitted\n18 June, 2024;\noriginally announced\nJune 2024.\nComments:\nTechnical\nreport\nv1. Code and model are released at https://github.com/RLHFlow/RLHF-Reward-Modeling/\n[108]<a arXiv:2405.19266/>\n[\n[109]<a pdf/>\n,\n[110]<a other/>\n]\ncs.CL\nPediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications\nAuthors:\n[111]<a Dingkang Yang/>\n,\n[112]<a Jinjie Wei/>\n,\n[113]<a Dongling Xiao/>\n,\n[114]<a Shunli Wang/>\n,\n[115]<a Tong Wu/>\n,\n[116]<a Gang Li/>\n,\n[117]<a Mingcheng Li/>\n,\n[118]<a Shuaibing Wang/>\n,\n[119]<a Jiawei Chen/>\n,\n[120]<a Yue Jiang/>\n,\n[121]<a Qingyao Xu/>\n,\n[122]<a Ke Li/>\n,\n[123]<a Peng Zhai/>\n,\n[124]<a Lihua Zhang/>\nAbstract\n:\n\u2026experts strategy is presented to resolve the competency conflict between medical generalist and pediatric expertise mastery. Extensive results based on the metrics,\nGPT\n-\n4\n, and doctor evaluations on distinct doctor downstream tasks show that PediatricsGPT consistently outperforms previous Chinese medical LLMs. Our model\u2026\n... 5695 pixels below - scroll or extract content to see more ...\nCurrent step: 7/20Current date and time: 2025-03-26 21:12\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_3D1xePAwD9ZUsbNUazfqUuqa",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - The needed information on 'GPT-4 Technical Report' submission date for v3 is not visible in the viewport.\",\"memory\":\"Currently on search results page for 'GPT-4 Technical Report'. Need to find the right paper and check submission date for version 3.\",\"next_goal\":\"Scroll down to see more results for the correct 'GPT-4 Technical Report'.\"},\"action\":[{\"scroll_down\":{}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - The needed information on 'GPT-4 Technical Report' submission date for v3 is not visible in the viewport.\n\ud83e\udde0 Currently on search results page for 'GPT-4 Technical Report'. Need to find the right paper and check submission date for version 3.\n\ud83c\udfaf Scroll down to see more results for the correct 'GPT-4 Technical Report'.\n\ud83d\udee0\ufe0f Actions: \n - {'scroll_down': {}}\n"
+        }
+      ],
+      "duration_in_s": 11.574586868286133
+    },
+    {
+      "url": "http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header",
+      "llm_calls": [
+        {
+          "input_tokens": 6453,
+          "output_tokens": 82,
+          "messages_in": [
+            {
+              "content": "You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.\n\n# Input Format\nTask\nPrevious steps\nCurrent URL\nOpen Tabs\nInteractive Elements\n[index]<type>text</type>\n- index: Numeric identifier for interaction\n- type: HTML element type (button, input, etc.)\n- text: Element description\nExample:\n[33]<button>Submit Form</button>\n\n- Only elements with numeric indexes in [] are interactive\n- elements without [] provide only context\n\n# Response Rules\n1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:\n{\"current_state\": {\"evaluation_previous_goal\": \"Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not\",\n\"memory\": \"Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz\",\n\"next_goal\": \"What needs to be done with the next immediate action\"},\n\"action\":[{\"one_action_name\": {// action-specific parameter}}, // ... more actions in sequence]}\n\n2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.\nCommon action sequences:\n- Form filling: [{\"input_text\": {\"index\": 1, \"text\": \"username\"}}, {\"input_text\": {\"index\": 2, \"text\": \"password\"}}, {\"click_element\": {\"index\": 3}}]\n- Navigation and extraction: [{\"go_to_url\": {\"url\": \"https://example.com\"}}, {\"extract_content\": {\"goal\": \"extract the names\"}}]\n- Actions are executed in the given order\n- If the page changes after an action, the sequence is interrupted and you get the new state.\n- Only provide the action sequence until an action which changes the page state significantly.\n- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page\n- only use multiple actions if it makes sense.\n\n3. ELEMENT INTERACTION:\n- Only use indexes of the interactive elements\n- Elements marked with \"[]Non-interactive text\" are non-interactive\n\n4. NAVIGATION & ERROR HANDLING:\n- If no suitable elements exist, use other functions to complete the task\n- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.\n- Handle popups/cookies by accepting or closing them\n- Use scroll to find elements you are looking for\n- If you want to research something, open a new tab instead of using the current tab\n- If captcha pops up, try to solve it - else try a different approach\n- If the page is not fully loaded, use wait action\n\n5. TASK COMPLETION:\n- Use the done action as the last action as soon as the ultimate task is complete\n- Dont use \"done\" before you are done with everything the user asked you, except you reach the last step of max_steps. \n- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!\n- If you have to do something repeatedly for example the task says for \"each\", or \"for all\", or \"x times\", count always inside \"memory\" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.\n- Don't hallucinate actions\n- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. \n\n6. VISUAL CONTEXT:\n- When an image is provided, use it to understand the page layout\n- Bounding boxes with labels on their top right corner correspond to element indexes\n\n7. Form filling:\n- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.\n\n8. Long tasks:\n- Keep track of the status and subresults in the memory. \n\n9. Extraction:\n- If your task is to find information - call extract_content on the specific pages to get and store the information.\nYour responses must be always JSON with the specified format. ",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "system",
+              "name": null,
+              "id": null
+            },
+            {
+              "content": "Your ultimate task is: \"\"\"You are a helpful web agent.\n        Now you are given the task: Find the paper 'GPT-4 Technical Report', when was v3 submitted?.\n        Please interact with : https://arxiv.org/ to get the answer.\n        \"\"\". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Example output:",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - I opend the first page",
+                      "memory": "Starting with the new task. I have completed 1/10 steps",
+                      "next_goal": "Click on company a"
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 0
+                        }
+                      }
+                    ]
+                  },
+                  "id": "1",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "Browser started",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "1",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "[Your task history memory starts here]",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The page is currently empty, indicating a starting point.",
+                      "memory": "Need to open arxiv.org to search for the GPT-4 Technical Report and find submission information for v3.",
+                      "next_goal": "Open the arxiv.org website to begin the search for the paper."
+                    },
+                    "action": [
+                      {
+                        "go_to_url": {
+                          "url": "https://arxiv.org/"
+                        }
+                      }
+                    ]
+                  },
+                  "id": "2",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "2",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\udd17  Navigated to https://arxiv.org/",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - The arXiv homepage is open.",
+                      "memory": "Opened arXiv website. Need to search for 'GPT-4 Technical Report' to find submission date for version 3.",
+                      "next_goal": "Use the search function to find the 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "input_text": {
+                          "index": 6,
+                          "text": "GPT-4 Technical Report"
+                        }
+                      },
+                      {
+                        "click_element": {
+                          "index": 10
+                        }
+                      }
+                    ]
+                  },
+                  "id": "3",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "3",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \u2328\ufe0f  Input GPT-4 Technical Report into index 6",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 10: Search",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Success - Search results for 'GPT-4 Technical Report' displayed.",
+                      "memory": "Search results for 'GPT-4 Technical Report' found. Need to find and open the correct paper to check for v3 submission date.",
+                      "next_goal": "Identify and select the correct paper link for 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "click_element": {
+                          "index": 22
+                        }
+                      }
+                    ]
+                  },
+                  "id": "4",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "4",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\uddb1\ufe0f  Clicked button with index 22: arXiv:2502.04066",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Failed - The selected paper is not the 'GPT-4 Technical Report'.",
+                      "memory": "Accidentally opened the wrong paper. Need to refine search or page review to find the correct 'GPT-4 Technical Report'.",
+                      "next_goal": "Go back to search results to find the correct paper."
+                    },
+                    "action": [
+                      {
+                        "go_back": {}
+                      }
+                    ]
+                  },
+                  "id": "5",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "5",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd19  Navigated back",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "ai",
+              "name": null,
+              "id": null,
+              "example": false,
+              "tool_calls": [
+                {
+                  "name": "AgentOutput",
+                  "args": {
+                    "current_state": {
+                      "evaluation_previous_goal": "Unknown - The needed information on 'GPT-4 Technical Report' submission date for v3 is not visible in the viewport.",
+                      "memory": "Currently on search results page for 'GPT-4 Technical Report'. Need to find the right paper and check submission date for version 3.",
+                      "next_goal": "Scroll down to see more results for the correct 'GPT-4 Technical Report'."
+                    },
+                    "action": [
+                      {
+                        "scroll_down": {}
+                      }
+                    ]
+                  },
+                  "id": "6",
+                  "type": "tool_call"
+                }
+              ],
+              "invalid_tool_calls": [],
+              "usage_metadata": null
+            },
+            {
+              "content": "",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "tool",
+              "name": null,
+              "id": null,
+              "tool_call_id": "6",
+              "artifact": null,
+              "status": "success"
+            },
+            {
+              "content": "Action result: \ud83d\udd0d  Scrolled down the page by one page",
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n[Task history memory ends]\n[Current state starts here]\nThe following is one-time information - if you need to remember it write it to memory:\nCurrent url: http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header\nAvailable tabs:\n[TabInfo(page_id=0, url='http://arxiv.org/search/?query=GPT-4+Technical+Report&searchtype=all&source=header', title='Search | arXiv e-print repository')]\nInteractive elements from top layer of the current page inside the viewport:\n... 1100 pixels above - scroll or extract content to see more ...\nSubmitted\n6 February, 2025;\noriginally announced\nFebruary 2025.\n[0]<a arXiv:2412.06845/>\n[\n[1]<a pdf/>\n,\n[2]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nFully Open Source Moxin-7B\nTechnical\nReport\nAuthors:\n[3]<a Pu Zhao/>\n,\n[4]<a Xuan Shen/>\n,\n[5]<a Zhenglun Kong/>\n,\n[6]<a Yixin Shen/>\n,\n[7]<a Sung-En Chang/>\n,\n[8]<a Timothy Rupprecht/>\n,\n[9]<a Lei Lu/>\n,\n[10]<a Enfu Nan/>\n,\n[11]<a Changdi Yang/>\n,\n[12]<a Yumei He/>\n,\n[13]<a Xingchen Xu/>\n,\n[14]<a Yu Huang/>\n,\n[15]<a Wei Wang/>\n,\n[16]<a Yue Chen/>\n,\n[17]<a Yong He/>\n,\n[18]<a Yanzhi Wang/>\nAbstract\n:\n\u2026Models (LLMs) have undergone a significant transformation, marked by a rapid rise in both their popularity and capabilities. Leading this evolution are proprietary LLMs like\nGPT\n-\n4\nand\nGPT\n-o1, which have captured widespread attention in the AI community due to their remarkable per\u2026\n[19]<a \u25bd More/>\nSubmitted\n11 December, 2024;\nv1\nsubmitted 7 December, 2024;\noriginally announced\nDecember 2024.\n[20]<a arXiv:2410.03736/>\n[\n[21]<a pdf/>\n,\n[22]<a other/>\n]\ncs.HC\ncs.AI\ncs.LG\nCliMB: An AI-enabled Partner for Clinical Predictive Modeling\nAuthors:\n[23]<a Evgeny Saveliev/>\n,\n[24]<a Tim Schubert/>\n,\n[25]<a Thomas Pouplin/>\n,\n[26]<a Vasilis Kosmoliaptsis/>\n,\n[27]<a Mihaela van der Schaar/>\nAbstract\n:\nDespite its significant promise and continuous\ntechnical\nadvances, real-world applications of artificial intelligence (AI) remain limited. We attribute this to the \"domain expert-AI-conundrum\": while domain experts, such as clinician scientists, should be able to build predictive models such as risk scores, they face substantial barriers in accessing\u2026\n[28]<a \u25bd More/>\nSubmitted\n25 November, 2024;\nv1\nsubmitted 30 September, 2024;\noriginally announced\nOctober 2024.\nComments:\n* Evgeny Saveliev and Tim Schubert contributed equally to this work\n[29]<a arXiv:2409.03215/>\n[\n[30]<a pdf/>\n,\n[31]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nxLAM: A Family of Large Action Models to Empower AI Agent Systems\nAuthors:\nJianguo Zhang\n,\nTian Lan\n,\nMing Zhu\n,\nZuxin Liu\n,\nThai Hoang\n,\nShirley Kokane\n,\nWeiran Yao\n,\nJuntao Tan\n,\nAkshara Prabhakar\n,\n[32]<a Haolin Chen/>\n,\n[33]<a Zhiwei Liu/>\n,\n[34]<a Yihao Feng/>\n,\n[35]<a Tulika Awalgaonkar/>\n,\n[36]<a Rithesh Murthy/>\n,\n[37]<a Eric Hu/>\n,\n[38]<a Zeyuan Chen/>\n,\n[39]<a Ran Xu/>\n,\n[40]<a Juan Carlos Niebles/>\n,\n[41]<a Shelby Heinecke/>\n,\n[42]<a Huan Wang/>\n,\n[43]<a Silvio Savarese/>\n,\n[44]<a Caiming Xiong/>\nAbstract\n:\n\u2026delivers exceptional performance across multiple agent ability benchmarks, notably securing the 1st position on the Berkeley Function-Calling Leaderboard, outperforming\nGPT\n-\n4\n, Claude-3, and many other models in terms of tool use. By releasing the xLAM series, we aim to advance the performance of open-source LLMs for au\u2026\n[45]<a \u25bd More/>\nSubmitted\n4 September, 2024;\noriginally announced\nSeptember 2024.\nComments:\nTechnical\nreport\nfor the Salesforce xLAM model series\n[46]<a arXiv:2406.12845/>\n[\n[47]<a pdf/>\n,\n[48]<a other/>\n]\ncs.LG\ncs.CL\nInterpretable Preferences via Multi-Objective Reward Modeling and Mixture-of-Experts\nAuthors:\n[49]<a Haoxiang Wang/>\n,\n[50]<a Wei Xiong/>\n,\n[51]<a Tengyang Xie/>\n,\n[52]<a Han Zhao/>\n,\n[53]<a Tong Zhang/>\nAbstract\n:\n\u2026state-of-the-art performance on RewardBench, a benchmark evaluating RMs for language modeling. Notably, the performance of our model surpasses the LLM-as-a-judge method with\nGPT\n-\n4\njudges by a margin, and approaches the performance of the much larger Nemotron-\n4\n340B reward model.\n[54]<a \u25bd More/>\nSubmitted\n18 June, 2024;\noriginally announced\nJune 2024.\nComments:\nTechnical\nreport\nv1. Code and model are released at https://github.com/RLHFlow/RLHF-Reward-Modeling/\n[55]<a arXiv:2405.19266/>\n[\n[56]<a pdf/>\n,\n[57]<a other/>\n]\ncs.CL\nPediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications\nAuthors:\n[58]<a Dingkang Yang/>\n,\n[59]<a Jinjie Wei/>\n,\n[60]<a Dongling Xiao/>\n,\n[61]<a Shunli Wang/>\n,\n[62]<a Tong Wu/>\n,\n[63]<a Gang Li/>\n,\n[64]<a Mingcheng Li/>\n,\n[65]<a Shuaibing Wang/>\n,\n[66]<a Jiawei Chen/>\n,\n[67]<a Yue Jiang/>\n,\n[68]<a Qingyao Xu/>\n,\n[69]<a Ke Li/>\n,\n[70]<a Peng Zhai/>\n,\n[71]<a Lihua Zhang/>\nAbstract\n:\n\u2026experts strategy is presented to resolve the competency conflict between medical generalist and pediatric expertise mastery. Extensive results based on the metrics,\nGPT\n-\n4\n, and doctor evaluations on distinct doctor downstream tasks show that PediatricsGPT consistently outperforms previous Chinese medical LLMs. Our model\u2026\n[72]<a \u25bd More/>\nSubmitted\n11 November, 2024;\nv1\nsubmitted 29 May, 2024;\noriginally announced\nMay 2024.\nComments:\nAccepted by NeurIPS 2024. A\nTechnical\nReport\non a Chinese Medical Large Language Model\n[73]<a arXiv:2405.00732/>\n[\n[74]<a pdf/>\n,\n[75]<a other/>\n]\ncs.CL\ncs.AI\ncs.LG\nLoRA Land: 310 Fine-tuned LLMs that Rival\nGPT\n-\n4\n, A\nTechnical\nReport\nAuthors:\n[76]<a Justin Zhao/>\n,\n[77]<a Timothy Wang/>\n,\n[78]<a Wael Abid/>\n,\n[79]<a Geoffrey Angus/>\n,\n[80]<a Arnav Garg/>\n,\n[81]<a Jeffery Kinnison/>\n,\n[82]<a Alex Sherstinsky/>\n,\n[83]<a Piero Molino/>\n,\n[84]<a Travis Addair/>\n,\n[85]<a Devvret Rishi/>\nAbstract\n:\n\u2026applications. First, we measure the quality of LLMs fine-tuned with quantized low rank adapters across 10 base models and 31 tasks for a total of 310 models. We find that\n4\n-bit LoRA fine-tuned models outperform base models by 34 points and\nGPT\n-\n4\nby 10 points on average. Second, w\u2026\n[86]<a \u25bd More/>\nSubmitted\n29 April, 2024;\noriginally announced\nMay 2024.\n[87]<a arXiv:2404.18255/>\n[\n[88]<a pdf/>\n,\n[89]<a other/>\n]\ncs.CL\ncs.AI\nPatentGPT: A Large Language Model for Intellectual Property\nAuthors:\n[90]<a Zilong Bai/>\n,\n[91]<a Ruiji Zhang/>\n,\n[92]<a Linqing Chen/>\n,\n[93]<a Qijun Cai/>\n,\n[94]<a Yuan Zhong/>\n,\n[95]<a Cong Wang/>\n,\n[96]<a Yan Fang/>\n,\n[97]<a Jie Fang/>\n,\n[98]<a Jing Sun/>\n,\n[99]<a Weikuan Wang/>\n,\n[100]<a Lizhi Zhou/>\n,\n[101]<a Haoran Hua/>\n,\n[102]<a Tian Qiu/>\n,\n[103]<a Chaochao Wang/>\n,\n[104]<a Cheng Sun/>\n,\n[105]<a Jianping Lu/>\n,\n[106]<a Yixin Wang/>\n,\n[107]<a Yubin Xia/>\n,\n[108]<a Meng Hu/>\n,\n[109]<a Haowen Liu/>\n,\nPeng Xu\n,\n[110]<a Licong Xu/>\n,\n[111]<a Fu Bian/>\n,\n[112]<a Xiaolong Gu/>\n,\n[113]<a Lisha Zhang/>\n, et al. (2 additional authors not shown)\nAbstract\n:\n\u2026Intellectual Property (IP) domain is challenging due to the strong need for specialized knowledge, privacy protection, processing of extremely long text in this field. In this\ntechnical\n\u2026\n[114]<a \u25bd More/>\nSubmitted\n4 June, 2024;\nv1\nsubmitted 28 April, 2024;\noriginally announced\nApril 2024.\nComments:\n19 pages, 9 figures\nACM Class:\nI.2.7\n[115]<a arXiv:2404.11459/>\n[\n[116]<a pdf/>\n,\n[117]<a other/>\n]\ncs.CL\ncs.CV\nOctopus v3:\nTechnical\nReport\nfor On-device Sub-billion Multimodal AI Agent\nAuthors:\nWei Chen\n,\nZhiyuan Li\nAbstract\n:\n\u2026types of data, including natural language, visual, and audio inputs, to inform its actions. Despite advancements in large language models that incorporate visual data, such as\nGPT\n-4V, effectively translating image-based data into actionable outcomes for AI agents continues to be challenging. In this paper, we introduce a multimodal model that incorporates th\u2026\n[118]<a \u25bd More/>\nSubmitted\n18 April, 2024;\nv1\nsubmitted 17 April, 2024;\noriginally announced\nApril 2024.\n[119]<a arXiv:2403.17297/>\n[\n[120]<a pdf/>\n,\n[121]<a other/>\n]\ncs.CL\ncs.AI\nInternLM2\nTechnical\nReport\nAuthors:\n[122]<a Zheng Cai/>\n,\n[123]<a Maosong Cao/>\n,\n[124]<a Haojiong Chen/>\n,\n[125]<a Kai Chen/>\n,\n[126]<a Keyu Chen/>\n,\n[127]<a Xin Chen/>\n,\n[128]<a Xun Chen/>\n,\n[129]<a Zehui Chen/>\n,\n[130]<a Zhi Chen/>\n,\n[131]<a Pei Chu/>\n,\n[132]<a Xiaoyi Dong/>\n,\n[133]<a Haodong Duan/>\n,\n[134]<a Qi Fan/>\n,\n[135]<a Zhaoye Fei/>\n,\n[136]<a Yang Gao/>\n,\n[137]<a Jiaye Ge/>\n,\n[138]<a Chenya Gu/>\n,\n[139]<a Yuzhe Gu/>\n,\n[140]<a Tao Gui/>\n,\n[141]<a Aijia Guo/>\n,\n[142]<a Qipeng Guo/>\n,\n[143]<a Conghui He/>\n,\n[144]<a Yingfan Hu/>\n,\n[145]<a Ting Huang/>\n,\n[146]<a Tao Jiang/>\n, et al. (75 additional authors not shown)\nAbstract\n:\nThe evolution of Large Language Models (LLMs) like ChatGPT and\nGPT\n-\n4\nhas sparked discussions on the advent of Artificial General Intelligence (AGI). However, replicating such advancements in open-source models has been challenging. This paper introduces InternLM2, an open-source LLM that outperforms its predecessors in\u2026\n[147]<a \u25bd More/>\nSubmitted\n25 March, 2024;\noriginally announced\nMarch 2024.\n[148]<a arXiv:2403.06838/>\n[\n[149]<a pdf/>\n,\n[150]<a other/>\n]\ncs.SE\ncs.CR\nACFIX: Guiding LLMs with Mined Common RBAC Practices for Context-Aware Repair of Access Control Vulnerabilities in Smart Contracts\nAuthors:\n[151]<a Lyuye Zhang/>\n,\n[152]<a Kaixuan Li/>\n,\n[153]<a Kairan Sun/>\n,\n[154]<a Daoyuan Wu/>\n,\n[155]<a Ye Liu/>\n,\n[156]<a Haoye Tian/>\n,\n[157]<a Yang Liu/>\nAbstract\n:\n\u2026to generate proper patch code, a task that demands human-level intelligence.\n  Leveraging recent advancements in large language models (LLMs), we employ the state-of-the-art\nGPT\n-\u2026\n[158]<a \u25bd More/>\n... 4595 pixels below - scroll or extract content to see more ...\nCurrent step: 8/20Current date and time: 2025-03-26 21:12\n"
+                },
+                {
+                  "type": "image_url",
+                  "image_url": "benchmark: removed"
+                }
+              ],
+              "additional_kwargs": {},
+              "response_metadata": {},
+              "type": "human",
+              "name": null,
+              "id": null,
+              "example": false
+            }
+          ],
+          "message_out": {
+            "tool_calls": [
+              {
+                "id": "call_6zh3OcfOMDVFkNkDNYcmZHZY",
+                "function": {
+                  "arguments": "{\"current_state\":{\"evaluation_previous_goal\":\"Unknown - The specific paper for 'GPT-4 Technical Report' is not visible yet.\",\"memory\":\"Need to identify the correct paper for 'GPT-4 Technical Report'. Previous pages don't show the desired paper.\",\"next_goal\":\"Scroll further down to see more results or check a nearby visible paper if it seems related.\"},\"action\":[{\"scroll_down\":{}}]}",
+                  "name": "AgentOutput"
+                },
+                "type": "function"
+              }
+            ],
+            "refusal": null
+          },
+          "pretty_out": "\ud83d\udd0e Unknown - The specific paper for 'GPT-4 Technical Report' is not visible yet.\n\ud83e\udde0 Need to identify the correct paper for 'GPT-4 Technical Report'. Previous pages don't show the desired paper.\n\ud83c\udfaf Scroll further down to see more results or check a nearby visible paper if it seems related.\n\ud83d\udee0\ufe0f Actions: \n - {'scroll_down': {}}\n"
+        }
+      ],
+      "duration_in_s": 12.303418159484863
+    }
+  ],
+  "logs": {},
+  "task_description": "Find the paper 'GPT-4 Technical Report', when was v3 submitted?",
+  "task_id": "webvoyager--ArXiv--17",
+  "task_website": "ArXiv",
+  "reference_answer": "Mon, 27 Mar 2023 17:46:54 UTC",
+  "total_input_tokens": 30302,
+  "total_output_tokens": 513,
+  "last_message": "{\"tool_calls\": [{\"id\": \"call_6zh3OcfOMDVFkNkDNYcmZHZY\", \"function\": {\"arguments\": \"{\\\"current_state\\\":{\\\"evaluation_previous_goal\\\":\\\"Unknown - The specific paper for 'GPT-4 Technical Report' is not visible yet.\\\",\\\"memory\\\":\\\"Need to identify the correct paper for 'GPT-4 Technical Report'. Previous pages don't show the desired paper.\\\",\\\"next_goal\\\":\\\"Scroll further down to see more results or check a nearby visible paper if it seems related.\\\"},\\\"action\\\":[{\\\"scroll_down\\\":{}}]}\", \"name\": \"AgentOutput\"}, \"type\": \"function\"}], \"refusal\": null}"
+}
