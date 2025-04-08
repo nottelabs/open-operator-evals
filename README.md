@@ -1,6 +1,8 @@
 # Opensource operators evals
 
-![podium](https://github.com/user-attachments/assets/36fd0a19-c0bb-45fe-9593-5c01d39a2f2e)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36fd0a19-c0bb-45fe-9593-5c01d39a2f2e" alt="podium">
+</p>
 
 | Rank | Provider                                                    | Agent Self-Report | LLM Evaluation | Time per Task | Task Reliability |
 | ---- | ----------------------------------------------------------- | ----------------- | -------------- | ------------- | ---------------- |
@@ -23,7 +25,7 @@ PS: [We are actively hiring software and research engineers](https://nottelabs.n
 [In the main table](#opensource-operators-evals)
 
 - `Agent Self-Report` The success rate reported by the agent itself across all tasks. This reflects the agent's internal confidence in its performance.
-- `LLM Evaluation` The success rate determined by the independent WebVoyager LLM as a judge evaluator, assessing the agent's actions and outputs. This provides an objective measure of task completion.
+- `LLM Evaluation` The success rate determined by GPT-4 using WebVoyager's evaluation prompt as a judge evaluator, assessing the agent's actions and outputs. This provides an objective measure of task completion.
 - `Time per Task` The average execution time in seconds for the agent to attempt and complete a single task. This indicates the efficiency and speed of the agent's operations.
 - `Task Reliability` The percentage of tasks the agent successfully completed at least once across multiple attempts (8 in this benchmark). This metric highlights the agent's ability to handle a diverse set of tasks given sufficient retries, indicating system robustness.
 
@@ -42,7 +44,7 @@ The race for open-source web agents is heating up, leading to very bold statemen
 | 2️⃣   | [Browser-Use](https://github.com/browser-use/browser-use)   | 77.3%             | 60.2%          | 113s          | 83.3%            |
 | 3️⃣   | [Convergence](https://github.com/convergence-ai/proxy-lite) | 38.4%             | 31.4%          | 83s           | 50%              |
 
-The metric is the average of tasks over 8x separate runs to account for the high variance you get with those web agent systems. The interval in brackets is the lowest and best run performance. In our benchmarks each provider ran each tasks 8x using the same config, headless mode, and a strict cap: 6 minutes or 20 steps—because no wants an agent burning 80 steps to find a lasagna recipe. Agents had to handle execution and failures autonomously.
+Results are averaged over tasks and then over 8 separate runs to account for the high variance inherent in web agent systems. In our benchmarks, each provider ran each task 8 times using the same configuration, headless mode, and strict limits: 6 minutes or 20 steps maximum—because no one wants an agent burning 80 steps to find a lasagna recipe. Agents had to handle execution and failures autonomously.
 
 # The dataset
 
@@ -63,7 +65,7 @@ Beyond known limitations like outdated web content, a key issue is the high vari
 
 To reduce variance and improve reproducibility, we sampled [WebVoyager30](eval/data/webvoyager/webvoyager_simple.jsonl)—a 30-task subset across 15 diverse websites. It retains the full dataset’s complexity while enabling practical multi-run evaluation, offering a more reliable benchmark for the community.
 
-Running 30 tasks × 8 times (240 runs total) is far more informative than running 500 tasks once, as it averages out randomness and provides a statistically sounder view of performance. Running all 500 tasks 8× would be ideal but is often impractical due to compute costs and time, making fast and accessible reproduction difficult.
+Running 30 tasks × 8 times (240 runs total) is far more informative than running 600 tasks once, as it averages out randomness and provides a statistically sounder view of performance. Running all 600 tasks 8× would be ideal but is often impractical due to compute costs and time, making fast and accessible reproduction difficult.
 
 The selected tasks are neither trivial nor overly complex—they reflect the overall difficulty of the full dataset, making this a reasonable and cost-effective proxy.
 
@@ -100,7 +102,7 @@ Version: [v0.1.40](https://github.com/browser-use/browser-use/releases/tag/0.1.4
 Reasoning: openai/gpt-4o
 ```
 
-Browser-Use [reported an 89% success rate](https://browser-use.com/posts/sota-technical-report) on WebVoyager, but we were unable to replicate these results despite our efforts, both on WebVoyager30 with multiple retries and with the full dataset in a single shot. We also tested different configurations of the agent, browser, and lenient interpretations of ambiguous outcomes, but their reported performance was impossible to achieve. On our benchmarks, Browser-Use shows higher alignment ratios, often exceeding 1.2 (up to 1.534), indicating a greater overestimation of its abilities by 20-50%. Additionally, mismatch counts are higher (5-8 instances), reflecting a larger gap between self-assessments and actual performance.
+Browser-Use [reported an 89% success rate](https://browser-use.com/posts/sota-technical-report) on WebVoyager, but we were unable to replicate these results despite our efforts, both on WebVoyager30 with multiple retries and with the full dataset in a single shot. We also tested different configurations of the agent, browser, and lenient interpretations of ambiguous outcomes, but their reported performance was impossible to achieve. Browser-Use shows higher alignment ratios (1.2–1.534), indicating 20–50% overestimation of its abilities. It also has more mismatches (5–8), reflecting a bigger gap between self-assessment and performance.
 
 | Runs                                               | Agent Self-Report | LLM Evaluation | Alignment | Mismatch | Time per Task |
 | -------------------------------------------------- | ----------------- | -------------- | --------- | -------- | ------------- |
@@ -136,7 +138,7 @@ Convergence Proxy-lite performs significantly below competitors at just 38.4% (a
 
 # Config
 
-We conducted our evaluation on a Macbook M1 machine using Python 3.11, with our IP address located in a residential area in Switzerland, which explains the presence of some German screenshots in our findings.
+We conducted our evaluation on a Macbook M1 machine using Python 3.11, with our IP address located in a residential area in Switzerland, which explains the presence of some German screenshots in our findings. This IP location triggers cookie consent popups that make task completion more challenging for the agents.
 
 # Conclusion
 
