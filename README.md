@@ -57,7 +57,7 @@ url: https://www.google.com/travel/flights
 
 An agent navigates the site and returns a success status and an answer. Relying on the agent’s self-reported success is unreliable, as agents may misjudge task completion. WebVoyager addresses this with an independent LLM evaluator that judges success based on agent actions and screenshots.
 
-### The challenge of high variancex
+### The challenge of high variance
 
 Beyond known limitations like outdated web content, a key issue is the high variance in agent performance. These systems, powered by non-deterministic LLMs and operating on a constantly changing web, often yield inconsistent results. Reasoning errors, execution failures, and unpredictable network behavior make single-run evaluations unreliable. To counter this, we propose to run each task multiple times for a much more accurate view—averaging results helps smooth out randomness and gives a more statistically sound estimate of performance.
 
