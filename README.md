@@ -15,8 +15,8 @@
 [You can investigate all replays/logs](#replays) and [reproduce the benchmark yourself](#reproduce-evals) 👇🏻
 
 - [Notte](https://github.com/nottelabs/notte) leads the benchmark by achieving the highest performance with 86.2% self-reported success and 79% LLM-verified completion. It also has the fastest execution time at 47s per task and an impressive 96.6% task reliability—Percentage of tasks an agent successfully completes at least once when given multiple attempts
-- [Browser-Use](https://github.com/browser-use/browser-use) demonstrates a notable performance difference compared to their claimed results in [their blog post](https://browser-use.com/posts/sota-technical-report), achieving 77.3% self-reported agent performance and 60.2% LLM-verified success versus their stated 89%. The absence of access to their results files prevents us from verifying their reported performance.
-- [Convergence](https://github.com/convergence-ai/proxy-lite) shows significantly lower performance than competitors with 38.4% agent success and 31.4% evaluation success, primarily due to CAPTCHA and bot detection issues. However, shows strong self-awareness, achieving near-perfect alignment in some instances, indicating potential for improvement if detection challenges are overcome.
+- Our evaluation of [Browser-Use](https://github.com/browser-use/browser-use) shows 77.3% self-reported agent performance and 60.2% LLM-verified success, compared to their reported 89% in [their blog post](https://browser-use.com/posts/sota-technical-report). Their results files are not available for verification.
+- [Convergence](https://github.com/convergence-ai/proxy-lite) achieved 38.4% agent success and 31.4% evaluation success, lower than other methods. Performance was limited by CAPTCHA and bot detection. Notably, it showed strong self-awareness, with near-perfect alignment in some cases, suggesting potential if detection issues are addressed.
 
 PS: [We are actively hiring software and research engineers](https://nottelabs.notion.site/jobs-for-humans) 🪩
 
@@ -102,7 +102,7 @@ Version: [v0.1.40](https://github.com/browser-use/browser-use/releases/tag/0.1.4
 Reasoning: openai/gpt-4o
 ```
 
-Browser-Use [reported an 89% success rate](https://browser-use.com/posts/sota-technical-report) on WebVoyager, but we were unable to replicate these results despite our efforts, both on WebVoyager30 with multiple retries and with the full dataset in a single shot. We also tested different configurations of the agent, browser, and lenient interpretations of ambiguous outcomes, but their reported performance was impossible to achieve. Browser-Use shows higher alignment ratios (1.2–1.534), indicating 20–50% overestimation of its abilities. It also has more mismatches (5–8), reflecting a bigger gap between self-assessment and performance.
+[Browser-Use](https://browser-use.com/posts/sota-technical-report) reports 89% success on WebVoyager. In our evaluation, we were unable to reproduce this result using WebVoyager30 with multiple retries and the full dataset in a single run. We tested different agent and browser configurations, as well as more lenient interpretations of ambiguous outcomes. Browser-Use showed alignment ratios between 1.2 and 1.534, indicating 20–50% overestimation relative to LLM-verified success, and 5–8 mismatches between self-reported and verified outcomes.
 
 | Runs                                               | Agent Self-Report | LLM Evaluation | Alignment | Mismatch | Time per Task |
 | -------------------------------------------------- | ----------------- | -------------- | --------- | -------- | ------------- |
@@ -123,7 +123,7 @@ Version: [a4389c5](https://github.com/convergence-ai/proxy-lite/commit/a4389c599
 Reasoning: Convergence Proxy-lite
 ```
 
-Convergence Proxy-lite performs significantly below competitors at just 38.4% (agent) and 31.4% (evaluation) success rates. However, these results appear heavily impacted by technical issues, as the system frequently triggers Google's CAPTCHA and bot detection services. Despite these limitations, Convergence demonstrates remarkably better alignment between self-assessment and evaluation than Browser-Use, with one run achieving perfect 1.000 alignment with zero mismatches. This suggests that with improved bot detection handling, Convergence would likely outperform Browser-Use due to its superior self-awareness and calibration.
+[Convergence Proxy-lite](https://github.com/convergence-ai/proxy-lite) achieved 38.4% agent success and 31.4% LLM-verified success, lower than other evaluated systems. These results were affected by frequent triggers of Google’s CAPTCHA and bot detection. In one run, the system achieved perfect alignment (1.000) with zero mismatches between self-reported and verified outcomes, indicating accurate self-assessment under certain conditions. This suggests that with improved bot detection handling, Convergence would likely outperform Browser-Use due to its superior self-awareness and calibration.
 
 | Runs                                                | Agent Self-Report | LLM Evaluation | Alignment | Mismatch | Time per Task |
 | --------------------------------------------------- | ----------------- | -------------- | --------- | -------- | ------------- |
